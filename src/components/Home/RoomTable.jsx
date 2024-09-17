@@ -1,23 +1,29 @@
 import React, { useState, useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 import SelectBox from "../Helpers/SelectBox";
-import ROOMS_DATA from "../../data/room_data.json";
 import RoomListItem from "../common/RoomListItem";
+import { fetchRooms } from "../../lib/apis/room";
 
 export default function RoomTable({ className }) {
+  const { data: rawData } = useQuery({
+    queryKey: ["rooms"],
+    queryFn: fetchRooms,
+  });
   const filterCategories = ["All", "Owned", "Joined"];
   const [selectedCategory, setCategory] = useState(filterCategories[0]);
+
   const data = useMemo(() => {
     if (selectedCategory === "Owned") {
-      return ROOMS_DATA.datas.filter((o) => o.owned);
+      return rawData.filter((o) => o.owned);
     }
 
     if (selectedCategory === "Joined") {
-      return ROOMS_DATA.datas.filter((o) => o.joined);
+      return rawData.filter((o) => o.joined);
     }
 
-    return ROOMS_DATA.datas;
-  }, [selectedCategory]);
+    return rawData;
+  }, [rawData, selectedCategory]);
 
   return (
     <div
@@ -50,7 +56,7 @@ export default function RoomTable({ className }) {
               <td className="py-4 whitespace-nowrap  text-right">Created At</td>
             </tr>
             {/* table heading end */}
-            {data.map((o) => {
+            {data?.map((o) => {
               return <RoomListItem key={o.id} data={o} />;
             })}
           </tbody>

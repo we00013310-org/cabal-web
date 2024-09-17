@@ -23,6 +23,7 @@ import VerifyYouPages from "./views/VerifyYouPages";
 import Layout from "./Layout";
 import ActiveBidsPage from "./views/AcitveBidsPage";
 import RoomDetailPage from "./views/RoomDetailPage";
+import CreateRoomPage from "./views/CreateRoomPage";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
               {
                 path: "/rooms/:id",
                 element: <RoomDetailPage />,
+              },
+              {
+                path: "/create-room",
+                element: <CreateRoomPage />,
               },
               {
                 path: "/active-bids",

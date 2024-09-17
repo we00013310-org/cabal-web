@@ -54,9 +54,9 @@ const UserListItem = ({ data, type = "creator" }) => {
             </svg>
           </span>
           {type === "creator" ? (
-            <span>Owned {data.owned_rooms} Room(s)</span>
+            <span>Owned {data.owned_rooms} Rooms</span>
           ) : (
-            <span>Joined {data.joined_rooms} Room(s)</span>
+            <span>Joined {data.joined_rooms} Rooms</span>
           )}
         </div>
       </div>

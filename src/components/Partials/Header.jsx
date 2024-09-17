@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+
 import bank1 from "../../assets/images/bank-1.png";
 import bank2 from "../../assets/images/bank-2.png";
 import bank3 from "../../assets/images/bank-3.png";
@@ -10,11 +12,10 @@ import useToggle from "../../hooks/useToggle";
 import DarkModeContext from "../Contexts/DarkModeContext";
 import Icons from "../Helpers/Icons";
 import ModalCom from "../Helpers/ModalCom";
+import { fetchBalance } from "../../lib/apis/balance";
+
 import SolIcon from "../../assets/images/tokens/sol.svg";
-
 import USERS_DATA from "../../data/user_data.json";
-
-const YOUR_BALANCE = 99.99;
 
 export default function Header({ onLogout, sidebarHandler }) {
   const userData = USERS_DATA.datas.find((o) => o.id === "u2");
@@ -65,6 +66,12 @@ export default function Header({ onLogout, sidebarHandler }) {
     setPopup.toggle();
     setbalanceValue.set(false);
   };
+
+  const { data } = useQuery({
+    queryKey: ["balance"],
+    queryFn: fetchBalance,
+  });
+
   return (
     <>
       <div className="header-wrapper backdrop-blur-sm bg-[#efedfe5e]/60 dark:bg-transparent w-full h-full flex items-center xl:px-0 md:px-10 px-5">
@@ -201,7 +208,7 @@ export default function Header({ onLogout, sidebarHandler }) {
                 </span>
                 <div className="flex items-center mr-2">
                   <p className="lg:text-xl text-lg font-bold text-white">
-                    {YOUR_BALANCE}
+                    {+(data?.balance?.toFixed(3) || 0)}
                   </p>
                   <img className="w-[18px] h-[18px] ml-2" src={SolIcon} />
                 </div>

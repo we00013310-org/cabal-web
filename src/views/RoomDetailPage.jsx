@@ -1,22 +1,36 @@
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 
 import AssetsWidget from "../components/common/AssetsWidget";
 import Layout from "../components/Partials/Layout";
 import SellMonthStatics from "../components/Charts/SellMonthStatics";
 import { useSolToken } from "../hooks/useToken";
 import RoomValueStatics from "../components/common/RoomValueStatics";
+import RoomDetailHeader from "../components/common/RoomDetailHeader";
+import TokenRateStatics from "../components/common/TokenRateStatics";
+import { fetchRoomDetail } from "../lib/apis/room";
+import { fetchBalance } from "../lib/apis/balance";
 
 import SolIcon from "../assets/images/tokens/sol.svg";
 
-import ROOMS_DATA from "../data/room_data.json";
-import RoomDetailHeader from "../components/common/RoomDetailHeader";
-import TokenRateStatics from "../components/common/TokenRateStatics";
-
 const RoomDetailPage = () => {
-  let { id } = useParams();
-  const data = ROOMS_DATA.datas.find((o) => o.id == id);
-  const roomPrice = (data.maxSolAmount * 1.0) / data.max;
+  const { id } = useParams();
   const solToken = useSolToken();
+
+  const { data, isFetching } = useQuery({
+    queryKey: ["rooms", id],
+    queryFn: fetchRoomDetail(id),
+  });
+  const { data: balanceData, isFetching: fetchingBalance } = useQuery({
+    queryKey: ["balance"],
+    queryFn: fetchBalance,
+  });
+
+  if (isFetching) {
+    return null;
+  }
+
+  const roomPrice = (data.maxSolAmount * 1.0) / data.max;
   const initValue = solToken.price * data.members * roomPrice;
   const profit = data.value - initValue;
 
@@ -24,7 +38,7 @@ const RoomDetailPage = () => {
     <Layout>
       <div className="shop-details-wrapper w-full">
         <div className="main-wrapper w-full">
-          <RoomDetailHeader data={data} />
+          <RoomDetailHeader ownedKeys={balanceData?.keys?.[id]} data={data} />
           <div className="current_balance-bit-sell-widget w-full lg:h-[436px] mb-11">
             <div className="w-full h-full lg:flex lg:space-x-7">
               <div className="lg:w-2/3 h-full mb-10 lg:mb-0">
@@ -43,7 +57,7 @@ const RoomDetailPage = () => {
                       <div className="flex justify-between">
                         <div className="flex items-center">
                           <p className="text-26 font-bold text-dark-gray dark:text-white tracking-wide">
-                            {data.members * roomPrice}
+                            {+(data.members * roomPrice).toFixed(4)}
                           </p>
                           <img
                             className="w-[24px] h-[24px] ml-2"
@@ -59,7 +73,15 @@ const RoomDetailPage = () => {
                       </div>
                       <p className="text-thin-light-gray text-18 flex items-center mt-1">
                         <span>
-                          (${solToken.price * data.members * roomPrice})
+                          ($
+                          {
+                            +(
+                              solToken.price *
+                              data.members *
+                              roomPrice
+                            ).toFixed(4)
+                          }
+                          )
                         </span>
                       </p>
                     </div>

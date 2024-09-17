@@ -1,0 +1,46 @@
+{
+  "datas": [
+    {
+      "id": "sol",
+      "name": "Solana",
+      "slug": "sol",
+      "price": 131.4,
+      "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png"
+    },
+    {
+      "id": "usdc",
+      "name": "USDC",
+      "slug": "usdc",
+      "price": 1.0,
+      "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png"
+    },
+    {
+      "id": "btc",
+      "name": "bitcoin",
+      "slug": "btc",
+      "price": 58241.43,
+      "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
+    },
+    {
+      "id": "eth",
+      "name": "Ethereum",
+      "slug": "eth",
+      "price": 2288.01,
+      "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png"
+    },
+    {
+      "id": "link",
+      "name": "Chainlink",
+      "slug": "link",
+      "price": 10.55,
+      "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png"
+    },
+    {
+      "id": "bonk",
+      "name": "Bonk",
+      "slug": "bonk",
+      "price": 0.00001627,
+      "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/23095.png"
+    }
+  ]
+}

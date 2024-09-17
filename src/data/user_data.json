@@ -1,0 +1,60 @@
+{
+  "datas": [
+    {
+      "id": "u1",
+      "name": "Hunter",
+      "img": "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
+      "owned_rooms": "10",
+      "joined_rooms": 0
+    },
+    {
+      "id": "u2",
+      "name": "Nuoanunu",
+      "img": "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
+      "owned_rooms": "3",
+      "joined_rooms": 0
+    },
+    {
+      "id": "u3",
+      "name": "Nivle",
+      "img": "https://img.craiyon.com/2024-09-16/CDHhcFXOTJC3vyA7je7p6A.webp",
+      "owned_rooms": "1",
+      "joined_rooms": 0
+    },
+    {
+      "id": "u4",
+      "name": "Naut",
+      "img": "https://pics.craiyon.com/2023-11-21/Pqpd2hScQJetIEGO7RXBYg.webp",
+      "owned_rooms": "1",
+      "joined_rooms": 1
+    },
+    {
+      "id": "u5",
+      "name": "Atod",
+      "img": "https://pics.craiyon.com/2023-10-21/e736afedcc8441c2a6260f1b4a34c048.webp",
+      "owned_rooms": "1",
+      "joined_rooms": 1
+    },
+    {
+      "id": "u6",
+      "name": "Manucian",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZEIgWLrNHMW6f3H92ohB4FUnmQ8u3Hhxzww&s",
+      "owned_rooms": "0",
+      "joined_rooms": 2
+    },
+    {
+      "id": "u7",
+      "name": "NaVi",
+      "img": "https://e7.pngegg.com/pngimages/100/420/png-clipart-counter-strike-global-offensive-logo-natus-vincere-emblem-dota-2-navi-emblem-label.png",
+      "owned_rooms": "0",
+      "joined_rooms": 2
+    },
+    {
+      "id": "u8",
+      "name": "miCKE",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHeG51DuDEviLXcfoYJJR52SVGWhVScZR8oQ&s",
+      "owned_rooms": "0",
+      "joined_rooms": 4
+    }
+  ]
+}

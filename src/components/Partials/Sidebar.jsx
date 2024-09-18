@@ -2,8 +2,6 @@ import React, { useContext, useEffect } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-import logo from "../../assets/images/logo-2.svg";
-import logo3 from "../../assets/images/logo-3.svg";
 import DarkModeContext from "../Contexts/DarkModeContext";
 import Icons from "../Helpers/Icons";
 
@@ -109,6 +107,46 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                     }`}
                   >
                     Home
+                  </span>
+                </NavLink>
+              </li>
+              <li className="item group">
+                <NavLink
+                  to="/my-cabals"
+                  className={`nav-item flex items-center ${
+                    ((navData) => (navData.isActive ? "active" : ""),
+                    sidebar ? "justify-start space-x-3.5" : "justify-center")
+                  }`}
+                >
+                  <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full text-dark-gray dark:text-white ">
+                    <Icons name="star" />
+                  </span>
+                  <span
+                    className={`item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium ${
+                      sidebar ? "active flex-1" : "w-0"
+                    }`}
+                  >
+                    My Cabals
+                  </span>
+                </NavLink>
+              </li>
+              <li className="item group">
+                <NavLink
+                  to="/following-cabals"
+                  className={`nav-item flex items-center ${
+                    ((navData) => (navData.isActive ? "active" : ""),
+                    sidebar ? "justify-start space-x-3.5" : "justify-center")
+                  }`}
+                >
+                  <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full text-dark-gray dark:text-white ">
+                    <Icons name="heart" />
+                  </span>
+                  <span
+                    className={`item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium ${
+                      sidebar ? "active flex-1" : "w-0"
+                    }`}
+                  >
+                    Following Cabals
                   </span>
                 </NavLink>
               </li>

@@ -4,25 +4,27 @@ import SelectBox from "../../Helpers/SelectBox";
 import { generateNearestDays } from "../../../lib/date";
 import { generateNumbersInRange } from "../../../lib/generator";
 import RoomValueChart from "./RoomValueChart";
+import { useRoomValue } from "../../../hooks/useRoom";
 
 export default function RoomValueStatics({ data }) {
+  const roomValue = useRoomValue(data);
   const filterDatas = ["Last 15 days", "Last 7 days", "Last 30 days"];
   const [currencyDataLvl, setCurrencyDataLvl] = useState(
     generateNearestDays(15)
   );
   const [filterDataSet, setFilterDataSet] = useState(
-    generateNumbersInRange(15, data.value)
+    generateNumbersInRange(15, roomValue)
   );
   const dataSetHandler = (value) => {
     if (value === "Last 30 days") {
       setCurrencyDataLvl(generateNearestDays(30));
-      setFilterDataSet(generateNumbersInRange(30, data.value));
+      setFilterDataSet(generateNumbersInRange(30, roomValue));
     } else if (value === "Last 7 days") {
       setCurrencyDataLvl(generateNearestDays(7));
-      setFilterDataSet(generateNumbersInRange(7, data.value));
+      setFilterDataSet(generateNumbersInRange(7, roomValue));
     } else {
       setCurrencyDataLvl(generateNearestDays(15));
-      setFilterDataSet(generateNumbersInRange(15, data.value));
+      setFilterDataSet(generateNumbersInRange(15, roomValue));
     }
   };
   return (

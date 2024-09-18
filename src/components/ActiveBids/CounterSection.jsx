@@ -233,7 +233,7 @@ export default function CounterSection({ className }) {
             <div className="w-[2px] h-full bg-white-opacity sm:block hidden"></div>
             {/* Creators */}
             <div className="flex items-center space-x-2.5 mb-2 sm:mb-0">
-              <div className="w-20 h-20 flex justify-center items-center bg-white    rounded-full">
+              <div className="w-20 h-20 flex justify-center items-center bg-white  rounded-full">
                 <svg
                   width="26"
                   height="38"

@@ -24,6 +24,8 @@ import Layout from "./Layout";
 import ActiveBidsPage from "./views/AcitveBidsPage";
 import RoomDetailPage from "./views/RoomDetailPage";
 import CreateRoomPage from "./views/CreateRoomPage";
+import MyCabalsPage from "./views/MyCabalsPage";
+import FollowingCabalsPage from "./views/FollowingCabalsPage";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +70,14 @@ const router = createBrowserRouter([
               {
                 path: "/create-room",
                 element: <CreateRoomPage />,
+              },
+              {
+                path: "/my-cabals",
+                element: <MyCabalsPage />,
+              },
+              {
+                path: "/following-cabals",
+                element: <FollowingCabalsPage />,
               },
               {
                 path: "/active-bids",

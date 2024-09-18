@@ -16,6 +16,7 @@ import { fetchBalance } from "../../lib/apis/balance";
 
 import SolIcon from "../../assets/images/tokens/sol.svg";
 import USERS_DATA from "../../data/user_data.json";
+import { formatNumb } from "../../lib/number";
 
 export default function Header({ onLogout, sidebarHandler }) {
   const userData = USERS_DATA.datas.find((o) => o.id === "u2");
@@ -207,8 +208,11 @@ export default function Header({ onLogout, sidebarHandler }) {
                   <Icons name="wallet" />
                 </span>
                 <div className="flex items-center mr-2">
-                  <p className="lg:text-xl text-lg font-bold text-white">
-                    {+(data?.balance?.toFixed(3) || 0)}
+                  <p
+                    key={data?.balance}
+                    className="animate-fade lg:text-xl text-lg font-bold text-white"
+                  >
+                    {formatNumb(data?.balance || 0)}
                   </p>
                   <img className="w-[18px] h-[18px] ml-2" src={SolIcon} />
                 </div>

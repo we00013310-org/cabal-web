@@ -80,3 +80,56 @@ export const updateRoomByBuyingKey = async (roomId, qtt, price) => {
 
   return updatedRoom;
 };
+
+export const swapTokenApi =
+  (roomId, tokenAId, amountA, tokenBId, amountB) => async () => {
+    try {
+      console.log("tesdadas");
+      const rooms = await fetchRooms();
+      const currentData = await fetchRoomDetail(roomId)();
+      let newAssets = (currentData.assets || []).map((o) => {
+        if (o.id === tokenAId) {
+          return {
+            ...o,
+            amount: +o.amount - amountA,
+          };
+        }
+        if (o.id === tokenBId) {
+          return {
+            ...o,
+            amount: +o.amount + amountB,
+          };
+        }
+        return o;
+      });
+      if (!newAssets.find((o) => o.id === tokenBId)) {
+        newAssets.push({
+          id: tokenBId,
+          amount: amountB,
+        });
+      }
+      console.log("newAssets", newAssets);
+      newAssets = newAssets.filter((o) => !!o.amount);
+      const updatedRoom = {
+        ...currentData,
+        assets: newAssets,
+      };
+
+      const newRooms = rooms.map((o) => {
+        if (o.id !== updatedRoom.id) {
+          return o;
+        }
+
+        return updatedRoom;
+      });
+      localStorage.setItem(
+        ROOMS_DATA_KEY,
+        JSON.stringify(orderBy(newRooms, ["value"], ["desc"]))
+      );
+      console.log("updatedRoom", updatedRoom);
+
+      return updatedRoom;
+    } catch (err) {
+      console.log("err", err);
+    }
+  };

@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { formatDate } from "../../../lib/date";
 
 import dataImage1 from "../../../assets/images/data-table-user-1.png";
+import { useRoomValue } from "../../../hooks/useRoom";
 
-const calculatePercent = (room) => {
-  const prevValue = room.value - room["24h"];
+const calculatePercent = (room, value) => {
+  const prevValue = value - room["24h"];
 
   if (!prevValue) {
     return 0;
@@ -16,13 +17,14 @@ const calculatePercent = (room) => {
 
 const RoomListItem = ({ data }) => {
   const navigate = useNavigate();
+  const roomValue = useRoomValue(data);
 
   return (
     <tr
       onClick={() => {
         navigate(`/rooms/${data.id}`);
       }}
-      className="bg-white dark:bg-dark-white border-b dark:border-[#5356fb29] hover:opacity-80 hover:cursor-pointer"
+      className="animate-fade bg-white dark:bg-dark-white border-b dark:border-[#5356fb29] hover:opacity-80 hover:cursor-pointer"
     >
       <td className=" py-4">
         <div className="flex space-x-2 items-center">
@@ -47,7 +49,7 @@ const RoomListItem = ({ data }) => {
         <div className="flex space-x-1 items-center justify-center">
           $
           <span className="ml-1 text-base text-dark-gray dark:text-white font-medium whitespace-nowrap">
-            {data.value}
+            {roomValue}
           </span>
         </div>
       </td>
@@ -60,7 +62,7 @@ const RoomListItem = ({ data }) => {
         <span
           className={`text-base whitespace-nowrap px-2 ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"}`}
         >
-          {data["24h"]} ({calculatePercent(data)}%)
+          {data["24h"]} ({calculatePercent(data, roomValue)}%)
         </span>
       </td>
       <td className="text-right py-4">

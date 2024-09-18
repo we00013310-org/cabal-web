@@ -121,6 +121,12 @@ input[type="number"] {
     #f539f8 104.51%
   );
 }
+
+button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
 .text-26 {
   font-size: 26px;
   line-height: 31.54px;
@@ -538,7 +544,7 @@ input[type="number"] {
 /* TODO: =================================modal================================= */
 .children-element {
   left: 50%;
-  top: 175px;
+  top: 50px;
   transform: translate(-50%, 0px);
 }
 .modal-com {

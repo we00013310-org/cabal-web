@@ -3,9 +3,11 @@ import React, { useMemo } from "react";
 import background from "../../../assets/images/shape/balance-bg.svg";
 
 import TOKENS_DATA from "../../../data/token_data.json";
+import { useRoomValue } from "../../../hooks/useRoom";
+import { formatNumb } from "../../../lib/number";
 
-const calculatePercent = (room) => {
-  const prevValue = room.value - room["24h"];
+const calculatePercent = (room, value) => {
+  const prevValue = value - room["24h"];
 
   if (!prevValue) {
     return 0;
@@ -15,19 +17,18 @@ const calculatePercent = (room) => {
 };
 
 export default function AssetsWidget({ data }) {
+  const roomValue = useRoomValue(data);
   const formattedAssets = useMemo(() => {
     const results = [];
-    let solValue = data.value;
 
-    if (!data.value) {
+    if (!roomValue) {
       return results;
     }
 
     data.assets?.forEach((o) => {
       const token = TOKENS_DATA.datas.find((i) => i.id === o.id);
       const value = o.amount * token.price;
-      solValue -= value;
-      const percent = (value * 100.0) / data.value;
+      const percent = (value * 100.0) / roomValue;
 
       results.push({
         ...token,
@@ -37,18 +38,8 @@ export default function AssetsWidget({ data }) {
       });
     });
 
-    if (solValue > 0) {
-      const solToken = TOKENS_DATA.datas.find((o) => o.id === "sol");
-      results.push({
-        ...solToken,
-        amount: (solValue * 1.0) / solToken.price,
-        value: solValue,
-        percent: (solValue * 100.0) / data.value,
-      });
-    }
-
     return results;
-  }, [data]);
+  }, [data, roomValue]);
 
   return (
     <div
@@ -62,7 +53,7 @@ export default function AssetsWidget({ data }) {
           Current Value
         </p>
         <p className="text-[44px] font-bold text-white tracking-wide leading-10 mb-2">
-          $ {data.value}
+          $ {roomValue}
         </p>
         <p
           className={`text-lg ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"} tracking-wide`}
@@ -96,7 +87,7 @@ export default function AssetsWidget({ data }) {
                   </div>
                 </div>
                 <p className="font-18 text-white text-center uppercase">
-                  {o.amount.toFixed(2)} {o.slug}
+                  {formatNumb(o.amount)} {o.slug}
                 </p>
               </div>
             </div>

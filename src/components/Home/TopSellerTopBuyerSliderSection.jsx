@@ -61,7 +61,7 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
             <div className="lg:w-1/2 w-full mb-10 lg:mb-0 sm:p-8 p-4 bg-white dark:bg-dark-white   rounded-2xl section-shadow">
               <div className="heading flex justify-between items-center mb-4">
                 <h1 className="text-xl font-bold text-dark-gray dark:text-white tracking-wide">
-                  Top Creators
+                  Top Cabal Leaders
                 </h1>
                 <div className="slider-btns flex space-x-4">
                   <button

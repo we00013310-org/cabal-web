@@ -5,25 +5,35 @@ import SelectBox from "../Helpers/SelectBox";
 import RoomListItem from "../common/RoomListItem";
 import { fetchRooms } from "../../lib/apis/room";
 
-export default function RoomTable({ className }) {
+export default function RoomTable({
+  className,
+  hideHeader = false,
+  defaultFilter,
+}) {
   const { data: rawData } = useQuery({
     queryKey: ["rooms"],
     queryFn: fetchRooms,
   });
-  const filterCategories = ["All", "Owned", "Joined"];
-  const [selectedCategory, setCategory] = useState(filterCategories[0]);
+  const filterCategories = ["All", "Owned", "Following"];
+  const [selectedCategory, setCategory] = useState(
+    defaultFilter || filterCategories[0]
+  );
 
   const data = useMemo(() => {
     if (selectedCategory === "Owned") {
-      return rawData.filter((o) => o.owned);
+      return rawData?.filter((o) => o.owned);
     }
 
-    if (selectedCategory === "Joined") {
-      return rawData.filter((o) => o.joined);
+    if (selectedCategory === "Following") {
+      return rawData?.filter((o) => o.joined);
     }
 
     return rawData;
   }, [rawData, selectedCategory]);
+
+  if (!data?.length) {
+    return null;
+  }
 
   return (
     <div
@@ -31,19 +41,21 @@ export default function RoomTable({ className }) {
         className || ""
       }`}
     >
-      <div className="header w-full sm:flex justify-between items-center mb-5">
-        <div className="flex space-x-2 items-center mb-2 sm:mb-0">
-          <h1 className="text-xl font-bold text-dark-gray dark:text-white tracking-wide">
-            All Rooms
-          </h1>
+      {!hideHeader && (
+        <div className="header w-full sm:flex justify-between items-center mb-5">
+          <div className="flex space-x-2 items-center mb-2 sm:mb-0">
+            <h1 className="text-xl font-bold text-dark-gray dark:text-white tracking-wide">
+              All Rooms
+            </h1>
+          </div>
+          <SelectBox
+            action={setCategory}
+            datas={filterCategories}
+            className="Update-table-dropdown"
+            contentBodyClasses="w-auto min-w-max"
+          />
         </div>
-        <SelectBox
-          action={setCategory}
-          datas={filterCategories}
-          className="Update-table-dropdown"
-          contentBodyClasses="w-auto min-w-max"
-        />
-      </div>
+      )}
       <div className="relative w-full overflow-x-auto sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
@@ -51,7 +63,7 @@ export default function RoomTable({ className }) {
             <tr className="text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#5356fb29]  default-border-bottom ">
               <td className="py-4 w-[300px] block whitespace-nowrap">Room</td>
               <td className="py-4 whitespace-nowrap text-center">Value</td>
-              <td className="py-4 whitespace-nowrap text-center">Member</td>
+              <td className="py-4 whitespace-nowrap text-center">Sold Keys</td>
               <td className="py-4 whitespace-nowrap text-center">24H%</td>
               <td className="py-4 whitespace-nowrap  text-right">Created At</td>
             </tr>

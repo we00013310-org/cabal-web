@@ -12,6 +12,7 @@ import { fetchRoomDetail } from "../lib/apis/room";
 import { fetchBalance } from "../lib/apis/balance";
 
 import SolIcon from "../assets/images/tokens/sol.svg";
+import { useRoomValue } from "../hooks/useRoom";
 
 const RoomDetailPage = () => {
   const { id } = useParams();
@@ -25,6 +26,7 @@ const RoomDetailPage = () => {
     queryKey: ["balance"],
     queryFn: fetchBalance,
   });
+  const roomValue = useRoomValue(data);
 
   if (isFetching) {
     return null;
@@ -32,7 +34,7 @@ const RoomDetailPage = () => {
 
   const roomPrice = (data.maxSolAmount * 1.0) / data.max;
   const initValue = solToken.price * data.members * roomPrice;
-  const profit = data.value - initValue;
+  const profit = roomValue - initValue;
 
   return (
     <Layout>

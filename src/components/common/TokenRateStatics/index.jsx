@@ -27,7 +27,7 @@ const TokenRateStatics = ({ listTokens = [] }) => {
   const gap = (selectedToken.price - filterRateStatics[0]).toFixed(2);
 
   return (
-    <div className="chart-two bg-white dark:bg-dark-white   rounded-2xl p-8 2xl:w-[268px] w-full 2xl:mb-10 flex flex-col justify-between  border 2xl:border-none ">
+    <div className="chart-two bg-white dark:bg-dark-white h-full rounded-2xl p-8 2xl:w-[268px] w-full 2xl:mb-10 flex flex-col justify-between">
       <div>
         {/* dropdown heading */}
         <div className="flex space-x-2 items-center mb-5 relative cursor-pointer">

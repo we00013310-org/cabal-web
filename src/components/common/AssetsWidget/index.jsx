@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-import background from "../../../assets/images/shape/balance-bg.svg";
+import background from "../../../assets/images/shape/balance-bg.png";
 
 import TOKENS_DATA from "../../../data/token_data.json";
 import { useRoomValue } from "../../../hooks/useRoom";

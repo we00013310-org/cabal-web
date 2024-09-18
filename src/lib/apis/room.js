@@ -37,56 +37,73 @@ export const createRoom = async (data) => {
 };
 
 export const updateRoomByBuyingKey = async (roomId, qtt, price) => {
-  const rooms = await fetchRooms();
-  const currentData = await fetchRoomDetail(roomId)();
-  let newAssets = currentData.assets || [];
-  const amount = qtt * price;
+  try {
+    const rooms = await fetchRooms();
+    const currentData = await fetchRoomDetail(roomId)();
+    let newAssets = currentData.assets || [];
+    const histories = currentData.histories || [];
+    const amount = qtt * price;
 
-  if (newAssets.find((o) => o.id === "sol")) {
-    newAssets = newAssets.map((o) => {
-      if (o.id === "sol") {
-        return {
-          id: "sol",
-          amount: o.amount + amount,
-        };
-      }
-      return o;
-    });
-  } else {
-    newAssets.push({
-      id: "sol",
-      amount,
-    });
-  }
-
-  const updatedRoom = {
-    ...currentData,
-    members: currentData.members + qtt,
-    joined: true,
-    assets: newAssets,
-  };
-
-  const newRooms = rooms.map((o) => {
-    if (o.id !== updatedRoom.id) {
-      return o;
+    if (newAssets.find((o) => o.id === "sol")) {
+      newAssets = newAssets.map((o) => {
+        if (o.id === "sol") {
+          return {
+            id: "sol",
+            amount: o.amount + amount,
+          };
+        }
+        return o;
+      });
+    } else {
+      newAssets.push({
+        id: "sol",
+        amount,
+      });
     }
+    histories.push({
+      id: uuidv4(),
+      createdAt: new Date().getTime(),
+      label: `<span class="text-purple">Nuoanunu</span> ${amount >= 0 ? "bought" : "sold"} a Key`,
+      assets: [
+        {
+          id: "sol",
+          amount: amount,
+        },
+      ],
+    });
+
+    const updatedRoom = {
+      ...currentData,
+      members: currentData.members + qtt,
+      joined: true,
+      assets: newAssets,
+      histories,
+    };
+
+    const newRooms = rooms.map((o) => {
+      if (o.id !== updatedRoom.id) {
+        return o;
+      }
+
+      return updatedRoom;
+    });
+    localStorage.setItem(
+      ROOMS_DATA_KEY,
+      JSON.stringify(orderBy(newRooms, ["value"], ["desc"]))
+    );
 
     return updatedRoom;
-  });
-  localStorage.setItem(
-    ROOMS_DATA_KEY,
-    JSON.stringify(orderBy(newRooms, ["value"], ["desc"]))
-  );
-
-  return updatedRoom;
+  } catch (err) {
+    console.log("err", err);
+  }
 };
 
 export const swapTokenApi =
   (roomId, tokenAId, amountA, tokenBId, amountB) => async () => {
     try {
-      console.log("tesdadas");
       const rooms = await fetchRooms();
       const currentData = await fetchRoomDetail(roomId)();
+      const histories = currentData.histories || [];
       let newAssets = (currentData.assets || []).map((o) => {
         if (o.id === tokenAId) {
           return {
@@ -108,11 +125,27 @@ export const swapTokenApi =
           amount: amountB,
         });
       }
-      console.log("newAssets", newAssets);
+
       newAssets = newAssets.filter((o) => !!o.amount);
+      histories.push({
+        id: uuidv4(),
+        createdAt: new Date().getTime(),
+        label: `Swapped <span class="text-purple">${tokenAId.toUpperCase()}</span> to <span class="text-purple">${tokenBId.toUpperCase()}</span>`,
+        assets: [
+          {
+            id: tokenAId,
+            amount: -amountA,
+          },
+          {
+            id: tokenBId,
+            amount: amountB,
+          },
+        ],
+      });
       const updatedRoom = {
         ...currentData,
         assets: newAssets,
+        histories,
       };
 
       const newRooms = rooms.map((o) => {
@@ -122,11 +155,11 @@ export const swapTokenApi =
 
         return updatedRoom;
       });
+
       localStorage.setItem(
         ROOMS_DATA_KEY,
         JSON.stringify(orderBy(newRooms, ["value"], ["desc"]))
       );
-      console.log("updatedRoom", updatedRoom);
 
       return updatedRoom;
     } catch (err) {

@@ -13,6 +13,8 @@ import { fetchBalance } from "../lib/apis/balance";
 
 import SolIcon from "../assets/images/tokens/sol.svg";
 import { useRoomValue } from "../hooks/useRoom";
+import MessengerWidget from "../components/common/MessengerWidget";
+import RoomHistory from "../components/common/RoomHistory";
 
 const RoomDetailPage = () => {
   const { id } = useParams();
@@ -93,7 +95,6 @@ const RoomDetailPage = () => {
                   </div>
                 </div>
               </div>
-
               <div className="lg:w-1/3 h-full mb-10 lg:mb-0">
                 <div className="sell-month-analytic-card w-full h-full rounded-xl overflow-hidden relative">
                   {/* heading */}
@@ -131,9 +132,19 @@ const RoomDetailPage = () => {
 
           <RoomValueStatics data={data} />
 
-          <TokenRateStatics
-            listTokens={data.assets?.map((o) => o.id)?.push("sol")}
-          />
+          <div className="w-full h-full lg:flex lg:space-x-7 lg:h-[436px] mb-11">
+            <div className="lg:w-1/3 h-full mb-10 lg:mb-0">
+              <MessengerWidget />
+            </div>
+            <div className="lg:w-1/3 h-full mb-10 lg:mb-0">
+              <RoomHistory roomData={data} />
+            </div>
+            <div className="lg:w-1/3 h-full mb-10 lg:mb-0">
+              <TokenRateStatics
+                listTokens={data.assets?.map((o) => o.id)?.push("sol")}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

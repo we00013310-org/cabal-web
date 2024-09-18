@@ -1,56 +1,35 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import authProfilePic from "../../../assets/images/auth-profile-picture.png";
-import profileBanner from "../../../assets/images/profile-cover.png";
-import collections from "../../../data/collectionplan_data.json";
-import marketPlace from "../../../data/marketplace_data.json";
-import products from "../../../data/product_data.json";
+import { useQuery } from "@tanstack/react-query";
+
 import Layout from "../../Partials/Layout";
-import ActivitiesTab from "./ActivitiesTab";
-import CollectionTab from "./CollectionTab";
-import CreatedTab from "./CreatedTab";
-import HiddenProductsTab from "./HiddenProductsTab";
-import OnSaleTab from "./OnSaleTab";
-import OwnTab from "./OwnTab";
+import { fetchRooms } from "../../../lib/apis/room";
+import RoomTable from "../../Home/RoomTable";
+
+import USERS_DATA from "../../../data/user_data.json";
+import profileBanner from "../../../assets/images/profile-cover.png";
 
 export default function AuthProfile() {
-  const onSaleProducts = marketPlace.data;
-  const CreatedSell = marketPlace.data;
-  const CreatedBits = products.datas;
-  // const mainProducts = products.datas;
-  const ownProducts = products.datas;
-  const collectionProducts = collections.data;
+  const { data: rawData } = useQuery({
+    queryKey: ["rooms"],
+    queryFn: fetchRooms,
+  });
+  const userData = USERS_DATA.datas.find((o) => o.id === "u2");
+  const ownedRooms = rawData?.filter((o) => o.owned);
+  const joinedRooms = rawData?.filter((o) => o.joined);
 
   const tabs = [
     {
       id: 1,
-      name: "onsale",
-      content: "On Sale",
+      name: "Owned",
+      content: "Owned",
+      number: ownedRooms?.length || 0,
     },
     {
       id: 2,
-      name: "owned",
-      content: "Owned",
-    },
-    {
-      id: 3,
-      name: "created",
-      content: "Created",
-    },
-    {
-      id: 4,
-      name: "hidden",
-      content: "Hidden",
-    },
-    {
-      id: 5,
-      name: "collection",
-      content: "Collection",
-    },
-    {
-      id: 6,
-      name: "activity",
-      content: "Activity",
+      name: "Following",
+      content: "Following",
+      number: joinedRooms?.length || 0,
     },
   ];
 
@@ -58,6 +37,7 @@ export default function AuthProfile() {
   const tabHandler = (value) => {
     setTab(value);
   };
+
   return (
     <>
       <Layout>
@@ -78,22 +58,23 @@ export default function AuthProfile() {
                   {/* profile picture */}
                   <div className=" profile-picture sm:block flex justify-center items-center mb-4">
                     <img
-                      src={authProfilePic}
+                      src={userData.img}
                       alt=""
                       className="md:w-[205px] md:h-[205px] w-[130px] h-[130px] object-cover rounded-full overflow-hidden border-[6px] border-white"
                     />
                   </div>
                   <div className="auth-user-profile-content">
                     <div className="mb-4">
-                      <h1 className="text-dark-gray dark:text-white tracking-wide sm:text-26 text-xl font-bold">
-                        Rafiqul Islam Suvo
+                      <h1 className="text-3xl text-dark-gray dark:text-white tracking-wide sm:text-26 font-bold">
+                        {userData.name}
                       </h1>
                     </div>
                     <div className="sm:w-[437px] w-full mb-4">
                       <p className="text-thin-light-gray sm:text-base  text-sm tracking-wide leading-2">
-                        Autoglyphs are fitting the first “on-chain” to the find
-                        generative art on the Ethereum blockchain
-                        <span className="ml-1 text-purple">Read More</span>
+                        Referral Code:
+                        <span className="ml-2 text-2xl font-bold text-purple">
+                          {userData.name.toLowerCase()}
+                        </span>
                       </p>
                     </div>
                     <div className="flex text-thin-light-gray sm:text-xl text-sm">
@@ -154,9 +135,9 @@ export default function AuthProfile() {
                             onClick={() => tabHandler(tabValue.name)}
                           >
                             <span
-                              className={`py-4 sm:border-b-none border-b group-hover:border-purple border-transparent lg:text-xl text-sm tracking-wide font-bold  group-hover:text-purple text-dark-gray dark:text-white relative z-10 cursor-pointer ${
+                              className={`py-4 sm:border-b-none border-b group-hover:border-purple lg:text-xl text-sm tracking-wide font-bold  group-hover:text-purple text-dark-gray dark:text-white relative z-10 cursor-pointer ${
                                 tab === tabValue.name
-                                  ? "text-purple border-purple "
+                                  ? "text-purple border-purple border-b-4"
                                   : "text-dark-gray dark:text-white border-transparent "
                               }`}
                             >
@@ -169,7 +150,7 @@ export default function AuthProfile() {
                                   : "text-thin-light-gray bg-[#F2B8FD]"
                               }`}
                             >
-                              16
+                              {tabValue.number}
                             </span>
                           </li>
                         ))}
@@ -177,10 +158,10 @@ export default function AuthProfile() {
                   </div>
                   <div style={{ transform: "translateY(-22px)" }}>
                     <Link
-                      to="/upload-product"
+                      to="/create-room"
                       className="btn-gradient lg:flex hidden w-[153px] h-[46px] rounded-full text-white justify-center items-center"
                     >
-                      Upload Product
+                      Create Room
                     </Link>
                   </div>
                 </div>
@@ -189,27 +170,7 @@ export default function AuthProfile() {
             </div>
 
             <div className="tab-cotainer w-full mb-10">
-              {tab === "onsale" ? (
-                <OnSaleTab products={onSaleProducts} />
-              ) : tab === "owned" ? (
-                <OwnTab products={ownProducts} />
-              ) : tab === "created" ? (
-                <CreatedTab
-                  marketProducts={CreatedSell}
-                  mainProducts={CreatedBits}
-                />
-              ) : tab === "hidden" ? (
-                <HiddenProductsTab
-                  marketProducts={CreatedSell}
-                  mainProducts={CreatedBits}
-                />
-              ) : tab === "collection" ? (
-                <CollectionTab products={collectionProducts} />
-              ) : tab === "activity" ? (
-                <ActivitiesTab />
-              ) : (
-                ""
-              )}
+              <RoomTable key={tab} hideHeader defaultFilter={tab} />
             </div>
           </div>
         </div>

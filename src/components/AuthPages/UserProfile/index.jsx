@@ -15,7 +15,10 @@ import HiddenProductsTab from "./HiddenProductsTab";
 import OnSaleTab from "./OnSaleTab";
 import OwnTab from "./OwnTab";
 
+import USERS_DATA from "../../../data/user_data.json";
+
 export default function UserProfile() {
+  const userData = USERS_DATA.datas.find((o) => o.id === "u2");
   const onSaleProducts = marketPlace.data;
   const CreatedSell = marketPlace.data;
   const CreatedBits = products.datas;
@@ -64,6 +67,7 @@ export default function UserProfile() {
   const openFollowerModal = () => {
     setValue(!showFollowerModal);
   };
+
   return (
     <>
       <Layout>

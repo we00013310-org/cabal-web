@@ -1,6 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 const UserListItem = ({ data, type = "creator" }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="item">
+    <div
+      className="item cursor-pointer hover:opacity-80"
+      onClick={() => {
+        navigate(`/users/${data.id}`);
+      }}
+    >
       {/* img */}
       <div className="flex justify-center mb-4">
         <div className="w-14 h-14 relative">

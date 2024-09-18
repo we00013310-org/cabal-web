@@ -26,6 +26,7 @@ import RoomDetailPage from "./views/RoomDetailPage";
 import CreateRoomPage from "./views/CreateRoomPage";
 import MyCabalsPage from "./views/MyCabalsPage";
 import FollowingCabalsPage from "./views/FollowingCabalsPage";
+import UserPage from "./views/UserPage";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,14 @@ const router = createBrowserRouter([
                 element: <FollowingCabalsPage />,
               },
               {
+                path: "/profile",
+                element: <AuthProfilePage />,
+              },
+              {
+                path: "/users/:id",
+                element: <UserPage />,
+              },
+              {
                 path: "/active-bids",
                 element: <ActiveBidsPage />,
               },
@@ -122,10 +131,6 @@ const router = createBrowserRouter([
               {
                 path: "/upload-product",
                 element: <UploadProductPage />,
-              },
-              {
-                path: "/profile",
-                element: <AuthProfilePage />,
               },
               {
                 path: "/user-profile",

@@ -58,7 +58,7 @@ const RoomDetailPage = () => {
                   </div>
                   <div className="w-full h-full flex flex-col justify-between bg-white dark:bg-dark-white  ">
                     <div className="w-full px-5 pt-5">
-                      <div className="flex justify-between">
+                      <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <p className="text-26 font-bold text-dark-gray dark:text-white tracking-wide">
                             {+(data.members * roomPrice).toFixed(4)}
@@ -68,11 +68,11 @@ const RoomDetailPage = () => {
                             src={SolIcon}
                           />
                         </div>
-                        <p className="text-26 font-bold text-dark-gray dark:text-white tracking-wide">
-                          -
+                        <p className="text-xl text-dark-gray dark:text-white tracking-wide">
+                          ~
                         </p>
                         <p className="text-26 font-bold text-dark-gray dark:text-white tracking-wide">
-                          {data.members} key(s)
+                          {data.members} keys
                         </p>
                       </div>
                       <p className="text-thin-light-gray text-18 flex items-center mt-1">
@@ -133,18 +133,17 @@ const RoomDetailPage = () => {
           <RoomValueStatics data={data} />
 
           <div className="w-full h-full lg:flex lg:space-x-7 lg:h-[436px] mb-11">
-            <div className="lg:w-1/3 h-full mb-10 lg:mb-0">
-              <MessengerWidget />
-            </div>
-            <div className="lg:w-1/3 h-full mb-10 lg:mb-0">
+            <div className="lg:w-1/2 h-full mb-10 lg:mb-0">
               <RoomHistory roomData={data} />
             </div>
-            <div className="lg:w-1/3 h-full mb-10 lg:mb-0">
+            <div className="lg:w-1/2 h-full mb-10 lg:mb-0">
               <TokenRateStatics
                 listTokens={data.assets?.map((o) => o.id)?.push("sol")}
               />
             </div>
           </div>
+
+          <MessengerWidget />
         </div>
       </div>
     </Layout>

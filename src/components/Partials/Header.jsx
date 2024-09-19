@@ -559,7 +559,11 @@ export default function Header({ onLogout, sidebarHandler }) {
                 to="/profile"
                 className="lg:w-[62px] lg:h-[62px] w-[50px] h-[50px] rounded-full overflow-hidden block"
               >
-                <img src={profileImg} alt="profile" className="w-full h-full" />
+                <img
+                  src={userData.img || profileImg}
+                  alt="profile"
+                  className="w-full h-full"
+                />
               </Link>
             </div>
           </div>

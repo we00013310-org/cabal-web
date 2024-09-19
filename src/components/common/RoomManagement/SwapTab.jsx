@@ -47,7 +47,7 @@ const SwapTab = ({ roomData, onClose }) => {
 
   const handleSwap = () => {
     if (valueA > tokenABalance) {
-      toast.error("Sufficient balance!");
+      toast.error("Insufficient balance!");
       return;
     }
     if (tokenA === tokenB) {

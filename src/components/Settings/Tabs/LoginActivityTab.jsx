@@ -7,7 +7,7 @@ export default function LoginActivityTab() {
       <div className="relative w-full overflow-x-auto sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
-            <tr className="text-base text-thin-light-gray border-b dark:border-[#5356fb29]  default-border-b ">
+            <tr className="text-base text-thin-light-gray border-b dark:border-[#FFAB3329]  default-border-b ">
               <td className="py-4 text-center">OS</td>
               <td className="py-4 text-center">Browser</td>
               <td className="py-4 text-center">Location</td>
@@ -15,7 +15,7 @@ export default function LoginActivityTab() {
               <td className="py-4 text-center">Status</td>
               <td className="py-4 text-center"></td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
               <td className="text-center py-4">
                 <div className="flex items-center justify-center">
                   <span className="text-base text-dark-gray dark:text-white font-medium whitespace-nowrap px-2">
@@ -54,7 +54,7 @@ export default function LoginActivityTab() {
                 </button>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
               <td className="text-center py-4">
                 <div className="flex items-center justify-center">
                   <span className="text-base text-dark-gray dark:text-white font-medium whitespace-nowrap px-2">
@@ -93,7 +93,7 @@ export default function LoginActivityTab() {
                 </button>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
               <td className="text-center py-4">
                 <div className="flex items-center justify-center">
                   <span className="text-base text-dark-gray dark:text-white font-medium whitespace-nowrap px-2">
@@ -132,7 +132,7 @@ export default function LoginActivityTab() {
                 </button>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
               <td className="text-center py-4">
                 <div className="flex items-center justify-center">
                   <span className="text-base text-dark-gray dark:text-white font-medium whitespace-nowrap px-2">
@@ -171,7 +171,7 @@ export default function LoginActivityTab() {
                 </button>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
               <td className="text-center py-4">
                 <div className="flex items-center justify-center">
                   <span className="text-base text-dark-gray dark:text-white font-medium whitespace-nowrap px-2">
@@ -210,7 +210,7 @@ export default function LoginActivityTab() {
                 </button>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
               <td className="text-center py-4">
                 <div className="flex items-center justify-center">
                   <span className="text-base text-dark-gray dark:text-white font-medium whitespace-nowrap px-2">

@@ -50,9 +50,9 @@ export default function CounterSection({ className }) {
                       y2="26.6223"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint1_linear_25_21030"
@@ -62,9 +62,9 @@ export default function CounterSection({ className }) {
                       y2="7.43605"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint2_linear_25_21030"
@@ -74,9 +74,9 @@ export default function CounterSection({ className }) {
                       y2="19.8366"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint3_linear_25_21030"
@@ -86,9 +86,9 @@ export default function CounterSection({ className }) {
                       y2="11.6778"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint4_linear_25_21030"
@@ -98,9 +98,9 @@ export default function CounterSection({ className }) {
                       y2="13.9127"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -156,9 +156,9 @@ export default function CounterSection({ className }) {
                       y2="39.299"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint1_linear_25_21041"
@@ -168,9 +168,9 @@ export default function CounterSection({ className }) {
                       y2="34.3347"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint2_linear_25_21041"
@@ -180,9 +180,9 @@ export default function CounterSection({ className }) {
                       y2="18.904"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint3_linear_25_21041"
@@ -192,9 +192,9 @@ export default function CounterSection({ className }) {
                       y2="13.0511"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint4_linear_25_21041"
@@ -204,9 +204,9 @@ export default function CounterSection({ className }) {
                       y2="23.4435"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint5_linear_25_21041"
@@ -216,9 +216,9 @@ export default function CounterSection({ className }) {
                       y2="37.4286"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -274,9 +274,9 @@ export default function CounterSection({ className }) {
                       y2="45.5689"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint1_linear_25_21052"
@@ -286,9 +286,9 @@ export default function CounterSection({ className }) {
                       y2="9.99717"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint2_linear_25_21052"
@@ -298,9 +298,9 @@ export default function CounterSection({ className }) {
                       y2="29.3339"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint3_linear_25_21052"
@@ -310,9 +310,9 @@ export default function CounterSection({ className }) {
                       y2="17.5955"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint4_linear_25_21052"
@@ -322,9 +322,9 @@ export default function CounterSection({ className }) {
                       y2="21.4878"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                     <linearGradient
                       id="paint5_linear_25_21052"
@@ -334,9 +334,9 @@ export default function CounterSection({ className }) {
                       y2="18.2196"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -372,9 +372,9 @@ export default function CounterSection({ className }) {
                       y2="35.1092"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                   </defs>
                 </svg>

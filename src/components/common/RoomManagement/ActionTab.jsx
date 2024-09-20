@@ -7,7 +7,7 @@ const ActionTab = ({ data, selected, onClick }) => {
     <div className="item w-[120px] h-[90px] relative mb-0" onClick={onClick}>
       <div
         className={`w-full h-full bg-white dark:bg-dark-white rounded-md z-20 relative flex justify-center items-center cursor-pointer hover:opacity-80 ${
-          selected ? "" : "border border-light-purple dark:border-[#5356fb29] "
+          selected ? "" : "border border-light-purple dark:border-[#FFAB3329] "
         }`}
       >
         <div className="flex flex-col justify-center items-center">

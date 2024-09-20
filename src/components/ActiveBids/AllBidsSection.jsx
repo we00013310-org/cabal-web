@@ -26,7 +26,7 @@ export default function AllBidsSection({ className, allBids = [] }) {
           <div className="flex justify-center">
             <Link
               to="/market-place"
-              className=" border-b dark:border-[#5356fb29]  border-dark-gray text-dark-gray dark:text-white text-base"
+              className=" border-b dark:border-[#FFAB3329]  border-dark-gray text-dark-gray dark:text-white text-base"
             >
               View Art Work
             </Link>

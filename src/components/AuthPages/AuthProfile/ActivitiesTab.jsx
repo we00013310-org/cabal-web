@@ -43,7 +43,7 @@ export default function ActivitiesTab({ className }) {
       <div className="relative w-full overflow-x-auto sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
-            <tr className="text-base text-thin-light-gray whitespace-nowrap border-b dark:border-[#5356fb29]  default-border-b  ottom ">
+            <tr className="text-base text-thin-light-gray whitespace-nowrap border-b dark:border-[#FFAB3329]  default-border-b  ottom ">
               <td className="py-4 pr-12">List</td>
               <td className="py-4 text-start px-2">Product Name</td>
               <td className="py-4 text-start px-2">Price</td>
@@ -52,7 +52,7 @@ export default function ActivitiesTab({ className }) {
               <td className="py-4 text-start px-2 pr-12">To</td>
               <td className="py-4 ">Time</td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -131,7 +131,7 @@ export default function ActivitiesTab({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -210,7 +210,7 @@ export default function ActivitiesTab({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -289,7 +289,7 @@ export default function ActivitiesTab({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -368,7 +368,7 @@ export default function ActivitiesTab({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -447,7 +447,7 @@ export default function ActivitiesTab({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -526,7 +526,7 @@ export default function ActivitiesTab({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -605,7 +605,7 @@ export default function ActivitiesTab({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01

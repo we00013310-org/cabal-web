@@ -60,7 +60,7 @@ export default function RoomTable({
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
             {/* table heading */}
-            <tr className="text-sm md:text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#5356fb29]  default-border-bottom ">
+            <tr className="text-sm md:text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#FFAB3329]  default-border-bottom ">
               <td className="py-2 w-[240px] md:w-[300px] block whitespace-nowrap">
                 Room
               </td>

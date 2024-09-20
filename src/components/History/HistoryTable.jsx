@@ -31,7 +31,7 @@ export default function HistoryTable({ className }) {
       <div className="relative w-full overflow-x-auto sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
-            <tr className="text-base text-thin-light-gray whitespace-nowrap border-b dark:border-[#5356fb29]  default-border-bottom ">
+            <tr className="text-base text-thin-light-gray whitespace-nowrap border-b dark:border-[#FFAB3329]  default-border-bottom ">
               <td className="py-4">All Product</td>
               <td className="py-4 text-center">Value</td>
               <td className="py-4 text-center">USD</td>
@@ -43,7 +43,7 @@ export default function HistoryTable({ className }) {
 
             {selectedCategory === "All Categories" ? (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -169,7 +169,7 @@ export default function HistoryTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -295,7 +295,7 @@ export default function HistoryTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -421,7 +421,7 @@ export default function HistoryTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -550,7 +550,7 @@ export default function HistoryTable({ className }) {
               </>
             ) : selectedCategory === "Explore" ? (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -676,7 +676,7 @@ export default function HistoryTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -805,7 +805,7 @@ export default function HistoryTable({ className }) {
               </>
             ) : (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -931,7 +931,7 @@ export default function HistoryTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">

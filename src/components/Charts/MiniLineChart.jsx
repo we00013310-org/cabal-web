@@ -88,8 +88,8 @@ export default function MiniLineChart({
 
           return gradient;
         },
-        borderColor: "#5356FB",
-        pointBackgroundColor: "#5356FB",
+        borderColor: "#FFAB33",
+        pointBackgroundColor: "#FFAB33",
       },
       // {
       //   label: 'Data One',

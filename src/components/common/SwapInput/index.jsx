@@ -55,7 +55,7 @@ const SwapInput = ({
                         onClick={() => {
                           onChangeToken(o.id);
                         }}
-                        className="hover:opacity-80 pb-2 text-thin-light-gray tracking-wide text-xs sm:text-sm cursor-pointer flex items-center border-b border-light-purple dark:border-[#5356fb29]"
+                        className="hover:opacity-80 pb-2 text-thin-light-gray tracking-wide text-xs sm:text-sm cursor-pointer flex items-center border-b border-light-purple dark:border-[#FFAB3329]"
                       >
                         <img
                           className="rounded-full w-[20px] h-[20px] mr-2"

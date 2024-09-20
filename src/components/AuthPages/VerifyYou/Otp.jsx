@@ -19,7 +19,7 @@ export default function Otp() {
         className="otp-input-com flex sm:space-x-5 space-x-3 justify-center mb-8"
         id="otp-inputs"
       >
-        <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px]  overflow-hidden relative ">
+        <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px]  overflow-hidden relative ">
           <input
             className="input-field placeholder:text-base leading-14 text-center items-center text-2xl font-bold text-dark-gray dark:text-white w-full h-full bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-2 focus:outline-none"
             type="text"
@@ -27,7 +27,7 @@ export default function Otp() {
             id="otp"
           />
         </div>
-        <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px] overflow-hidden relative ">
+        <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px] overflow-hidden relative ">
           <input
             className="input-field placeholder:text-base text-2xl font-bold leading-14 text-center  text-dark-gray dark:text-white w-full h-full  bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-2 focus:outline-none"
             type="text"
@@ -35,7 +35,7 @@ export default function Otp() {
             id="otp"
           />
         </div>
-        <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px] overflow-hidden relative ">
+        <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px] overflow-hidden relative ">
           <input
             className="input-field placeholder:text-base text-2xl font-bold  leading-14 text-center  text-dark-gray dark:text-white w-full h-full  bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-2 focus:outline-none"
             type="text"
@@ -43,7 +43,7 @@ export default function Otp() {
             id="otp"
           />
         </div>
-        <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px]  overflow-hidden relative ">
+        <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px]  overflow-hidden relative ">
           <input
             className="input-field placeholder:text-base text-2xl font-bold leading-14 text-center  text-dark-gray dark:text-white w-full h-full  bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-2 focus:outline-none"
             type="text"
@@ -51,7 +51,7 @@ export default function Otp() {
             id="otp"
           />
         </div>
-        <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px]  overflow-hidden relative ">
+        <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px]  overflow-hidden relative ">
           <input
             className="input-field placeholder:text-base text-2xl font-bold leading-14 text-center  text-dark-gray dark:text-white w-full h-full  bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-2 focus:outline-none"
             type="text"
@@ -59,7 +59,7 @@ export default function Otp() {
             id="otp"
           />
         </div>
-        <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px] overflow-hidden relative ">
+        <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  sm:w-14 sm:h-14 w-12 h-12 rounded-[50px] overflow-hidden relative ">
           <input
             className="input-field placeholder:text-base text-2xl font-bold  leading-14 text-center text-dark-gray dark:text-white w-full h-full  bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-2 focus:outline-none"
             type="text"

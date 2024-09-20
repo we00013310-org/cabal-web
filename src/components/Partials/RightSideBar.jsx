@@ -95,9 +95,9 @@ export default function RightSideBar() {
                         y2="74.1629"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stopColor="#F539F8" />
-                        <stop offset="0.416763" stopColor="#C342F9" />
-                        <stop offset="1" stopColor="#5356FB" />
+                        <stop stopColor="#ffee99" />
+                        <stop offset="0.416763" stopColor="#ffcd66" />
+                        <stop offset="1" stopColor="#FFAB33" />
                       </linearGradient>
                     </defs>
                   </svg>

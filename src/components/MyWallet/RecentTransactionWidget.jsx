@@ -40,20 +40,20 @@ export default function RecentTransactionWidget() {
               <li
                 onClick={() => filterHander(value.id)}
                 key={value.uniqueId}
-                className={`text-base text-thin-light-gray hover:text-purple border-b dark:border-[#5356fb29]  border-transparent hover:border-purple uppercase ${
+                className={`text-base text-thin-light-gray hover:text-purple border-b dark:border-[#FFAB3329]  border-transparent hover:border-purple uppercase ${
                   filterActive === value.id ? "border-purple text-purple" : ""
                 }`}
               >
                 {value.name}
               </li>
             ))}
-            {/* <li className="text-base text-thin-light-gray hover:text-purple border-b dark:border-[#5356fb29]  border-transparent hover:border-purple uppercase">
+            {/* <li className="text-base text-thin-light-gray hover:text-purple border-b dark:border-[#FFAB3329]  border-transparent hover:border-purple uppercase">
               All
             </li>
-            <li className="text-base text-thin-light-gray hover:text-purple border-b dark:border-[#5356fb29]  border-transparent hover:border-purple uppercase">
+            <li className="text-base text-thin-light-gray hover:text-purple border-b dark:border-[#FFAB3329]  border-transparent hover:border-purple uppercase">
               SEND
             </li>
-            <li className="text-base text-thin-light-gray hover:text-purple border-b dark:border-[#5356fb29]  border-transparent hover:border-purple uppercase">
+            <li className="text-base text-thin-light-gray hover:text-purple border-b dark:border-[#FFAB3329]  border-transparent hover:border-purple uppercase">
               recent
             </li> */}
           </ul>
@@ -64,7 +64,7 @@ export default function RecentTransactionWidget() {
       {filterActive === 2 ? (
         <div className="content">
           <ul>
-            <li className="content-item py-3 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -93,7 +93,7 @@ export default function RecentTransactionWidget() {
                 </div>
               </div>
             </li>
-            <li className="content-item py-3 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -122,7 +122,7 @@ export default function RecentTransactionWidget() {
                 </div>
               </div>
             </li>
-            <li className="content-item py-3 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -156,7 +156,7 @@ export default function RecentTransactionWidget() {
       ) : filterActive === 3 ? (
         <div className="content">
           <ul>
-            <li className="content-item py-3 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -185,7 +185,7 @@ export default function RecentTransactionWidget() {
                 </div>
               </div>
             </li>
-            <li className="content-item py-3 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -219,7 +219,7 @@ export default function RecentTransactionWidget() {
       ) : (
         <div className="content">
           <ul>
-            <li className="content-item py-3 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -248,7 +248,7 @@ export default function RecentTransactionWidget() {
                 </div>
               </div>
             </li>
-            <li className="content-item py-3 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -277,7 +277,7 @@ export default function RecentTransactionWidget() {
                 </div>
               </div>
             </li>
-            <li className="content-item py-3 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">
@@ -306,7 +306,7 @@ export default function RecentTransactionWidget() {
                 </div>
               </div>
             </li>
-            <li className="content-item py-3 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+            <li className="content-item py-3 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
               <div className="flex justify-between items-center">
                 <div className="account-name flex space-x-4 items-center">
                   <div className="icon w-14 h-14 flex justify-center items-center">

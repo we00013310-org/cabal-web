@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function CreateRoomBanner({ className }) {
   return (
     <div
-      className={`create-nft w-full lg:h-[140px] shadow lg:flex rounded-lg justify-between items-center  md:p-9 p-4 bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29] -2 border-pink mb-8 ${
+      className={`create-nft w-full lg:h-[140px] shadow lg:flex rounded-lg justify-between items-center  md:p-9 p-4 bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329] -2 border-pink mb-8 ${
         className || ""
       }`}
     >

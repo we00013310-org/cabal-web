@@ -29,9 +29,9 @@ export default function GradientIcons({ name }) {
               y2="24.727"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_0_1"
@@ -41,9 +41,9 @@ export default function GradientIcons({ name }) {
               y2="24.5763"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
           </defs>
         </svg>
@@ -97,9 +97,9 @@ export default function GradientIcons({ name }) {
               y2="29.8789"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_0_1"
@@ -109,9 +109,9 @@ export default function GradientIcons({ name }) {
               y2="35.4804"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_0_1"
@@ -121,9 +121,9 @@ export default function GradientIcons({ name }) {
               y2="9.43722"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_0_1"
@@ -133,9 +133,9 @@ export default function GradientIcons({ name }) {
               y2="21.0545"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
           </defs>
         </svg>
@@ -221,9 +221,9 @@ export default function GradientIcons({ name }) {
               y2="19.9721"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_0_1"
@@ -233,9 +233,9 @@ export default function GradientIcons({ name }) {
               y2="19.9722"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_0_1"
@@ -245,9 +245,9 @@ export default function GradientIcons({ name }) {
               y2="31.6472"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_0_1"
@@ -257,9 +257,9 @@ export default function GradientIcons({ name }) {
               y2="19.4707"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint4_linear_0_1"
@@ -269,9 +269,9 @@ export default function GradientIcons({ name }) {
               y2="23.3595"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint5_linear_0_1"
@@ -281,9 +281,9 @@ export default function GradientIcons({ name }) {
               y2="24.1373"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint6_linear_0_1"
@@ -293,9 +293,9 @@ export default function GradientIcons({ name }) {
               y2="20.2485"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint7_linear_0_1"
@@ -305,9 +305,9 @@ export default function GradientIcons({ name }) {
               y2="21.804"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint8_linear_0_1"
@@ -317,9 +317,9 @@ export default function GradientIcons({ name }) {
               y2="18.6929"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
             <linearGradient
               id="paint9_linear_0_1"
@@ -329,9 +329,9 @@ export default function GradientIcons({ name }) {
               y2="17.1373"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#F539F8" />
-              <stop offset="0.416763" stopColor="#C342F9" />
-              <stop offset="1" stopColor="#5356FB" />
+              <stop stopColor="#ffee99" />
+              <stop offset="0.416763" stopColor="#ffcd66" />
+              <stop offset="1" stopColor="#FFAB33" />
             </linearGradient>
           </defs>
         </svg>

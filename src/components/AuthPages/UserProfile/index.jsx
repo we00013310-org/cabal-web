@@ -209,7 +209,7 @@ export default function UserProfile() {
                             onClick={() => tabHandler(tabValue.name)}
                           >
                             <span
-                              className={`py-4 sm:border-b   border-b dark:border-[#5356fb29] -none group-hover:border-purple border-transparent lg:text-xl text-sm tracking-wide font-bold  group-hover:text-purple text-dark-gray dark:text-white relative z-10  ${
+                              className={`py-4 sm:border-b   border-b dark:border-[#FFAB3329] -none group-hover:border-purple border-transparent lg:text-xl text-sm tracking-wide font-bold  group-hover:text-purple text-dark-gray dark:text-white relative z-10  ${
                                 tab === tabValue.name
                                   ? "text-purple border-purple "
                                   : "text-dark-gray dark:text-white border-transparent "
@@ -271,7 +271,7 @@ export default function UserProfile() {
         {showFollowerModal && (
           <ModalCom action={openFollowerModal} situation={showFollowerModal}>
             <div className="lg:w-[420px] w-full h-full lg:overflow-hidden lg:rounded-2xl bg-white dark:bg-dark-white  ">
-              <div className="heading flex justify-between items-center py-6  md:px-[30px] px-[23px] border-b  border-light-purple dark:border-[#5356fb29] ">
+              <div className="heading flex justify-between items-center py-6  md:px-[30px] px-[23px] border-b  border-light-purple dark:border-[#FFAB3329] ">
                 <p className="text-26 font-bold text-dark-gray dark:text-white tracking-wide">
                   Followers
                 </p>

@@ -24,7 +24,7 @@ const RoomListItem = ({ data }) => {
       onClick={() => {
         navigate(`/rooms/${data.id}`);
       }}
-      className="animate-fade bg-white dark:bg-dark-white border-b dark:border-[#5356fb29] hover:opacity-80 hover:cursor-pointer"
+      className="animate-fade bg-white dark:bg-dark-white border-b dark:border-[#FFAB3329] hover:opacity-80 hover:cursor-pointer"
     >
       <td className="py-2 md:py-4">
         <div className="flex space-x-2 items-center">

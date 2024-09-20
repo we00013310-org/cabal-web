@@ -169,7 +169,7 @@ export default function AuthProfile() {
                     </Link>
                   </div>
                 </div>
-                <div className="hidden lg:block w-full h-[1px] bg-[#DCD5FE] dark:bg-[#5356fb29] absolute top-[42px] left-0"></div>
+                <div className="hidden lg:block w-full h-[1px] bg-[#DCD5FE] dark:bg-[#FFAB3329] absolute top-[42px] left-0"></div>
               </div>
             </div>
 

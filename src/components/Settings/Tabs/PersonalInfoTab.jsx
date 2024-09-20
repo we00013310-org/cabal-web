@@ -77,7 +77,7 @@ export default function PersonalInfoTab({
                     onChange={(e) => dscrphn(e)}
                     placeholder="provide a detailed description of your item."
                     rows="7"
-                    className="w-full h-full px-7 py-4  border border-light-purple dark:border-[#5356fb29]  rounded-[20px] text-dark-gray dark:text-white bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-0 focus:outline-none"
+                    className="w-full h-full px-7 py-4  border border-light-purple dark:border-[#FFAB3329]  rounded-[20px] text-dark-gray dark:text-white bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-0 focus:outline-none"
                   />
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function PersonalInfoTab({
                   </p>
                 </div>
                 <div>
-                  <p className="text-18 tracking-wide text-[#33AAF2] border-b dark:border-[#5356fb29]  border-[#33AAF2]">
+                  <p className="text-18 tracking-wide text-[#33AAF2] border-b dark:border-[#FFAB3329]  border-[#33AAF2]">
                     Cannect
                   </p>
                 </div>
@@ -273,13 +273,13 @@ export default function PersonalInfoTab({
         </div>
       </div>
       <div className="content-footer w-full">
-        <div className="w-full h-[120px] border-t border-light-purple dark:border-[#5356fb29]  flex justify-end items-center">
+        <div className="w-full h-[120px] border-t border-light-purple dark:border-[#FFAB3329]  flex justify-end items-center">
           <div className="flex space-x-4 mr-9">
             <button
               type="button"
               className="text-18 text-light-red tracking-wide "
             >
-              <span className="border-b dark:border-[#5356fb29]  border-light-red">
+              <span className="border-b dark:border-[#FFAB3329]  border-light-red">
                 {" "}
                 Cancel
               </span>

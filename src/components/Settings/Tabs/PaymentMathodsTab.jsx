@@ -10,7 +10,7 @@ export default function PaymentMathodsTab() {
       <div className="payment-method-tab w-full">
         <div className="payment-item-wrapper w-full">
           <ul className="payment-items">
-            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#5356fb29]  border-light-purple  ">
+            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#FFAB3329]  border-light-purple  ">
               <div className="flex space-x-5 mb-3 sm:mb-0">
                 <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-light-purple dark:bg-dark-light-purple ">
                   <img src={method1} alt="payment" />
@@ -36,7 +36,7 @@ export default function PaymentMathodsTab() {
                 </button>
               </div>
             </li>
-            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#5356fb29]  border-light-purple  ">
+            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#FFAB3329]  border-light-purple  ">
               <div className="flex space-x-5 mb-3 sm:mb-0">
                 <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-light-purple dark:bg-dark-light-purple ">
                   <img src={method2} alt="payment" />
@@ -62,7 +62,7 @@ export default function PaymentMathodsTab() {
                 </button>
               </div>
             </li>
-            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#5356fb29]  border-light-purple  ">
+            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#FFAB3329]  border-light-purple  ">
               <div className="flex space-x-5 mb-3 sm:mb-0">
                 <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-light-purple dark:bg-dark-light-purple ">
                   <img src={method3} alt="payment" />
@@ -88,7 +88,7 @@ export default function PaymentMathodsTab() {
                 </button>
               </div>
             </li>
-            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#5356fb29]  border-light-purple ">
+            <li className="sm:flex justify-between items-center w-full py-[30px] border-b dark:border-[#FFAB3329]  border-light-purple ">
               <div className="flex space-x-5 mb-3 sm:mb-0">
                 <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-light-purple dark:bg-dark-light-purple ">
                   <img src={method4} alt="payment" />

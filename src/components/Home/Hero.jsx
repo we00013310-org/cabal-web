@@ -113,7 +113,7 @@ export default function Hero({ className }) {
             to="/market-place"
             className="text-white text-base sm:block hidden"
           >
-            <span className=" border-b dark:border-[#5356fb29]  border-white">
+            <span className=" border-b dark:border-[#FFAB3329]  border-white">
               {" "}
               View Art Work
             </span>

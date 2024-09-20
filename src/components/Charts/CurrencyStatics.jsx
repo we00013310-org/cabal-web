@@ -67,16 +67,16 @@ export default function CurrencyStatics({
       {
         label: "Dataset 1",
         data: datasetsLtc,
-        borderColor: "#5356FB",
-        backgroundColor: "#5356FB",
+        borderColor: "#FFAB33",
+        backgroundColor: "#FFAB33",
         borderWidth: 5,
       },
       {
         label: "Dataset 2",
         data: datasetsBtc,
         // data: [4, 14, 20, 34, 40, 90, 60, 75, 80, 95],
-        borderColor: "#F539F8",
-        backgroundColor: "#F539F8",
+        borderColor: "#ffee99",
+        backgroundColor: "#ffee99",
         borderWidth: 5,
       },
       {

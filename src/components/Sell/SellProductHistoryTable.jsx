@@ -28,7 +28,7 @@ export default function SellProductHistoryTable({ className }) {
       <div className="relative w-full overflow-x-auto sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
-            <tr className="text-base text-thin-light-gray border-b dark:border-[#5356fb29]  default-border-bottom ">
+            <tr className="text-base text-thin-light-gray border-b dark:border-[#FFAB3329]  default-border-bottom ">
               <td className="py-4">List</td>
               <td className="py-4">Publish date</td>
               <td className="py-4">Product Name</td>
@@ -37,7 +37,7 @@ export default function SellProductHistoryTable({ className }) {
               <td className="py-4 text-center">Tendered</td>
               <td className="py-4 text-center">Earnings</td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   01
@@ -88,7 +88,7 @@ export default function SellProductHistoryTable({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   02
@@ -139,7 +139,7 @@ export default function SellProductHistoryTable({ className }) {
                 </span>
               </td>
             </tr>
-            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+            <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
               <td className="text-start py-4 px-2">
                 <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                   03
@@ -244,7 +244,7 @@ export default function SellProductHistoryTable({ className }) {
 
             {selectedCategory === "All Categories" ? (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
                   <td className="text-start py-4 px-2">
                     <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                       01
@@ -295,7 +295,7 @@ export default function SellProductHistoryTable({ className }) {
                     </span>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
                   <td className="text-start py-4 px-2">
                     <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                       02
@@ -346,7 +346,7 @@ export default function SellProductHistoryTable({ className }) {
                     </span>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
                   <td className="text-start py-4 px-2">
                     <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                       03
@@ -451,7 +451,7 @@ export default function SellProductHistoryTable({ className }) {
               </>
             ) : selectedCategory === "Explore" ? (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
                   <td className="text-start py-4 px-2">
                     <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                       01
@@ -502,7 +502,7 @@ export default function SellProductHistoryTable({ className }) {
                     </span>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
                   <td className="text-start py-4 px-2">
                     <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                       02
@@ -553,7 +553,7 @@ export default function SellProductHistoryTable({ className }) {
                     </span>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
                   <td className="text-start py-4 px-2">
                     <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                       03
@@ -607,7 +607,7 @@ export default function SellProductHistoryTable({ className }) {
               </>
             ) : (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50 ">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50 ">
                   <td className="text-start py-4 px-2">
                     <span className="text-xl tracking-wide font-bold   text-dark-gray dark:text-white">
                       03

@@ -78,7 +78,7 @@ const MessengerWidget = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle opacity="1" cx="21" cy="21" r="21" fill="#5356FB" />
+            <circle opacity="1" cx="21" cy="21" r="21" fill="#FFAB33" />
             <path
               d="M28.0478 17.231L22.7595 22.4236C21.5318 23.6262 19.5445 23.6262 18.3169 22.4236L13.0289 17.231C13.02 17.3284 13 17.4166 13 17.5135V24.9158C13.0021 26.6183 14.4073 27.9982 16.1411 28.0002H24.9359C26.6697 27.9982 28.0749 26.6183 28.0769 24.9158V17.5135C28.0766 17.4166 28.0566 17.3284 28.0478 17.231Z"
               fill="white"
@@ -94,8 +94,8 @@ const MessengerWidget = () => {
   }
 
   return (
-    <div className="fixed z-[1000] h-full w-full bottom-0 right-0 md:bottom-10 md:right-10 md:w-[360px] md:h-[500px] rounded-2xl p-8 flex flex-col justify-between bg-blue-100 dark:bg-dark-white  border-4 dark:border-[#5356fb29]">
-      <div className="flex items-center justify-between pb-2 border-b dark:border-[#5356fb29]  border-light-purple mb-4">
+    <div className="fixed z-[1000] h-full w-full bottom-0 right-0 md:bottom-10 md:right-10 md:w-[360px] md:h-[500px] rounded-2xl p-8 flex flex-col justify-between bg-blue-100 dark:bg-dark-white  border-4 dark:border-[#FFAB3329]">
+      <div className="flex items-center justify-between pb-2 border-b dark:border-[#FFAB3329]  border-light-purple mb-4">
         <h1 className="text-2xl font-bold text-dark-gray dark:text-white tracking-wide">
           Discussion
         </h1>
@@ -129,7 +129,7 @@ const MessengerWidget = () => {
             >
               {message.text}
               {!message.sender.you && (
-                <div className="border-t border-light-purple dark:border-[#5356fb29] mt-2 pt-2  flex items-center space-x-2 lg:mb-0 mr-2">
+                <div className="border-t border-light-purple dark:border-[#FFAB3329] mt-2 pt-2  flex items-center space-x-2 lg:mb-0 mr-2">
                   <div className="w-4 h-4 flex justify-center items-center rounded-full overflow-hidden">
                     <img src={message.sender.img} alt="" />
                   </div>

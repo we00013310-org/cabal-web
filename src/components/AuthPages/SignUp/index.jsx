@@ -133,7 +133,7 @@ export default function SignUp() {
                       </a>
                       <a
                         href="#"
-                        className="w-full border border-light-purple dark:border-[#5356fb29]  rounded-[50px] h-[58px] flex justify-center bg-[#FAFAFA] dark:bg-[#11131F]  items-center"
+                        className="w-full border border-light-purple dark:border-[#FFAB3329]  rounded-[50px] h-[58px] flex justify-center bg-[#FAFAFA] dark:bg-[#11131F]  items-center"
                       >
                         <img
                           className="mr-3"

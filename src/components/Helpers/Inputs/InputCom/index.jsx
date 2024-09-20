@@ -21,7 +21,7 @@ export default function InputCom({
           {label}
         </label>
       )}
-      <div className="input-wrapper border border-light-purple dark:border-[#5356fb29] w-full rounded-[50px] h-[58px] overflow-hidden relative ">
+      <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329] w-full rounded-[50px] h-[58px] overflow-hidden relative ">
         <input
           placeholder={placeholder}
           value={value}

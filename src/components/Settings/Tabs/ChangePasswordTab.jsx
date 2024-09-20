@@ -49,7 +49,7 @@ export default function ChangePasswordTab() {
             >
               Old Password
             </label>
-            <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  w-full rounded-[50px] h-[58px] overflow-hidden relative ">
+            <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  w-full rounded-[50px] h-[58px] overflow-hidden relative ">
               <div className="absolute left-6 bottom-[17px] z-10">
                 <Icons name="password" />
               </div>
@@ -74,7 +74,7 @@ export default function ChangePasswordTab() {
             >
               New Password
             </label>
-            <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  w-full rounded-[50px] h-[58px] overflow-hidden relative ">
+            <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  w-full rounded-[50px] h-[58px] overflow-hidden relative ">
               <div className="absolute left-6 bottom-[17px] z-10">
                 <Icons name="password" />
               </div>
@@ -99,7 +99,7 @@ export default function ChangePasswordTab() {
             >
               Confirm Password
             </label>
-            <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  w-full rounded-[50px] h-[58px] overflow-hidden relative ">
+            <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  w-full rounded-[50px] h-[58px] overflow-hidden relative ">
               <div className="absolute left-6 bottom-[17px] z-10">
                 <Icons name="password" />
               </div>
@@ -120,7 +120,7 @@ export default function ChangePasswordTab() {
           <div className="flex justify-center space-x-4 items-center">
             <button
               type="button"
-              className="text-light-red text-18 tracking-wide border-b dark:border-[#5356fb29]  border-light-red "
+              className="text-light-red text-18 tracking-wide border-b dark:border-[#FFAB3329]  border-light-red "
             >
               Cancel
             </button>

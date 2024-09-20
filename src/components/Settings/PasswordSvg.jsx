@@ -489,7 +489,7 @@ export default function PasswordSvg() {
       <path
         opacity="0.95"
         d="M291.034 239.92L166.497 167.505C159.755 163.612 154.239 153.079 154.239 144.09V137.711C154.239 128.722 159.755 124.556 166.497 128.449L291.034 200.864C297.776 204.757 303.292 215.29 303.292 224.279V230.658C303.28 239.648 297.764 243.813 291.034 239.92Z"
-        fill="#5356FB"
+        fill="#FFAB33"
       />
       <path
         d="M191.477 163.828C191.477 167.267 189.048 168.652 186.052 166.926C183.056 165.201 180.627 161.002 180.627 157.562C180.627 154.123 183.056 152.739 186.052 154.464C189.037 156.2 191.477 160.389 191.477 163.828Z"
@@ -885,7 +885,7 @@ export default function PasswordSvg() {
       />
       <path
         d="M224.992 275.287C222.903 275.492 220.781 275.923 219.998 280.826C219.351 284.856 216.514 309.463 216.514 309.463C216.514 309.463 219.896 313.084 229.531 313.549C236.103 313.867 236.364 312.233 236.364 312.233C236.364 312.233 237.805 297.874 238.736 288.964C239.167 284.81 238.702 283.687 237.431 282.438C236.432 281.462 233.561 279.044 231.472 277.592C229.758 276.422 226.796 275.106 224.992 275.287Z"
-        fill="#F539F8"
+        fill="#ffee99"
       />
       <path
         d="M236.353 312.233C236.353 312.233 237.794 297.897 238.725 288.988C238.725 288.84 238.725 288.692 238.713 288.545L233.447 287.671C233.742 296.558 231.098 311.609 231.098 311.609C231.098 311.609 230.837 313.22 224.413 312.937C225.877 313.232 227.568 313.47 229.532 313.561C236.092 313.879 236.353 312.233 236.353 312.233Z"
@@ -989,7 +989,7 @@ export default function PasswordSvg() {
       />
       <path
         d="M252.105 278.296C251.027 277.819 250.324 278.182 250.324 278.182L244.796 289.941C244.796 289.941 240.552 285.617 239.076 284.141C239.042 284.107 238.917 283.982 238.77 283.823C236.84 284.936 235.036 285.98 233.436 286.899C232.721 288.647 234.185 290.531 237.215 293.062C240.756 296.013 241.766 297.103 244.626 297.852C247.486 298.601 248.86 295.628 249.552 294.061C250.244 292.495 253.921 279.919 253.921 279.919C253.921 279.919 253.195 278.772 252.105 278.296Z"
-        fill="#F539F8"
+        fill="#ffee99"
       />
       <path
         d="M252.503 278.5L247.43 291.621C247.43 291.621 248.871 296.286 246.465 297.818C248.122 297.251 249.041 295.253 249.563 294.073C250.256 292.506 253.933 279.93 253.933 279.93C253.933 279.93 253.365 279.045 252.503 278.5Z"
@@ -1021,9 +1021,9 @@ export default function PasswordSvg() {
           y2="145.054"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F539F8" />
-          <stop offset="0.416763" stopColor="#C342F9" />
-          <stop offset="1" stopColor="#5356FB" />
+          <stop stopColor="#ffee99" />
+          <stop offset="0.416763" stopColor="#ffcd66" />
+          <stop offset="1" stopColor="#FFAB33" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_41_78090"
@@ -1049,9 +1049,9 @@ export default function PasswordSvg() {
           y2="175.871"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F539F8" />
-          <stop offset="0.416763" stopColor="#C342F9" />
-          <stop offset="1" stopColor="#5356FB" />
+          <stop stopColor="#ffee99" />
+          <stop offset="0.416763" stopColor="#ffcd66" />
+          <stop offset="1" stopColor="#FFAB33" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_41_78090"
@@ -1635,9 +1635,9 @@ export default function PasswordSvg() {
           y2="112.382"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F539F8" />
-          <stop offset="0.416763" stopColor="#C342F9" />
-          <stop offset="1" stopColor="#5356FB" />
+          <stop stopColor="#ffee99" />
+          <stop offset="0.416763" stopColor="#ffcd66" />
+          <stop offset="1" stopColor="#FFAB33" />
         </linearGradient>
         <linearGradient
           id="paint35_linear_41_78090"
@@ -1647,9 +1647,9 @@ export default function PasswordSvg() {
           y2="116.05"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F539F8" />
-          <stop offset="0.416763" stopColor="#C342F9" />
-          <stop offset="1" stopColor="#5356FB" />
+          <stop stopColor="#ffee99" />
+          <stop offset="0.416763" stopColor="#ffcd66" />
+          <stop offset="1" stopColor="#FFAB33" />
         </linearGradient>
         <linearGradient
           id="paint36_linear_41_78090"
@@ -2195,9 +2195,9 @@ export default function PasswordSvg() {
           y2="146.893"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F539F8" />
-          <stop offset="0.416763" stopColor="#C342F9" />
-          <stop offset="1" stopColor="#5356FB" />
+          <stop stopColor="#ffee99" />
+          <stop offset="0.416763" stopColor="#ffcd66" />
+          <stop offset="1" stopColor="#FFAB33" />
         </linearGradient>
         <linearGradient
           id="paint75_linear_41_78090"
@@ -2207,9 +2207,9 @@ export default function PasswordSvg() {
           y2="177.92"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F539F8" />
-          <stop offset="0.416763" stopColor="#C342F9" />
-          <stop offset="1" stopColor="#5356FB" />
+          <stop stopColor="#ffee99" />
+          <stop offset="0.416763" stopColor="#ffcd66" />
+          <stop offset="1" stopColor="#FFAB33" />
         </linearGradient>
         <linearGradient
           id="paint76_linear_41_78090"
@@ -2219,9 +2219,9 @@ export default function PasswordSvg() {
           y2="140.377"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F539F8" />
-          <stop offset="0.416763" stopColor="#C342F9" />
-          <stop offset="1" stopColor="#5356FB" />
+          <stop stopColor="#ffee99" />
+          <stop offset="0.416763" stopColor="#ffcd66" />
+          <stop offset="1" stopColor="#FFAB33" />
         </linearGradient>
       </defs>
     </svg>

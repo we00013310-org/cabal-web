@@ -38,7 +38,7 @@ export default function ProductUploadField({
                   className={`w-full h-full bg-white dark:bg-dark-white   rounded-md z-20 relative  flex justify-center items-center ${
                     datas.priceType === "fixed"
                       ? ""
-                      : "border border-light-purple dark:border-[#5356fb29] "
+                      : "border border-light-purple dark:border-[#FFAB3329] "
                   }`}
                 >
                   <div className="flex flex-col justify-center items-center">
@@ -77,7 +77,7 @@ export default function ProductUploadField({
                   className={`w-full h-full bg-white dark:bg-dark-white   rounded-md z-20 relative  flex justify-center items-center ${
                     datas.priceType === "bids"
                       ? ""
-                      : "border border-light-purple dark:border-[#5356fb29] "
+                      : "border border-light-purple dark:border-[#FFAB3329] "
                   }`}
                 >
                   <div className="flex flex-col justify-center items-center">
@@ -116,7 +116,7 @@ export default function ProductUploadField({
                   className={`w-full h-full bg-white dark:bg-dark-white   rounded-md z-20 relative  flex justify-center items-center ${
                     datas.priceType === "auction"
                       ? ""
-                      : "border border-light-purple dark:border-[#5356fb29] "
+                      : "border border-light-purple dark:border-[#FFAB3329] "
                   }`}
                 >
                   <div className="flex flex-col justify-center items-center">
@@ -182,7 +182,7 @@ export default function ProductUploadField({
                   onChange={(e) => dscrphn(e)}
                   placeholder="provide a detailed description of your item."
                   rows="7"
-                  className="w-full h-full px-7 py-4  border border-light-purple dark:border-[#5356fb29]  rounded-[20px] text-dark-gray dark:text-white bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-0 focus:outline-none"
+                  className="w-full h-full px-7 py-4  border border-light-purple dark:border-[#FFAB3329]  rounded-[20px] text-dark-gray dark:text-white bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-0 focus:outline-none"
                 />
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function ProductUploadField({
           <div className="field w-full mb-6">
             <h1 className="field-title">Instant sale price </h1>
             <div className="input-field my-2">
-              <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  w-full rounded-[50px] h-[58px] flex items-center overflow-hidden">
+              <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  w-full rounded-[50px] h-[58px] flex items-center overflow-hidden">
                 <input
                   value={datas.price}
                   onChange={(e) => priceHndlr(e)}
@@ -288,7 +288,7 @@ export default function ProductUploadField({
             <div className="input-field mt-2">
               <div className="sm:flex sm:space-x-5">
                 {/* create collection */}
-                <div className="sm:w-[100px] h-[100px] w-full mb-2 sm:mb-0 rounded-[4px] bg-[#FAFAFA] dark:bg-[#11131F]  border border-light-purple dark:border-[#5356fb29]  flex justify-center items-center cursor-pointer">
+                <div className="sm:w-[100px] h-[100px] w-full mb-2 sm:mb-0 rounded-[4px] bg-[#FAFAFA] dark:bg-[#11131F]  border border-light-purple dark:border-[#FFAB3329]  flex justify-center items-center cursor-pointer">
                   <div>
                     <span className="mb-1 flex justify-center">
                       <svg
@@ -327,7 +327,7 @@ export default function ProductUploadField({
                     </span>
                   </div>
                 </div>
-                <div className="sm:w-[100px] h-[100px] w-full mb-2 sm:mb-0 rounded-[4px] bg-[#FAFAFA] dark:bg-[#11131F]  border border-light-purple dark:border-[#5356fb29]  flex justify-center items-center cursor-pointer">
+                <div className="sm:w-[100px] h-[100px] w-full mb-2 sm:mb-0 rounded-[4px] bg-[#FAFAFA] dark:bg-[#11131F]  border border-light-purple dark:border-[#FFAB3329]  flex justify-center items-center cursor-pointer">
                   <div>
                     <div className="mb-1 flex justify-center ">
                       <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
@@ -343,7 +343,7 @@ export default function ProductUploadField({
                     </span>
                   </div>
                 </div>
-                <div className="sm:w-[100px] h-[100px] w-full mb-2 sm:mb-0 rounded-[4px] bg-[#FAFAFA] dark:bg-[#11131F]  border border-light-purple dark:border-[#5356fb29]  flex justify-center items-center cursor-pointer">
+                <div className="sm:w-[100px] h-[100px] w-full mb-2 sm:mb-0 rounded-[4px] bg-[#FAFAFA] dark:bg-[#11131F]  border border-light-purple dark:border-[#FFAB3329]  flex justify-center items-center cursor-pointer">
                   <div>
                     <div className="mb-1 flex justify-center ">
                       <div className="w-[50px] h-[50px] rounded-full overflow-hidden">

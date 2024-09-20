@@ -17,7 +17,7 @@ export default function DoughnutChart({ dataSets = [] }) {
       {
         label: "# of Votes",
         data: dataSets,
-        backgroundColor: ["#E3E4FE", "#5356FB", "#F539F8", "#FFCD00"],
+        backgroundColor: ["#E3E4FE", "#FFAB33", "#ffee99", "#FFCD00"],
         borderWidth: 0,
       },
     ],

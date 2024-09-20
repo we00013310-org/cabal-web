@@ -289,14 +289,14 @@ export default function UploadProduct() {
                   </div>
                 </div>
                 {/* bottom action */}
-                <div className="w-full h-[120px] bg-red border-t border-light-purple dark:border-[#5356fb29]  flex justify-end items-center">
+                <div className="w-full h-[120px] bg-red border-t border-light-purple dark:border-[#FFAB3329]  flex justify-end items-center">
                   <div className="flex sm:space-x-4 space-x-2 sm:mr-9 mr-2">
                     <button
                       type="button"
                       onClick={cancelUploadModalHandler}
                       className="sm:text-18 text-sm text-light-red tracking-wide "
                     >
-                      <span className="border-b dark:border-[#5356fb29]  border-light-red">
+                      <span className="border-b dark:border-[#FFAB3329]  border-light-red">
                         {" "}
                         Cancel
                       </span>
@@ -327,7 +327,7 @@ export default function UploadProduct() {
                     <div className="preview-upload-product lg:w-[580px] lg:h-[622px] w-full h-full bg-white dark:bg-[#11131F]   lg:rounded-2xl">
                       <div className="w-full h-full flex flex-col justify-between">
                         {/* heading */}
-                        <div className="lg:px-[40px] lg:py-[33px] px-[30px] py-[23px] flex justify-between border-b dark:border-[#5356fb29]  border-light-purple  mb-4 lg:mb-0">
+                        <div className="lg:px-[40px] lg:py-[33px] px-[30px] py-[23px] flex justify-between border-b dark:border-[#FFAB3329]  border-light-purple  mb-4 lg:mb-0">
                           <h1 className="text-dark-gray dark:text-white tracking-wide text-26 font-bold">
                             Item Privew
                           </h1>
@@ -388,7 +388,7 @@ export default function UploadProduct() {
                 {cancelUploadModal && (
                   <ModalCom>
                     <div className="lg:w-[460px] lg:h-[473px] w-full h-full bg-white dark:bg-dark-white   lg:rounded-2xl">
-                      <div className="w-full h-[92px] lg:px-10 lg:py-4 px-[30px] py-[23px] border-b dark:border-[#5356fb29]  border-light-purple  flex justify-between items-center">
+                      <div className="w-full h-[92px] lg:px-10 lg:py-4 px-[30px] py-[23px] border-b dark:border-[#FFAB3329]  border-light-purple  flex justify-between items-center">
                         <h1 className="text-26 tracking-wide font-bold   text-dark-gray dark:text-white">
                           Confirm
                         </h1>

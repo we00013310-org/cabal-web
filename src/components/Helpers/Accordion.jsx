@@ -11,7 +11,7 @@ export default function Accordion({ datas }) {
     <>
       <div className="accordion-item overflow-hidden relative z-[1]">
         <div
-          className="accordion-title-bar flex items-center space-x-3 py-5 border-b  border-light-purple dark:border-[#5356fb29] "
+          className="accordion-title-bar flex items-center space-x-3 py-5 border-b  border-light-purple dark:border-[#FFAB3329] "
           onClick={accordionHandler}
         >
           <div className="accordion-title-icon relative">

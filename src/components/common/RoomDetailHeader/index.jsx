@@ -59,7 +59,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
   return (
     <>
       <div
-        className={`w-full shadow lg:flex rounded-lg justify-between items-center p-4 md:p-8 py-4 md:py-8 bg-white dark:bg-dark-white  border-b dark:border-[#5356fb29] -2 border-pink mb-8 ${
+        className={`w-full shadow lg:flex rounded-lg justify-between items-center p-4 md:p-8 py-4 md:py-8 bg-white dark:bg-dark-white  border-b dark:border-[#FFAB3329] -2 border-pink mb-8 ${
           className || ""
         }`}
       >
@@ -99,7 +99,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center lg:items-start py-4 lg:py-0 lg:justify-end space-y-2 lg:mr-8 border-t lg:border-t-0 border-light-purple dark:border-[#5356fb29]">
+        <div className="flex flex-col items-center lg:items-start py-4 lg:py-0 lg:justify-end space-y-2 lg:mr-8 border-t lg:border-t-0 border-light-purple dark:border-[#FFAB3329]">
           <p className="text-sm sm:text-base text-thin-light-gray">
             Sold Keys:{" "}
             <span className="text-base sm:text-xl text-dark-white dark:text-white">
@@ -119,7 +119,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
             {generateActions()}
           </div>
         </div>
-        <div className="flex flex-col pt-4 lg:py-0 items-center lg:items-start border-t lg:border-t-0 border-light-purple dark:border-[#5356fb29] lg:justify-end space-y-2">
+        <div className="flex flex-col pt-4 lg:py-0 items-center lg:items-start border-t lg:border-t-0 border-light-purple dark:border-[#FFAB3329] lg:justify-end space-y-2">
           <p className="text-sm sm:text-base text-thin-light-gray">
             Owned Keys:{" "}
             <span className="text-base sm:text-xl font-bold text-purple">

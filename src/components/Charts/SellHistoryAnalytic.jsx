@@ -65,13 +65,13 @@ export default function SellHistoryAnalytic() {
       {
         label: "Dataset 1",
         data: [65, 59, 80, 81, 56, 55, 40],
-        backgroundColor: "#5356FB",
+        backgroundColor: "#FFAB33",
         borderRadius: 10,
       },
       {
         label: "Dataset 2",
         data: [87, 98, 23, 51, 12, 78, 35],
-        backgroundColor: "#F539F8",
+        backgroundColor: "#ffee99",
         borderRadius: 10,
       },
     ],

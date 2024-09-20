@@ -47,7 +47,7 @@ const CollateralTab = () => {
           )}
         </div>
       </div>
-      <div className="w-full mt-4 pt-4 sm:mt-8 sm:pt-8 bg-red border-t border-light-purple dark:border-[#5356fb29] flex justify-center items-center">
+      <div className="w-full mt-4 pt-4 sm:mt-8 sm:pt-8 bg-red border-t border-light-purple dark:border-[#FFAB3329] flex justify-center items-center">
         <button
           type="submit"
           className="flex justify-center items-center btn-gradient text-base sm:text-xl rounded-full text-white py-2 w-40 sm:py-2.5"

@@ -28,7 +28,7 @@
   min-width: 0;
 }
 :root {
-  --toastify-color-success: #f539f8;
+  --toastify-color-success: #ffee99;
 }
 
 /* TODO: =================================default================================ */
@@ -43,9 +43,9 @@ html {
 .primary-gradient {
   background: linear-gradient(
     134.38deg,
-    #f539f8 0%,
-    #c342f9 43.55%,
-    #5356fb 104.51%
+    #ffee99 0%,
+    #ffcd66 43.55%,
+    #ffab33 104.51%
   );
 }
 .btn-shine {
@@ -77,9 +77,9 @@ html {
   height: 100%;
   background: linear-gradient(
     134.38deg,
-    #5356fb 0%,
-    #c342f9 43.55%,
-    #f539f8 104.51%
+    #ffab33 0%,
+    #ffcd66 43.55%,
+    #ffee99 104.51%
   );
   opacity: 30%;
 }
@@ -108,17 +108,18 @@ input[type="number"] {
 .btn-gradient {
   background: linear-gradient(
     134.38deg,
-    #f539f8 0%,
-    #c342f9 43.55%,
-    #5356fb 104.51%
+    #ffee99 0%,
+    #ffcd66 43.55%,
+    #ffab33 104.51%
   );
+  color: #1d1f2f;
 }
 .btn-gradient:hover {
   background: linear-gradient(
     134.38deg,
-    #5356fb 0%,
-    #c342f9 43.55%,
-    #f539f8 104.51%
+    #ffab33 0%,
+    #ffcd66 43.55%,
+    #ffee99 104.51%
   );
 }
 
@@ -141,9 +142,9 @@ button:disabled {
 .text-gradient {
   background: linear-gradient(
     134.38deg,
-    #f539f8 0%,
-    #c342f9 43.55%,
-    #5356fb 104.51%
+    #ffee99 0%,
+    #ffcd66 43.55%,
+    #ffab33 104.51%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -152,7 +153,7 @@ button:disabled {
 .border-gradient {
   border: 1px solid transparent;
   background: linear-gradient(to right, white, white),
-    linear-gradient(134.38deg, #f539f8 0%, #c342f9 43.55%, #5356fb 104.51%);
+    linear-gradient(134.38deg, #ffee99 0%, #ffcd66 43.55%, #ffab33 104.51%);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
 }
@@ -188,7 +189,7 @@ button:disabled {
   caret-color: transparent;
 }
 .otp-input-com .input-wrapper:focus-within {
-  border: 2px solid #5356fb;
+  border: 2px solid #FFAB33;
 } */
 
 /* TODO: =================================update password end================================ */
@@ -366,9 +367,9 @@ button:disabled {
   height: 100%;
   background: linear-gradient(
     134.38deg,
-    #5356fb 0%,
-    #c342f9 43.55%,
-    #f539f8 104.51%
+    #ffab33 0%,
+    #ffcd66 43.55%,
+    #ffee99 104.51%
   );
   z-index: -1;
   opacity: 30%;
@@ -456,11 +457,11 @@ button:disabled {
 /* TODO: =================================upload product end================================ */
 .drop-product-upload {
   background-color: #fafafa;
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%235356FB29' stroke-width='1' stroke-dasharray='8%2c8' stroke-dashoffset='12' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23FFAB3329' stroke-width='1' stroke-dasharray='8%2c8' stroke-dashoffset='12' stroke-linecap='square'/%3e%3c/svg%3e");
 }
 
 .drop-product-upload.highlight {
-  border: 2px dashed #5356fb;
+  border: 2px dashed #ffab33;
 }
 .field-title {
   @apply text-base sm:text-xl font-bold tracking-wide text-dark-gray dark:text-white;

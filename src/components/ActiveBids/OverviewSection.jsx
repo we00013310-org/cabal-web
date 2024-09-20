@@ -107,7 +107,7 @@ export default function OverviewSection({ className }) {
                 Place a Bid
               </button>
               <Link to="/market-place" className="text-blue-500 text-base">
-                <span className=" border-b dark:border-[#5356fb29] lue-500">
+                <span className=" border-b dark:border-[#FFAB3329] lue-500">
                   View Art Work
                 </span>
               </Link>

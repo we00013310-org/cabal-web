@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        pink: "#F539F8",
-        purple: "#5356FB",
+        pink: "#ffee99",
+        purple: "#FFAB33",
         "light-gray": "#E5E5E5",
         "thin-light-gray": "#858D98",
         "dark-gray": "#374557",
@@ -18,7 +18,7 @@ export default {
         "light-red": "#EB5757",
         "white-opacity": "#7B7EFC",
         "dark-white": "#1D1F2F",
-        "dark-light-purple": "#5356fb29",
+        "dark-light-purple": "#FFAB3329",
       },
       animation: {
         fly: "fly 6s cubic-bezier(0.75, 0.02, 0.31, 0.87) infinite",

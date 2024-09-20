@@ -67,7 +67,7 @@ export default function Notification() {
             }`}
           >
             <ul>
-              <li className="content-item py-4 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications">
                   <div className="icon">
                     <svg
@@ -95,7 +95,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -105,7 +105,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -131,7 +131,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -141,7 +141,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -176,7 +176,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -212,7 +212,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4 items-center">
                   <div className="icon">
                     <svg
@@ -240,7 +240,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -250,7 +250,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -276,7 +276,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -286,7 +286,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -321,7 +321,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -357,7 +357,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4 items-center">
                   <div className="icon">
                     <svg
@@ -385,7 +385,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -395,7 +395,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -421,7 +421,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -431,7 +431,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -466,7 +466,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -546,7 +546,7 @@ export default function Notification() {
             }`}
           >
             <ul>
-              <li className="content-item py-4 border-b  border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b  border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -556,7 +556,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -582,7 +582,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -592,7 +592,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -627,7 +627,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -663,7 +663,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b   border-light-purple dark:border-[#5356fb29]  hover:border-purple">
+              <li className="content-item py-4 border-b   border-light-purple dark:border-[#FFAB3329]  hover:border-purple">
                 <div className="notifications flex space-x-4 items-center">
                   <div className="icon">
                     <svg
@@ -691,7 +691,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -701,7 +701,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -727,7 +727,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple   hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple   hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -737,7 +737,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -772,7 +772,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple   hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple   hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -852,7 +852,7 @@ export default function Notification() {
             }`}
           >
             <ul>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4 items-center">
                   <div className="icon">
                     <svg
@@ -880,7 +880,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -890,7 +890,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -916,7 +916,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -926,7 +926,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -961,7 +961,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple   hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple   hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -997,7 +997,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4 items-center">
                   <div className="icon">
                     <svg
@@ -1025,7 +1025,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple   hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple   hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -1035,7 +1035,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -1061,7 +1061,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -1071,7 +1071,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -1106,7 +1106,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -1142,7 +1142,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4 items-center">
                   <div className="icon">
                     <svg
@@ -1170,7 +1170,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -1180,7 +1180,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#5356FB" />
+                      <circle cx="26" cy="26" r="26" fill="#FFAB33" />
                       <path
                         d="M25.9481 24.3684C25.4776 24.213 25.0352 24.1246 24.6425 23.9303C21.1636 22.2082 17.6912 20.4687 14.2167 18.7379C13.962 18.6106 13.7656 18.4466 13.7613 18.1423C13.757 17.8251 13.9534 17.6481 14.221 17.5143C17.6718 15.7943 21.1226 14.07 24.5712 12.3456C25.564 11.8493 26.5416 11.9054 27.5214 12.3996C29.7377 13.5153 31.9627 14.6203 34.1834 15.7295C35.3164 16.295 36.4473 16.8625 37.5781 17.4301C37.6429 17.4625 37.7076 17.4927 37.7745 17.5251C38.0335 17.6459 38.2126 17.8337 38.2126 18.1337C38.2126 18.438 38.0205 18.6084 37.7659 18.7336C36.1581 19.5343 34.5525 20.3392 32.9447 21.1399C31.0887 22.0657 29.2414 23.0045 27.3746 23.9066C26.93 24.1224 26.4272 24.2173 25.9481 24.3684Z"
                         fill="white"
@@ -1206,7 +1206,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple   hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple   hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg
@@ -1216,7 +1216,7 @@ export default function Notification() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="26" cy="26" r="26" fill="#F539F8" />
+                      <circle cx="26" cy="26" r="26" fill="#ffee99" />
                       <path
                         d="M36.2507 24.2795C35.8857 25.5416 35.5884 26.7445 35.1694 27.9018C35.0663 28.1874 34.5662 28.505 34.2452 28.5084C30.4894 28.5523 26.7335 28.5371 22.9777 28.5388C22.4218 28.5388 22.067 28.2651 21.9403 27.7329C21.3456 25.2459 20.7458 22.7589 20.1781 20.2668C20.0058 19.5133 20.3488 19.0487 21.0753 19.0436C24.1367 19.0233 27.1981 19.0352 30.3356 19.0352C30.2984 20.6605 30.7411 22.0814 31.9728 23.1644C33.1774 24.2305 34.6017 24.5481 36.2507 24.2795Z"
                         fill="white"
@@ -1251,7 +1251,7 @@ export default function Notification() {
                   </div>
                 </div>
               </li>
-              <li className="content-item py-4 border-b dark:border-[#5356fb29]  border-light-purple  hover:border-purple">
+              <li className="content-item py-4 border-b dark:border-[#FFAB3329]  border-light-purple  hover:border-purple">
                 <div className="notifications flex space-x-4">
                   <div className="icon">
                     <svg

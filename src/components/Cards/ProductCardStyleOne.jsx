@@ -205,7 +205,7 @@ export default function ProductCardStyleOne({ datas, hidden = false }) {
           to="/market-place"
           className="text-dark-gray dark:text-white text-sm"
         >
-          <span className=" border-b dark:border-[#5356fb29]  border-dark-gray ">
+          <span className=" border-b dark:border-[#FFAB3329]  border-dark-gray ">
             View Art Work
           </span>
         </Link>

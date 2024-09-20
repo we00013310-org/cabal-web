@@ -35,7 +35,7 @@ export default function UpdateTable({ className }) {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
             {/* table heading */}
-            <tr className="text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#5356fb29]  default-border-bottom ">
+            <tr className="text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#FFAB3329]  default-border-bottom ">
               <td className="py-4 w-[300px] block whitespace-nowrap">
                 All Product
               </td>
@@ -49,7 +49,7 @@ export default function UpdateTable({ className }) {
             {/* table heading end */}
             {selectedCategory === "All Categories" ? (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -175,7 +175,7 @@ export default function UpdateTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -301,7 +301,7 @@ export default function UpdateTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -427,7 +427,7 @@ export default function UpdateTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -556,7 +556,7 @@ export default function UpdateTable({ className }) {
               </>
             ) : selectedCategory === "Explore" ? (
               <>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -682,7 +682,7 @@ export default function UpdateTable({ className }) {
                     </button>
                   </td>
                 </tr>
-                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+                <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                   <td className=" py-4">
                     <div className="flex space-x-2 items-center">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
@@ -810,7 +810,7 @@ export default function UpdateTable({ className }) {
                 </tr>
               </>
             ) : (
-              <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#5356fb29]  hover:bg-gray-50">
+              <tr className="bg-white dark:bg-dark-white   border-b dark:border-[#FFAB3329]  hover:bg-gray-50">
                 <td className=" py-4">
                   <div className="flex space-x-2 items-center">
                     <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">

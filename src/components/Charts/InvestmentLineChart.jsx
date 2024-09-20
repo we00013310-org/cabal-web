@@ -90,9 +90,9 @@ export default function InvestmentLineChart({ datasets }) {
 
           return gradient;
         },
-        borderColor: "#f539f8",
+        borderColor: "#ffee99",
         pointBorderColor: "#ffffff",
-        pointBackgroundColor: "#f539f8",
+        pointBackgroundColor: "#ffee99",
         pointBorderWidth: 3,
         pointHoverBorderWidth: 3,
       },

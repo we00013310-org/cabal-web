@@ -140,7 +140,7 @@ const SwapTab = ({ roomData, onClose }) => {
       </div>
       {!!dip && (
         <div className="input-field my-2 animate-fade">
-          <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  w-full rounded-full h-[58px] flex items-center overflow-hidden">
+          <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  w-full rounded-full h-[58px] flex items-center overflow-hidden">
             <div className="flex-1 pl-4 sm:pl-8 flex h-full items-center bg-[#FAFAFA] dark:bg-[#11131F] ">
               <div className="flex space-x-1 items-center">
                 <span className="text-dark-gray dark:text-white text-sm sm:text-base mr-1 sm:mr-2">
@@ -177,7 +177,7 @@ const SwapTab = ({ roomData, onClose }) => {
         </div>
       )}
 
-      <div className="w-full mt-4 pt-4 sm:mt-8 sm:pt-8 bg-red border-t border-light-purple dark:border-[#5356fb29] flex justify-center items-center">
+      <div className="w-full mt-4 pt-4 sm:mt-8 sm:pt-8 bg-red border-t border-light-purple dark:border-[#FFAB3329] flex justify-center items-center">
         <button
           onClick={handleSwap}
           className="flex justify-center items-center btn-gradient text-base sm:text-xl rounded-full text-white py-2 w-40 sm:py-2.5"

@@ -102,7 +102,7 @@ const RoomDetailPage = () => {
               <div className="lg:w-1/3 h-full mb-8 lg:mb-0">
                 <div className="sell-month-analytic-card w-full h-full rounded-xl overflow-hidden relative">
                   {/* heading */}
-                  <div className="w-full py-2 sm:py-4 bg-pink flex pl-4 sm:pl-8 items-center">
+                  <div className="w-full py-2 sm:py-4 bg-purple flex pl-4 sm:pl-8 items-center">
                     <h1 className="text-base sm:text-xl font-medium tracking-wide text-white">
                       Profit took this Month
                     </h1>

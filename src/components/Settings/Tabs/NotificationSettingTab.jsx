@@ -11,7 +11,7 @@ export default function NotificationSettingTab() {
     <div className="notification-setting-tab w-full">
       <div className="notification-settings-wrapper w-full">
         <ul className="notification-settings-items w-full">
-          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#5356fb29]  border-light-purple ">
+          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#FFAB3329]  border-light-purple ">
             <div className="sm:flex sm:space-x-4 items-center">
               <div className="w-16 h-16">
                 <svg
@@ -44,9 +44,9 @@ export default function NotificationSettingTab() {
                       y2="62.0225"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stopColor="#F539F8" />
-                      <stop offset="0.416763" stopColor="#C342F9" />
-                      <stop offset="1" stopColor="#5356FB" />
+                      <stop stopColor="#ffee99" />
+                      <stop offset="0.416763" stopColor="#ffcd66" />
+                      <stop offset="1" stopColor="#FFAB33" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -67,7 +67,7 @@ export default function NotificationSettingTab() {
               />
             </div>
           </li>
-          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#5356fb29]  border-light-purple ">
+          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#FFAB3329]  border-light-purple ">
             <div className="sm:flex sm:space-x-4 items-center">
               <div className="w-16 h-16">
                 <svg
@@ -77,7 +77,7 @@ export default function NotificationSettingTab() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <circle cx="30" cy="30" r="30" fill="#5356FB" />
+                  <circle cx="30" cy="30" r="30" fill="#FFAB33" />
                   <path
                     d="M29.9407 28.117C29.3978 27.9377 28.8874 27.8356 28.4342 27.6115C24.4201 25.6243 20.4135 23.6173 16.4044 21.6202C16.1106 21.4733 15.884 21.2841 15.879 20.933C15.874 20.5669 16.1006 20.3627 16.4094 20.2083C20.3911 18.2237 24.3728 16.2341 28.352 14.2445C29.4974 13.6718 30.6255 13.7365 31.756 14.3068C34.3133 15.5942 36.8806 16.8691 39.443 18.149C40.7503 18.8014 42.0551 19.4563 43.3599 20.1112C43.4346 20.1486 43.5093 20.1834 43.5865 20.2208C43.8853 20.3602 44.092 20.5769 44.092 20.923C44.092 21.2741 43.8704 21.4708 43.5766 21.6153C41.7214 22.5391 39.8688 23.4679 38.0136 24.3917C35.8721 25.46 33.7406 26.5432 31.5866 27.5841C31.0737 27.8331 30.4935 27.9426 29.9407 28.117Z"
                     fill="white"
@@ -109,7 +109,7 @@ export default function NotificationSettingTab() {
               />
             </div>
           </li>
-          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#5356fb29]  border-light-purple  ">
+          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#FFAB3329]  border-light-purple  ">
             <div className="sm:flex sm:space-x-4 items-center">
               <div className="w-16 h-16">
                 <svg
@@ -119,7 +119,7 @@ export default function NotificationSettingTab() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <circle cx="30" cy="30" r="30" fill="#F539F8" />
+                  <circle cx="30" cy="30" r="30" fill="#ffee99" />
                   <path
                     d="M41.8287 28.0141C41.4077 29.4703 41.0646 30.8583 40.5811 32.1937C40.4622 32.5232 39.8851 32.8897 39.5147 32.8936C35.1811 32.9443 30.8474 32.9267 26.5138 32.9287C25.8724 32.9287 25.463 32.6129 25.3168 31.9988C24.6306 29.1292 23.9385 26.2596 23.2835 23.3841C23.0847 22.5146 23.4804 21.9785 24.3187 21.9727C27.8511 21.9493 31.3835 21.9629 35.0037 21.9629C34.9608 23.8383 35.4716 25.4778 36.8927 26.7274C38.2827 27.9575 39.9261 28.324 41.8287 28.0141Z"
                     fill="white"
@@ -158,7 +158,7 @@ export default function NotificationSettingTab() {
               />
             </div>
           </li>
-          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#5356fb29]  border-light-purple  ">
+          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#FFAB3329]  border-light-purple  ">
             <div className="sm:flex sm:space-x-4 items-center">
               <div className="w-16 h-16">
                 <svg
@@ -199,7 +199,7 @@ export default function NotificationSettingTab() {
               />
             </div>
           </li>
-          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#5356fb29]  border-light-purple  ">
+          <li className="notification-settings-item sm:flex justify-between items-center mb-4 pb-4 border-b dark:border-[#FFAB3329]  border-light-purple  ">
             <div className="sm:flex sm:space-x-4 items-center">
               <div className="w-16 h-16">
                 <svg

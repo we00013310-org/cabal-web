@@ -138,10 +138,10 @@ export default function UserPage() {
                               {tabValue.content}
                             </span>
                             <span
-                              className={`w-5 h-5 group-hover:bg-pink group-hover:text-white  text-[10px]  rounded-full absolute -top-2 -right-5 flex justify-center items-center ${
+                              className={`w-5 h-5 group-hover:bg-pink group-hover:text-dark-white  text-[10px]  rounded-full absolute -top-2 -right-5 flex justify-center items-center ${
                                 tab === tabValue.name
-                                  ? "text-white bg-pink"
-                                  : "text-thin-light-gray bg-[#F2B8FD]"
+                                  ? "text-white bg-purple"
+                                  : "text-thin-light-gray bg-pink"
                               }`}
                             >
                               {tabValue.number}
@@ -151,7 +151,7 @@ export default function UserPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block w-full h-[1px] bg-[#DCD5FE] dark:bg-[#FFAB3329] absolute top-[42px] left-0"></div>
+                <div className="hidden lg:block w-full h-[1px] bg-[#DCD5FE] dark:bg-[#5356fb29] absolute top-[42px] left-0"></div>
               </div>
             </div>
 

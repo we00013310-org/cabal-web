@@ -70,7 +70,7 @@ const MessengerWidget = () => {
         onClick={() => setToggled(true)}
         className="fixed z-10 bottom-10 right-10 cursor-pointer border-4 rounded-full border-dark-light-purple animate-heartBeat hover:animate-spin"
       >
-        <div className="w-[100px]">
+        <div className="w-14 md:w-24">
           <svg
             width="100%"
             height="100%"

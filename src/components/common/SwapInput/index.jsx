@@ -20,22 +20,22 @@ const SwapInput = ({
   return (
     <div className="rounded-xl bg-[#FAFAFA] dark:bg-[#11131F] border">
       <div className="flex justify-between items-center px-4 pt-2 mb-1">
-        <span className="text-dark-gray dark:text-white">
+        <span className="text-sm sm:text-base text-dark-gray dark:text-white">
           {output ? "To" : "From"}
         </span>
         <div className="flex items-center text-thin-light-gray">
           <span className="scale-50">
             <Icons name="wallet" />
           </span>
-          <span className="font-thin underline">
+          <span className="text-sm sm:text-base font-thin underline">
             {formatNumb(tokenBalance, 6)}
           </span>
         </div>
       </div>
-      <div className="rounded-xl bg-white dark:bg-dark-white p-4 flex items-center">
+      <div className="rounded-xl bg-white dark:bg-dark-white p-2 sm:p-4 flex items-center">
         <div
           onClick={triggerOpt}
-          className="relative cursor-pointer space-x-2 p-4 rounded-lg bg-[#FAFAFA] dark:bg-[#11131F] flex items-center "
+          className="relative cursor-pointer space-x-2 p-2 sm:p-4 rounded-lg bg-[#FAFAFA] dark:bg-[#11131F] flex items-center "
         >
           {!!showOpt && !!listTokens.length && (
             <>
@@ -45,7 +45,7 @@ const SwapInput = ({
               />
               <div
                 style={{ boxShadow: "0px 4px 87px 0px #0000002B" }}
-                className="z-10 absolute left-0 top-0 w-[120px] bg-white dark:bg-dark-white rounded-[4px] p-3  animate-fade"
+                className="z-10 absolute left-0 top-0 w-[120px] bg-white dark:bg-dark-white rounded-md p-3 animate-fade"
               >
                 <ul className="flex flex-col space-y-4">
                   {listTokens.map((o) => {
@@ -55,7 +55,7 @@ const SwapInput = ({
                         onClick={() => {
                           onChangeToken(o.id);
                         }}
-                        className="hover:opacity-80 pb-2 text-thin-light-gray tracking-wide text-sm cursor-pointer flex items-center border-b border-light-purple dark:border-[#5356fb29]"
+                        className="hover:opacity-80 pb-2 text-thin-light-gray tracking-wide text-xs sm:text-sm cursor-pointer flex items-center border-b border-light-purple dark:border-[#5356fb29]"
                       >
                         <img
                           className="rounded-full w-[20px] h-[20px] mr-2"
@@ -73,7 +73,7 @@ const SwapInput = ({
             className="w-[32px] h-[32px] rounded-full overflow-hidden"
             src={token.img}
           />
-          <span className="text-xl font-medium flex-1 text-center text-dark-gray dark:text-white">
+          <span className="text-sm sm:text-base font-medium flex-1 text-center text-dark-gray dark:text-white">
             {token.slug.toUpperCase()}
           </span>
           <span>
@@ -94,13 +94,13 @@ const SwapInput = ({
         </div>
         <div className="flex-1 flex-col">
           <input
-            className="w-full input-field placeholder:text-2xl text-2xl py-2 text-dark-gray text-right dark:text-white bg-transparent focus:ring-0 focus:outline-none"
+            className="w-full input-field   sm:placeholder:text-2xl placeholder:text-xl text-xl sm:text-2xl text-dark-gray text-right dark:text-white bg-transparent focus:ring-0 focus:outline-none"
             type="number"
             placeholder="Input"
             onChange={onChange}
             value={value}
           />
-          <div className="text-right text-sm text-thin-light-gray">
+          <div className="text-right text-xs sm:text-sm text-thin-light-gray">
             ~${formatNumb(token.price * value)}
           </div>
         </div>

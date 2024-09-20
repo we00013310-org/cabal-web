@@ -27,20 +27,20 @@ const TokenRateStatics = ({ listTokens = [] }) => {
   const gap = (selectedToken.price - filterRateStatics[0]).toFixed(2);
 
   return (
-    <div className="chart-two bg-white dark:bg-dark-white h-full rounded-2xl p-8 2xl:w-[268px] w-full 2xl:mb-10 flex flex-col justify-between">
+    <div className="chart-two bg-white dark:bg-dark-white h-full rounded-2xl p-4 sm:p-8 2xl:w-[268px] w-full 2xl:mb-10 flex flex-col justify-between">
       <div>
         {/* dropdown heading */}
-        <div className="flex space-x-2 items-center mb-5 relative cursor-pointer">
+        <div className="flex space-x-2 items-center mb-2 sm:mb-5 relative cursor-pointer">
           {/* icon area */}
           <div className="icon-area">
-            <img className="w-4 h-4" src={selectedToken.img} />
+            <img className="w-4 h-4 sm:w-6 sm:h-6" src={selectedToken.img} />
           </div>
           {/* heading */}
           <div
-            className="heading flex space-x-1 items-center"
+            className="heading flex space-x-2 items-center"
             onClick={() => setRateStaticsDropdown(!rateStaticsDropdown)}
           >
-            <span className="text-xl font-bold   text-dark-gray dark:text-white">
+            <span className="text-base sm:text-xl font-bold text-dark-gray dark:text-white">
               {selectedToken.slug.toUpperCase()} rate
             </span>
             <span className="text-[#374557] dark:text-thin-light-gray">
@@ -73,7 +73,7 @@ const TokenRateStatics = ({ listTokens = [] }) => {
                     <span>
                       <img className="w-4 h-4" src={o.img} />
                     </span>
-                    <span className="text-thin-light-gray text-base tracking-wide">
+                    <span className="text-thin-light-gray text-sm sm:text-base tracking-wide">
                       {o.slug.toUpperCase()} Rate
                     </span>
                   </li>

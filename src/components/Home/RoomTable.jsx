@@ -37,14 +37,14 @@ export default function RoomTable({
 
   return (
     <div
-      className={`update-table w-full p-8 bg-white dark:bg-dark-white   overflow-hidden rounded-2xl section-shadow relative min-h-[520px] ${
+      className={`update-table w-full p-4 md:p-8 bg-white dark:bg-dark-white overflow-hidden rounded-2xl section-shadow relative min-h-[320px] ${
         className || ""
       }`}
     >
       {!hideHeader && (
-        <div className="header w-full sm:flex justify-between items-center mb-5">
+        <div className="header w-full flex justify-between items-center mb-2">
           <div className="flex space-x-2 items-center mb-2 sm:mb-0">
-            <h1 className="text-xl font-bold text-dark-gray dark:text-white tracking-wide">
+            <h1 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white tracking-wide">
               All Rooms
             </h1>
           </div>
@@ -60,12 +60,14 @@ export default function RoomTable({
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody>
             {/* table heading */}
-            <tr className="text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#5356fb29]  default-border-bottom ">
-              <td className="py-4 w-[300px] block whitespace-nowrap">Room</td>
-              <td className="py-4 whitespace-nowrap text-center">Value</td>
-              <td className="py-4 whitespace-nowrap text-center">Sold Keys</td>
-              <td className="py-4 whitespace-nowrap text-center">24H%</td>
-              <td className="py-4 whitespace-nowrap  text-right">Created At</td>
+            <tr className="text-sm md:text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#5356fb29]  default-border-bottom ">
+              <td className="py-2 w-[240px] md:w-[300px] block whitespace-nowrap">
+                Room
+              </td>
+              <td className="py-2 whitespace-nowrap text-center">Value</td>
+              <td className="py-2 whitespace-nowrap text-center">Sold Keys</td>
+              <td className="py-2 whitespace-nowrap text-center">24H%</td>
+              <td className="py-2 whitespace-nowrap  text-right">Created At</td>
             </tr>
             {/* table heading end */}
             {data?.map((o) => {

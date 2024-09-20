@@ -43,20 +43,20 @@ export default function AssetsWidget({ data }) {
 
   return (
     <div
-      className="current-balance-widget w-full h-full rounded-2xl overflow-hidden flex flex-col justify-between  px-8 py-9"
+      className="current-balance-widget w-full h-full rounded-2xl overflow-hidden flex flex-col justify-between px-4 py-4 sm:px-8 sm:py-9"
       style={{
         background: `url(${background}) 0% 0% / cover no-repeat`,
       }}
     >
       <div className="balance">
-        <p className="text-lg text-white opacity-[70%] tracking-wide mb-6">
+        <p className="text-base sm:text-lg text-white opacity-[70%] tracking-wide mb-2 sm:mb-4">
           Current Value
         </p>
-        <p className="text-[44px] font-bold text-white tracking-wide leading-10 mb-2">
+        <p className="text-4xl sm:text-5xl font-bold text-white tracking-wide leading-10 mb-2">
           $ {roomValue}
         </p>
         <p
-          className={`text-lg ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"} tracking-wide`}
+          className={`text-base sm:text-lg ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"} tracking-wide`}
         >
           $ {data["24h"]} ({calculatePercent(data)}%)
         </p>
@@ -86,7 +86,7 @@ export default function AssetsWidget({ data }) {
                     </h3>
                   </div>
                 </div>
-                <p className="font-18 text-white text-center uppercase">
+                <p className="text-sm sm:text-base text-white text-center uppercase">
                   {formatNumb(o.amount)} {o.slug}
                 </p>
               </div>

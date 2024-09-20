@@ -69,14 +69,14 @@ export default function Layout({ children }) {
             }  h-full`}
           >
             {/* header */}
-            <div className="nft-header w-full lg:h-[100px] h-[70px] default-border-bottom dark:border-[#292967]  z-40 xl:sticky fixed top-0 left-0 ">
+            <div className="nft-header w-full sm:h-20 h-14 default-border-bottom dark:border-[#292967]  z-40 xl:sticky fixed top-0 left-0 ">
               <Header
                 sidebarHandler={() => setMobileSidebar.toggle()}
                 onLogout={logOut}
               />
             </div>
             {/* container */}
-            <div className="nft-container 2xl:flex 2xl:space-x-8 h-full mb-12 lg:mt-[140px] mt-24 xl:mt-10">
+            <div className="nft-container 2xl:flex 2xl:space-x-8 h-full mb-12 mt-20 sm:mt-28 xl:mt-10">
               <div className="nft-main-container flex-1">
                 {children && children}
               </div>

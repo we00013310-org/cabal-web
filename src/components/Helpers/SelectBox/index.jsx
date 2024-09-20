@@ -14,6 +14,7 @@ function SelectBox({ datas = [], className, action, contentBodyClasses }) {
     setItem(value);
     setToggle.set(false);
   };
+
   return (
     <>
       {datas.length > 0 && (
@@ -24,7 +25,9 @@ function SelectBox({ datas = [], className, action, contentBodyClasses }) {
             onClick={() => setToggle.toggle()}
             className="flex space-x-1 items-center"
           >
-            <span className="text-sm text-thin-light-gray">{item}</span>
+            <span className="text-sm sm:text-base text-thin-light-gray">
+              {item}
+            </span>
             <span className="text-[#374557] dark:text-thin-light-gray">
               <svg
                 width="13"
@@ -59,7 +62,7 @@ function SelectBox({ datas = [], className, action, contentBodyClasses }) {
                 <li
                   key={value}
                   onClick={(e) => handler(e, value)}
-                  className="text-thin-light-gray tracking-wide text-sm cursor-pointer"
+                  className="text-thin-light-gray tracking-wide text-xs sm:text-sm cursor-pointer"
                 >
                   {value}
                 </li>

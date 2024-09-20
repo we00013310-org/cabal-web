@@ -12,13 +12,13 @@ const ActionTab = ({ data, selected, onClick }) => {
       >
         <div className="flex flex-col justify-center items-center">
           <div
-            className={`w-[48px] h-[48px]  rounded-full flex justify-center items-center ${
+            className={`w-12 h-12 rounded-full flex justify-center items-center ${
               selected ? "primary-gradient" : "bg-[#F2E8FA]"
             }`}
           >
             <GradientIcons name={`${selected ? selectedIcon : icon}`} />
           </div>
-          <p className="text-center text-base tracking-wide mt-1   text-dark-gray dark:text-white">
+          <p className="text-center text-sm sm:text-base tracking-wide mt-1   text-dark-gray dark:text-white">
             {label}
           </p>
         </div>

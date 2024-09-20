@@ -7,10 +7,10 @@ const RoomHistory = ({ roomData }) => {
   let histories = orderBy(roomData?.histories || [], ["createdAt"], ["desc"]);
 
   return (
-    <div className="recent-transaction-widget w-full h-full py-7 px-4 rounded-2xl bg-white dark:bg-dark-white  ">
-      <div className="heading sm:flex items-center px-3">
+    <div className="recent-transaction-widget w-full h-full p-4 sm:p-8 rounded-2xl bg-white dark:bg-dark-white ">
+      <div className="heading sm:flex items-center mb-2 sm:mb-4">
         <div>
-          <h1 className="text-xl font-bold tracking-wide text-dark-gray dark:text-white">
+          <h1 className="text-base sm:text-xl font-bold tracking-wide text-dark-gray dark:text-white">
             Room History
           </h1>
         </div>
@@ -21,18 +21,18 @@ const RoomHistory = ({ roomData }) => {
             return (
               <li
                 key={o.id}
-                className="content-item py-3 border-b border-light-purple dark:border-[#5356fb29]  hover:border-purple"
+                className="content-item py-2 sm:py-3 border-b border-light-purple dark:border-dark-light-purple hover:border-purple"
               >
                 <div className="flex justify-between items-center">
                   <div>
                     <div className="name">
                       <p
                         dangerouslySetInnerHTML={{ __html: o.label }}
-                        className="text-base text-dark-gray dark:text-white font-medium mb-1"
+                        className="text-sm sm:text-base text-dark-gray dark:text-white font-medium mb-1"
                       />
                     </div>
                     <div className="time">
-                      <p className="text-sm text-thin-light-gray font-medium">
+                      <p className="text-xs sm:text-sm text-thin-light-gray font-medium">
                         {formatDistance(new Date(o.createdAt), new Date())}
                       </p>
                     </div>
@@ -44,7 +44,7 @@ const RoomHistory = ({ roomData }) => {
                       return (
                         <p
                           key={o.id + a.id}
-                          className={`animate-fade text-base font-bold ${value >= 0 ? "text-light-green" : "text-light-red"}`}
+                          className={`animate-fade text-sm sm:text-base font-bold ${value >= 0 ? "text-light-green" : "text-light-red"}`}
                         >
                           {value >= 0 ? `+${value}` : value}{" "}
                           {a.id.toUpperCase()}

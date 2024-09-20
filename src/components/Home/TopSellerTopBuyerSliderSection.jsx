@@ -16,9 +16,16 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 426,
+        breakpoint: 320,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -60,7 +67,7 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
           <div className="main-wrapper w-full lg:flex xl:space-x-8 lg:space-x-4">
             <div className="lg:w-1/2 w-full mb-10 lg:mb-0 sm:p-8 p-4 bg-white dark:bg-dark-white   rounded-2xl section-shadow">
               <div className="heading flex justify-between items-center mb-4">
-                <h1 className="text-xl font-bold text-dark-gray dark:text-white tracking-wide">
+                <h1 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white tracking-wide">
                   Top Cabal Leaders
                 </h1>
                 <div className="slider-btns flex space-x-4">
@@ -120,7 +127,7 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
             </div>
             <div className="flex-1 sm:p-8 p-4 bg-white dark:bg-dark-white   rounded-2xl section-shadow">
               <div className="heading flex justify-between items-center mb-4">
-                <h1 className="text-xl font-bold text-dark-gray dark:text-white tracking-wide">
+                <h1 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white tracking-wide">
                   Top Users
                 </h1>
                 <div className="slider-btns flex space-x-4">

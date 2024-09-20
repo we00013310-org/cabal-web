@@ -49,7 +49,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
         onClick={() => {
           buyKey();
         }}
-        className="w-40 h-11 flex justify-center items-center btn-gradient text-base rounded-full text-white"
+        className="flex justify-center items-center btn-gradient text-sm sm:text-base rounded-full text-white py-1.5 w-40 sm:py-2.5"
       >
         Buy Key
       </button>
@@ -59,17 +59,17 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
   return (
     <>
       <div
-        className={`w-full shadow lg:flex rounded-lg justify-between items-center md:p-9 p-4 py-9 bg-white dark:bg-dark-white  border-b dark:border-[#5356fb29] -2 border-pink mb-10 ${
+        className={`w-full shadow lg:flex rounded-lg justify-between items-center p-4 md:p-8 py-4 md:py-8 bg-white dark:bg-dark-white  border-b dark:border-[#5356fb29] -2 border-pink mb-8 ${
           className || ""
         }`}
       >
-        <div className="flex-1 mb-8 lg:mb-0 flex justify-center lg:justify-start">
+        <div className="flex-1 mb-4 lg:mb-0 flex justify-center lg:justify-start">
           <div className="flex space-x-4">
-            <div className="w-24 h-24 flex justify-center items-center rounded-full overflow-hidden">
+            <div className="w-16 h-16 sm:w-24 sm:h-24 flex justify-center items-center rounded-full overflow-hidden">
               <img src={data.img} alt="" />
             </div>
             <div className="flex flex-col">
-              <h1 className="text-4xl text-dark-gray dark:text-white font-bold mb-3">
+              <h1 className="text-2xl sm:text-4xl text-dark-gray dark:text-white font-bold mb-2 sm:mb-3">
                 {data.name}
               </h1>
               <span className="text-base text-thin-light-gray tracking-wide mb-4 flex flex-col-reverse sm:flex-row sm:items-center">
@@ -91,7 +91,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
               {!!data?.owned && (
                 <button
                   onClick={() => showModal(true)}
-                  className="text-white btn-shine text-base rounded-full tracking-wide bg-purple px-4 py-2.5 flex justify-center items-center"
+                  className="text-white btn-shine text-sm sm:text-base rounded-full tracking-wide bg-purple px-4 py-1.5 sm:px-4 sm:py-2.5 flex justify-center items-center"
                 >
                   <span>Manage Room</span>
                 </button>
@@ -100,15 +100,17 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
           </div>
         </div>
         <div className="flex flex-col items-center lg:items-start py-4 lg:py-0 lg:justify-end space-y-2 lg:mr-8 border-t lg:border-t-0 border-light-purple dark:border-[#5356fb29]">
-          <p className="text-thin-light-gray">
+          <p className="text-sm sm:text-base text-thin-light-gray">
             Sold Keys:{" "}
-            <span className="text-xl text-dark-white dark:text-white">
+            <span className="text-base sm:text-xl text-dark-white dark:text-white">
               {data.members} / {data.max}
             </span>
           </p>
           <p className="flex items-center space-x-2">
-            <span className="text-thin-light-gray">Key Price: </span>
-            <span className="text-xl text-dark-white dark:text-white">
+            <span className="text-sm sm:text-base text-thin-light-gray">
+              Key Price:{" "}
+            </span>
+            <span className="text-base sm:text-xl text-dark-white dark:text-white">
               {keyPrice}
             </span>
             <img className="w-[24px] h-[24px] ml-2" src={SolIcon} />
@@ -117,17 +119,24 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
             {generateActions()}
           </div>
         </div>
-        <div className="flex flex-col py-4 lg:py-0 items-center lg:items-start border-t lg:border-t-0 border-light-purple dark:border-[#5356fb29] lg:justify-end space-y-2">
-          <p className="text-thin-light-gray">
+        <div className="flex flex-col pt-4 lg:py-0 items-center lg:items-start border-t lg:border-t-0 border-light-purple dark:border-[#5356fb29] lg:justify-end space-y-2">
+          <p className="text-sm sm:text-base text-thin-light-gray">
             Owned Keys:{" "}
-            <span className="text-xl font-bold text-purple">{ownedKeys}</span>
+            <span className="text-base sm:text-xl font-bold text-purple">
+              {ownedKeys}
+            </span>
           </p>
           <p className="flex items-center space-x-2">
-            <span className="text-thin-light-gray">Sell Price: </span>
-            <span className="text-xl text-dark-white dark:text-white">
+            <span className="text-sm sm:text-base text-thin-light-gray">
+              Sell Price:{" "}
+            </span>
+            <span className="text-base sm:text-xl text-dark-white dark:text-white">
               {+sellPrice.toFixed(4)}
             </span>
-            <img className="w-[24px] h-[24px] ml-2" src={SolIcon} />
+            <img
+              className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] ml-2"
+              src={SolIcon}
+            />
           </p>
           <div className="flex items-center space-x-5 pt-2">
             <button
@@ -135,7 +144,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
               onClick={() => {
                 sellKey();
               }}
-              className="w-40 h-11 flex justify-center items-center btn-gradient text-base rounded-full text-white"
+              className="flex justify-center items-center btn-gradient text-sm sm:text-base rounded-full text-white py-1.5 w-40 sm:py-2.5"
             >
               Sell Key
             </button>

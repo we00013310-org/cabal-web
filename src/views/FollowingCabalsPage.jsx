@@ -14,7 +14,7 @@ const FollowingCabalsPage = () => {
               </h1>
               <RoomTable
                 hideHeader
-                className="my-10"
+                className="my-8"
                 defaultFilter="Following"
               />
 

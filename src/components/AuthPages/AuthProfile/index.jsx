@@ -53,7 +53,7 @@ export default function AuthProfile() {
                   />
                 </div>
               </div>
-              <div className="auth lg:flex justify-between items-center mb-16">
+              <div className="auth lg:flex justify-between items-center mb-8 sm:mb-16">
                 <div className="auth-user-details sm:px-10 px-0 mb-5 lg:mb-0 relative">
                   {/* profile picture */}
                   <div className=" profile-picture sm:block flex justify-center items-center mb-4">
@@ -64,34 +64,34 @@ export default function AuthProfile() {
                     />
                   </div>
                   <div className="auth-user-profile-content">
-                    <div className="mb-4">
-                      <h1 className="text-3xl text-dark-gray dark:text-white tracking-wide sm:text-26 font-bold">
+                    <div className="mb-2 sm:mb-4">
+                      <h1 className="text-2xl sm:text-3xl text-dark-gray dark:text-white tracking-wide sm:text-26 font-bold">
                         {userData.name}
                       </h1>
                     </div>
-                    <div className="sm:w-[437px] w-full mb-4">
-                      <p className="text-thin-light-gray sm:text-base  text-sm tracking-wide leading-2">
+                    <div className="mb-2 sm:mb-4">
+                      <p className="text-thin-light-gray text-sm sm:text-base tracking-wide leading-2">
                         Referral Code:
-                        <span className="ml-2 text-2xl font-bold text-purple">
+                        <span className="ml-2 text-base sm:text-2xl font-bold text-purple">
                           {userData.name.toLowerCase()}
                         </span>
                       </p>
                     </div>
                     <div className="flex text-thin-light-gray sm:text-xl text-sm">
                       <p className="border-r pr-5  border-thin-light-gray">
-                        <span className="font-bold mr-1   text-dark-gray dark:text-white">
+                        <span className="font-bold mr-1 text-dark-gray dark:text-white">
                           49
                         </span>
                         Followers
                       </p>
-                      <p className="border-r px-5  border-thin-light-gray">
-                        <span className="font-bold mr-1   text-dark-gray dark:text-white">
+                      <p className="border-r px-5 border-thin-light-gray">
+                        <span className="font-bold mr-1 text-dark-gray dark:text-white">
                           35
                         </span>
                         Following
                       </p>
                       <p className="pl-5">
-                        <span className="font-bold mr-1   text-dark-gray dark:text-white">
+                        <span className="font-bold mr-1 text-dark-gray dark:text-white">
                           914
                         </span>
                         Favorites
@@ -99,15 +99,19 @@ export default function AuthProfile() {
                     </div>
                   </div>
                 </div>
-                <div className="flex space-x-5 ml-0 sm:ml-10 lg:ml-0">
+                <div className="flex space-x-3 sm:space-x-5 ml-0 sm:ml-10 lg:ml-0">
                   <Link
                     to="/settings"
-                    className="text-white btn-shine text-base rounded-full tracking-wide bg-purple px-4 py-2.5 flex justify-center items-center"
+                    className="text-white btn-shine text-sm sm:text-base rounded-full tracking-wide bg-purple px-4 py-2.5 flex justify-center items-center "
                   >
                     <span>Edit Profile</span>
                   </Link>
-                  <button type="button" className="bg-white   rounded-full p-4">
+                  <button
+                    type="button"
+                    className="bg-white rounded-full p-2 sm:p-4 "
+                  >
                     <svg
+                      className="scale-75 sm:scale-100"
                       width="23"
                       height="22"
                       viewBox="0 0 23 22"
@@ -122,7 +126,7 @@ export default function AuthProfile() {
                   </button>
                 </div>
               </div>
-              <div className="auth-tab-content relative mb-10">
+              <div className="auth-tab-content relative mb-8">
                 <div className="lg:flex justify-between">
                   <div className="tab-items">
                     <ul className="lg:flex lg:space-x-14 space-x-8">
@@ -169,7 +173,7 @@ export default function AuthProfile() {
               </div>
             </div>
 
-            <div className="tab-cotainer w-full mb-10">
+            <div className="tab-cotainer w-full mb-8">
               <RoomTable key={tab} hideHeader defaultFilter={tab} />
             </div>
           </div>

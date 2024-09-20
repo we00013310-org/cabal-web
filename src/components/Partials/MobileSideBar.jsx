@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/images/logo-2.svg";
-import logo3 from "../../assets/images/logo-3.svg";
+import MainLogo from "../../assets/images/logo/main.png";
 import DarkModeContext from "../Contexts/DarkModeContext";
 import Icons from "../Helpers/Icons";
 
@@ -14,9 +13,10 @@ export default function MobileSidebar({ sidebar, action, onLogout }) {
       {/* logo-area */}
       <div className="w-full flex items-center transition-all duration-300 relative ease-in-out mb-14">
         <div className="sidebar-logo enter">
-          <h1 className="font-display text-5xl text-gray-700 dark:text-white">
+          <img src={MainLogo} className="h-12" />
+          {/* <h1 className="font-display text-5xl text-gray-700 dark:text-white">
             Cabal
-          </h1>
+          </h1> */}
         </div>
 
         <span className="absolute right-5 top-5 z-20" onClick={action}>

@@ -1,6 +1,7 @@
 import USERS_DATA from "../data/user_data.json";
 import { v4 as uuidv4 } from "uuid";
 
+// number, value, % range
 export function generateNumbersInRange(x, y, z = 20) {
   const result = [];
 

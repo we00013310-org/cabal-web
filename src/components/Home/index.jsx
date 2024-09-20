@@ -10,8 +10,8 @@ export default function Home() {
     <Layout>
       <div className="home-page-wrapper">
         <CreateRoomBanner />
-        <RoomTable className="mb-10" />
-        <TopSellerTopBuyerSliderSection className="mb-10" />
+        <RoomTable className="my-8" />
+        <TopSellerTopBuyerSliderSection className="mb-8" />
       </div>
     </Layout>
   );

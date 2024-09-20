@@ -64,7 +64,7 @@ export default function RoomValueChart({ datasets, dataLvls }) {
     },
     elements: {
       point: {
-        radius: [6],
+        radius: [2],
         // hoverRadius: 6,
       },
     },
@@ -120,7 +120,7 @@ export default function RoomValueChart({ datasets, dataLvls }) {
 
           return gradients;
         },
-        borderWidth: 4,
+        borderWidth: 1,
         pointBackgroundColor(context) {
           const { chart } = context;
           const { ctx, chartArea } = chart;

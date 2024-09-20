@@ -155,7 +155,7 @@ export default function UserPage() {
               </div>
             </div>
 
-            <div className="tab-cotainer w-full mb-10">
+            <div className="tab-cotainer w-full mb-8">
               <RoomTable key={tab} hideHeader defaultFilter={tab} />
             </div>
           </div>

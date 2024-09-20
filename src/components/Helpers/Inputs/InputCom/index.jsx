@@ -21,12 +21,12 @@ export default function InputCom({
           {label}
         </label>
       )}
-      <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]   w-full rounded-[50px] h-[58px] overflow-hidden relative ">
+      <div className="input-wrapper border border-light-purple dark:border-[#5356fb29] w-full rounded-[50px] h-[58px] overflow-hidden relative ">
         <input
           placeholder={placeholder}
           value={value}
           onChange={inputHandler}
-          className="input-field placeholder:text-base text-bese px-6 text-dark-gray dark:text-white w-full h-full bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-0 focus:outline-none"
+          className="input-field text-sm placeholder:text-sm sm:placeholder:text-base sm:text-base px-4 sm:px-6 text-dark-gray dark:text-white w-full h-full bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-0 focus:outline-none"
           type={type}
           id={name}
         />

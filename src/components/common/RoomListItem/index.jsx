@@ -26,9 +26,9 @@ const RoomListItem = ({ data }) => {
       }}
       className="animate-fade bg-white dark:bg-dark-white border-b dark:border-[#5356fb29] hover:opacity-80 hover:cursor-pointer"
     >
-      <td className=" py-4">
+      <td className="py-2 md:py-4">
         <div className="flex space-x-2 items-center">
-          <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center">
+          <div className="w-10 h-10 md:w-16 md:h-16 rounded-full overflow-hidden flex justify-center items-center">
             <img
               src={data.img || dataImage1}
               alt="data"
@@ -36,7 +36,7 @@ const RoomListItem = ({ data }) => {
             />
           </div>
           <div className="flex flex-col">
-            <h1 className="font-bold text-xl   text-dark-gray dark:text-white">
+            <h1 className="font-bold text-base md:text-xl text-dark-gray dark:text-white">
               {data.name}
             </h1>
             <span className="text-sm text-thin-light-gray">
@@ -45,28 +45,28 @@ const RoomListItem = ({ data }) => {
           </div>
         </div>
       </td>
-      <td className="text-center py-4 px-2">
-        <div className="flex space-x-1 items-center justify-center">
+      <td className="text-center py-2 md:py-4 px-2">
+        <div className="text-sm md:text-base flex space-x-1 items-center justify-center">
           $
-          <span className="ml-1 text-base text-dark-gray dark:text-white font-medium whitespace-nowrap">
+          <span className="ml-1 text-dark-gray dark:text-white font-medium whitespace-nowrap">
             {roomValue}
           </span>
         </div>
       </td>
-      <td className="text-center py-4">
-        <span className="text-base text-dark-gray dark:text-white font-medium">
+      <td className="text-center py-2 md:py-4">
+        <span className="text-sm md:text-base text-dark-gray dark:text-white font-medium">
           {data.members} / {data.max}
         </span>
       </td>
-      <td className="text-center py-4 px-2">
+      <td className="text-center py-2 md:py-4 px-2">
         <span
-          className={`text-base whitespace-nowrap px-2 ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"}`}
+          className={`text-sm md:text-base whitespace-nowrap px-2 ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"}`}
         >
           {data["24h"]} ({calculatePercent(data, roomValue)}%)
         </span>
       </td>
-      <td className="text-right py-4">
-        <span className="text-base text-thin-light-gray whitespace-nowrap px-2">
+      <td className="text-right py-2 md:py-4">
+        <span className="text-sm md:text-base text-thin-light-gray whitespace-nowrap px-2">
           {formatDate(new Date())}
         </span>
       </td>

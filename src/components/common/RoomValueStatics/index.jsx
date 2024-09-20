@@ -28,11 +28,11 @@ export default function RoomValueStatics({ data }) {
     }
   };
   return (
-    <div className="sell-analise w-full md:p-8 p-4 bg-white dark:bg-dark-white   overflow-hidden rounded-2xl section-shadow mb-11">
+    <div className="sell-analise w-full sm:p-8 p-4 bg-white dark:bg-dark-white overflow-hidden rounded-2xl section-shadow mb-8">
       <div className="flex flex-col justify-between h-full">
         <div className="content flex justify-between items-center mb-5">
           <div>
-            <h1 className="text-xl font-bold text-dark-gray dark:text-white tracking-wide">
+            <h1 className="text-base sm:text-xl text-dark-gray dark:text-white tracking-wide">
               Room Value Analize
             </h1>
           </div>

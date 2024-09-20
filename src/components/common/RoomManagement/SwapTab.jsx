@@ -88,10 +88,10 @@ const SwapTab = ({ roomData, onClose }) => {
           handleChangeValueA(valueA);
         }}
       />
-      <div className="relative h-[23px] full flex justify-center">
+      <div className="relative h-6 full flex justify-center">
         <button
           onClick={handleRotate}
-          className="relative top-[-21px] bg-purple w-[63px] h-[63px] text-dark-gray text-4xl dark:text-white rounded-full flex justify-center items-center cursor-pointer transition-transform hover:rotate-180"
+          className="relative top-[-16px] bg-purple w-12 h-12 text-2xl sm:w-16 sm:h-16 text-dark-gray sm:text-4xl dark:text-white rounded-full flex justify-center items-center cursor-pointer transition-transform hover:rotate-180"
         >
           ↓
         </button>
@@ -134,16 +134,16 @@ const SwapTab = ({ roomData, onClose }) => {
             </svg>
           )}
         </button>
-        <span className="text-base  text-dark-gray dark:text-white">
+        <span className="text-sm sm:text-base text-dark-gray dark:text-white">
           Buy Dip
         </span>
       </div>
       {!!dip && (
         <div className="input-field my-2 animate-fade">
-          <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  w-full rounded-[50px] h-[58px] flex items-center overflow-hidden">
-            <div className="flex-1 pl-8 flex h-full items-center bg-[#FAFAFA] dark:bg-[#11131F] ">
+          <div className="input-wrapper border border-light-purple dark:border-[#5356fb29]  w-full rounded-full h-[58px] flex items-center overflow-hidden">
+            <div className="flex-1 pl-4 sm:pl-8 flex h-full items-center bg-[#FAFAFA] dark:bg-[#11131F] ">
               <div className="flex space-x-1 items-center">
-                <span className="text-dark-gray dark:text-white text-base mr-2">
+                <span className="text-dark-gray dark:text-white text-sm sm:text-base mr-1 sm:mr-2">
                   MC ↓ by
                 </span>
                 <span>
@@ -177,10 +177,10 @@ const SwapTab = ({ roomData, onClose }) => {
         </div>
       )}
 
-      <div className="w-full mt-8 pt-8 bg-red border-t border-light-purple dark:border-[#5356fb29] flex justify-center items-center">
+      <div className="w-full mt-4 pt-4 sm:mt-8 sm:pt-8 bg-red border-t border-light-purple dark:border-[#5356fb29] flex justify-center items-center">
         <button
           onClick={handleSwap}
-          className="h-[46px] w-[200px] flex justify-center items-center btn-gradient text-xl rounded-full text-white"
+          className="flex justify-center items-center btn-gradient text-base sm:text-xl rounded-full text-white py-2 w-40 sm:py-2.5"
         >
           Swap
         </button>

@@ -1,7 +1,10 @@
 import { useState } from "react";
+
 import ActionTab from "./ActionTab";
 import SwapTab from "./SwapTab";
 import CollateralTab from "./CollateralTab";
+
+import CloseIcon from "../../../assets/images/icons/close-ic.png";
 
 const tabsData = [
   {
@@ -23,12 +26,18 @@ const RoomManagement = ({ roomData, onClose }) => {
 
   return (
     <div className="lg:w-[580px] sm:w-[450px] w-full rounded-2xl h-auto bg-white dark:bg-dark-white  ">
-      <div className="heading border-b dark:border-[#5356fb29]  border-light-purple lg:px-7 sm:px-5 px-3 py-6 flex items-center justify-between">
-        <h3 className="text-xl font-bold   text-dark-gray dark:text-white">
+      <div className="heading border-b dark:border-[#5356fb29]  border-light-purple lg:px-7 sm:px-5 p-4 flex items-center justify-between">
+        <h3 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white">
           Room Management
         </h3>
+        <button
+          onClick={onClose}
+          className="text-dark-gray dark:text-white cursor-pointer w-[24px] h-[24px] hover:opacity-80"
+        >
+          <img src={CloseIcon} />
+        </button>
       </div>
-      <div className="content lg:px-7 px-3 sm:px-5 py-8">
+      <div className="content p-4 sm:p-8">
         <div className="items flex space-x-5">
           {tabsData.map((o) => {
             return (
@@ -45,7 +54,7 @@ const RoomManagement = ({ roomData, onClose }) => {
             );
           })}
         </div>
-        <div className="mt-8">
+        <div className="mt-4 sm:mt-6">
           {tab === "swap" ? (
             <SwapTab roomData={roomData} onClose={onClose} />
           ) : (

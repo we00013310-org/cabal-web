@@ -32,7 +32,13 @@ ChartJS.register(
   }
 );
 
-export default function SellMonthStatics({ setRGBColor }) {
+export default function SellMonthStatics({
+  setRGBColor,
+  dataSet = [
+    51, 61, 51, 61, 91, 51, 61, 51, 61, 51, 61, 41, 51, 61, 51, 61, 91, 51, 61,
+    51, 61, 51, 61, 41, 51, 61, 51, 61, 91, 51,
+  ],
+}) {
   const rgbColor = setRGBColor;
   const colors = rgbColor.match(/\d+/g).map(Number);
   const [r, g, b] = colors;
@@ -117,10 +123,7 @@ export default function SellMonthStatics({ setRGBColor }) {
     datasets: [
       {
         label: "First dataset",
-        data: [
-          51, 61, 51, 61, 91, 51, 61, 51, 61, 51, 61, 41, 51, 61, 51, 61, 91,
-          51, 61, 51, 61, 51, 61, 41, 51, 61, 51, 61, 91, 51,
-        ],
+        data: dataSet,
         fill: true,
         backgroundColor: () => {
           if (setColor) {
@@ -133,7 +136,7 @@ export default function SellMonthStatics({ setRGBColor }) {
           return false;
         },
         borderColor: `rgb(${setColor})`,
-        borderWidth: 3,
+        borderWidth: 1,
         pointBackgroundColor: `transparent`,
         pointHoverBackgroundColor: `rgb(${setColor})`,
         pointBorderColor: "transparent",

@@ -14,27 +14,25 @@ export default function RoomValueStatics({ data }) {
   const [currencyDataLvl, setCurrencyDataLvl] = useState(
     generateNearestDays(15)
   );
-  const [filterDataSet, setFilterDataSet] = useState(
-    generateNumbersInRange(15, roomValue)
-  );
   const dataSetHandler = (value) => {
     if (value === "Last 30 days") {
       setCurrencyDataLvl(generateNearestDays(30));
-      setFilterDataSet(generateNumbersInRange(30, roomValue));
     } else if (value === "Last 7 days") {
       setCurrencyDataLvl(generateNearestDays(7));
-      setFilterDataSet(generateNumbersInRange(7, roomValue));
     } else {
       setCurrencyDataLvl(generateNearestDays(15));
-      setFilterDataSet(generateNumbersInRange(15, roomValue));
     }
   };
   const chartsData = useMemo(() => {
     return data.assets.map((o) => {
-      const price = tokens.find((i) => i.id === o.id).price;
+      const token = tokens.find((i) => i.id === o.id);
       return {
         label: o.id,
-        data: generateNumbersInRange(currencyDataLvl.length, price * o.amount),
+        data: generateNumbersInRange(
+          currencyDataLvl.length,
+          token.price * o.amount
+        ),
+        color: token.color,
       };
     });
   }, [currencyDataLvl.length, data.assets, tokens]);

@@ -101,6 +101,7 @@ const TokenRateStatics = ({ listTokens = [] }) => {
           height="122px"
           datasets={filterRateStatics}
           label="Price ($)"
+          color={selectedToken.color}
         />
       </div>
     </div>

@@ -34,7 +34,8 @@ ChartJS.register(
 
 export default function MiniLineChart({
   datasets = [],
-  label = '"First dataset"',
+  label = "First dataset",
+  color = "#FFAB33",
 }) {
   const lineChartOptions = {
     type: "line",
@@ -83,13 +84,13 @@ export default function MiniLineChart({
         backgroundColor: () => {
           const chart = document.getElementById("chart").getContext("2d");
           const gradient = chart.createLinearGradient(0, 0, 0, 450);
-          gradient.addColorStop(0, "rgba(83, 86, 251,0.6)");
-          gradient.addColorStop(0.2, "rgba(83, 86, 251, 0.01)");
+          gradient.addColorStop(0, color);
+          gradient.addColorStop(0.3, "rgba(83, 86, 88, 0.01)");
 
           return gradient;
         },
-        borderColor: "#FFAB33",
-        pointBackgroundColor: "#FFAB33",
+        borderColor: color,
+        pointBackgroundColor: color,
       },
       // {
       //   label: 'Data One',

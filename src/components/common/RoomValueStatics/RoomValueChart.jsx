@@ -11,7 +11,6 @@ import React, { useContext } from "react";
 import { Line } from "react-chartjs-2";
 
 import DarkModeContext from "../../Contexts/DarkModeContext";
-import { CHART_COLORS } from "../../../lib/constants";
 
 ChartJS.register(
   CategoryScale,
@@ -112,18 +111,18 @@ export default function RoomValueChart({ chartsData, dataLvls }) {
         //   }
         //   return getGradient(ctx, chartArea);
         // },
-        borderColor: CHART_COLORS[i],
+        borderColor: o.color,
         fill: true,
         backgroundColor: () => {
           const charts = document.getElementById("chart").getContext("2d");
           const gradients = charts.createLinearGradient(0, 0, 0, 550);
-          gradients.addColorStop(0, CHART_COLORS[i]);
+          gradients.addColorStop(0, o.color);
           gradients.addColorStop(1, "rgba(83, 86, 251, 0.01)");
 
           return gradients;
         },
         borderWidth: 1,
-        pointBackgroundColor: CHART_COLORS[i],
+        pointBackgroundColor: o.color,
         // pointBackgroundColor(context) {
         //   const { chart } = context;
         //   const { ctx, chartArea } = chart;

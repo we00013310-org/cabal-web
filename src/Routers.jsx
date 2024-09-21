@@ -69,7 +69,7 @@ const router = createBrowserRouter([
                 element: <RoomDetailPage />,
               },
               {
-                path: "/create-room",
+                path: "/create-cabal",
                 element: <CreateRoomPage />,
               },
               {

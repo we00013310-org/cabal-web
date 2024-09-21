@@ -5,6 +5,8 @@ import background from "../../../assets/images/shape/balance-bg.png";
 import TOKENS_DATA from "../../../data/token_data.json";
 import { useRoomValue } from "../../../hooks/useRoom";
 import { formatNumb } from "../../../lib/number";
+import SolIcon from "../../../assets/images/tokens/sol.svg";
+import { useSolToken } from "../../../hooks/useToken";
 
 const calculatePercent = (room, value) => {
   const prevValue = value - room["24h"];
@@ -17,7 +19,9 @@ const calculatePercent = (room, value) => {
 };
 
 export default function AssetsWidget({ data }) {
+  const solToken = useSolToken();
   const roomValue = useRoomValue(data);
+  const roomPrice = (data.maxSolAmount * 1.0) / data.max;
   const formattedAssets = useMemo(() => {
     const results = [];
 
@@ -48,18 +52,42 @@ export default function AssetsWidget({ data }) {
         background: `url(${background}) 0% 0% / cover no-repeat`,
       }}
     >
-      <div className="balance">
-        <p className="text-base sm:text-lg text-white opacity-[70%] tracking-wide mb-2 sm:mb-4">
-          Current Value
-        </p>
-        <p className="text-4xl sm:text-5xl font-bold text-white tracking-wide leading-10 mb-2">
-          $ {roomValue}
-        </p>
-        <p
-          className={`text-base sm:text-lg ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"} tracking-wide`}
-        >
-          $ {data["24h"]} ({calculatePercent(data)}%)
-        </p>
+      <div className="flex justify-between mb-2">
+        <div className="balance">
+          <p className="text-base sm:text-lg text-white opacity-[70%] tracking-wide mb-2 sm:mb-4">
+            Current Value
+          </p>
+          <p className="text-4xl sm:text-5xl font-bold text-white tracking-wide leading-10 mb-1">
+            $ {roomValue}
+          </p>
+          <p
+            className={`text-base sm:text-lg ${data["24h"] >= 0 ? "text-light-green" : "text-light-red"} tracking-wide`}
+          >
+            $ {data["24h"]} ({calculatePercent(data, roomValue)}%)
+          </p>
+        </div>
+        <div className="key-solds">
+          <p className="text-base sm:text-lg text-white opacity-[70%] tracking-wide mb-2 sm:mb-4">
+            Total Keys sold
+          </p>
+          <p className="text-4xl sm:text-5xl font-bold text-white tracking-wide leading-10 mb-1">
+            {data.members} keys
+          </p>
+          <div className="flex items-center">
+            <p className="text-base sm:text-xl font-bold text-white tracking-wide">
+              {+(data.members * roomPrice).toFixed(4)}
+            </p>
+            <img
+              className="w-4 h-4 sm:w-[20px] sm:h-[20px] ml-1"
+              src={SolIcon}
+            />
+            <p className="text-sm sm:text-base text-white flex items-center ml-1">
+              <span>
+                ~ ${+(solToken.price * data.members * roomPrice).toFixed(4)}
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
       <div className="counters flex space-x-16">
         {formattedAssets.map((o) => {

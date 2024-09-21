@@ -9,7 +9,7 @@ const FollowingCabalsPage = () => {
         <div className="main-wrapper">
           <div className="flex justify-between items-center mb-6">
             <div className="w-full">
-              <h1 className="text-26 font-bold   text-dark-gray dark:text-white">
+              <h1 className="text-26 font-bold text-dark-gray dark:text-white">
                 <span>Following Cabals</span>
               </h1>
               <RoomTable

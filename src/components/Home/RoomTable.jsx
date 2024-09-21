@@ -9,6 +9,7 @@ export default function RoomTable({
   className,
   hideHeader = false,
   defaultFilter,
+  user,
 }) {
   const { data: rawData } = useQuery({
     queryKey: ["rooms"],
@@ -20,6 +21,9 @@ export default function RoomTable({
   );
 
   const data = useMemo(() => {
+    if (user) {
+      return rawData?.filter((o) => o.owner === user);
+    }
     if (selectedCategory === "Owned") {
       return rawData?.filter((o) => o.owned);
     }

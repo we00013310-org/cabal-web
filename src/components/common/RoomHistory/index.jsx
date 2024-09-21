@@ -11,7 +11,7 @@ const RoomHistory = ({ roomData }) => {
       <div className="heading sm:flex items-center mb-2 sm:mb-4">
         <div>
           <h1 className="text-base sm:text-xl font-bold tracking-wide text-dark-gray dark:text-white">
-            Room History
+            Cabal History
           </h1>
         </div>
       </div>

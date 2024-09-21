@@ -11,6 +11,7 @@ import React, { useContext } from "react";
 import { Line } from "react-chartjs-2";
 
 import DarkModeContext from "../../Contexts/DarkModeContext";
+import { CHART_COLORS } from "../../../lib/constants";
 
 ChartJS.register(
   CategoryScale,
@@ -20,7 +21,7 @@ ChartJS.register(
   Tooltip,
   Filler
 );
-export default function RoomValueChart({ datasets, dataLvls }) {
+export default function RoomValueChart({ chartsData, dataLvls }) {
   const darkMode = useContext(DarkModeContext);
   const options = {
     responsive: true,
@@ -46,6 +47,7 @@ export default function RoomValueChart({ datasets, dataLvls }) {
       },
 
       y: {
+        stacked: true,
         beginAtZero: true,
         grid: {
           color: darkMode.theme === "light" ? "#E3E4FE" : "#a7a9b533",
@@ -96,44 +98,44 @@ export default function RoomValueChart({ datasets, dataLvls }) {
   }
   const data = {
     labels,
-    datasets: [
-      {
-        label: "Room Value",
-        data: datasets,
-        // data: [0, 51, 9, "", 31, 6, "", "", "", 71, 51, 60, 5, 51, 21],
-        borderColor(context) {
-          const { chart } = context;
-          const { ctx, chartArea } = chart;
+    datasets: chartsData.map((o, i) => {
+      return {
+        label: o.label,
+        data: o.data,
+        // borderColor(context) {
+        //   const { chart } = context;
+        //   const { ctx, chartArea } = chart;
 
-          if (!chartArea) {
-            // This case happens on initial chart load
-            return null;
-          }
-          return getGradient(ctx, chartArea);
-        },
+        //   if (!chartArea) {
+        //     // This case happens on initial chart load
+        //     return null;
+        //   }
+        //   return getGradient(ctx, chartArea);
+        // },
+        borderColor: CHART_COLORS[i],
         fill: true,
         backgroundColor: () => {
           const charts = document.getElementById("chart").getContext("2d");
           const gradients = charts.createLinearGradient(0, 0, 0, 550);
-          gradients.addColorStop(0, "rgba(245, 57, 248,0.6)");
+          gradients.addColorStop(0, CHART_COLORS[i]);
           gradients.addColorStop(1, "rgba(83, 86, 251, 0.01)");
 
           return gradients;
         },
         borderWidth: 1,
-        pointBackgroundColor(context) {
-          const { chart } = context;
-          const { ctx, chartArea } = chart;
+        pointBackgroundColor: CHART_COLORS[i],
+        // pointBackgroundColor(context) {
+        //   const { chart } = context;
+        //   const { ctx, chartArea } = chart;
 
-          if (!chartArea) {
-            // This case happens on initial chart load
-            return null;
-          }
-          return getGradient(ctx, chartArea);
-        },
-        // pointBorderWidth: 3,
-      },
-    ],
+        //   if (!chartArea) {
+        //     // This case happens on initial chart load
+        //     return null;
+        //   }
+        //   return getGradient(ctx, chartArea);
+        // },
+      };
+    }),
   };
   return <Line options={options} data={data} />;
 }

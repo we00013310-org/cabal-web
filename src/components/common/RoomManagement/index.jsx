@@ -28,7 +28,7 @@ const RoomManagement = ({ roomData, onClose }) => {
     <div className="lg:w-[580px] sm:w-[450px] w-full rounded-2xl h-auto bg-white dark:bg-dark-white  ">
       <div className="heading border-b dark:border-[#FFAB3329]  border-light-purple lg:px-7 sm:px-5 p-4 flex items-center justify-between">
         <h3 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white">
-          Room Management
+          Cabal Management
         </h3>
         <button
           onClick={onClose}

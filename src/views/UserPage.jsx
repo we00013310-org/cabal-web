@@ -30,7 +30,7 @@ export default function UserPage() {
       id: 2,
       name: "Following",
       content: "Following",
-      number: joinedRooms?.length || 0,
+      number: ownedRooms?.length || 0,
     },
   ];
 
@@ -156,7 +156,12 @@ export default function UserPage() {
             </div>
 
             <div className="tab-cotainer w-full mb-8">
-              <RoomTable key={tab} hideHeader defaultFilter={tab} />
+              <RoomTable
+                user={userData.name}
+                key={tab}
+                hideHeader
+                defaultFilter={tab}
+              />
             </div>
           </div>
         </div>

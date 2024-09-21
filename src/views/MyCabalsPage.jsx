@@ -13,7 +13,7 @@ const MyCabalsPage = () => {
                 <span>My Cabals</span>
               </h1>
               <RoomTable hideHeader className="my-4" defaultFilter="Owned" />
-              <CreateRoomBanner />
+              <CreateRoomBanner className="my-4" />
             </div>
           </div>
         </div>

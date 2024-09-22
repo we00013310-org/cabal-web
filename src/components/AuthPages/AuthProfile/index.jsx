@@ -27,8 +27,8 @@ export default function AuthProfile() {
     },
     {
       id: 2,
-      name: "Following",
-      content: "Following",
+      name: "Investing",
+      content: "Investing",
       number: joinedRooms?.length || 0,
     },
   ];

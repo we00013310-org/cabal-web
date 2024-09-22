@@ -12,10 +12,10 @@ const CreateRoomPage = () => {
 
   const { mutate } = useMutation({
     mutationFn: createRoom,
-    onSuccess: () => {
+    onSuccess: (data) => {
       toast.success("Cabal created successfully!");
       queryClient.invalidateQueries({ queryKey: ["rooms"] });
-      navigate("/");
+      navigate(`/rooms/${data.id}`);
     },
   });
 

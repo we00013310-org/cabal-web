@@ -17,7 +17,6 @@ export default function UserPage() {
   });
   const userData = USERS_DATA.datas.find((o) => o.id === id);
   const ownedRooms = rawData?.filter((o) => o.owner === userData.name);
-  const joinedRooms = rawData?.filter((o) => o.joined);
 
   const tabs = [
     {
@@ -28,8 +27,8 @@ export default function UserPage() {
     },
     {
       id: 2,
-      name: "Following",
-      content: "Following",
+      name: "Investing",
+      content: "Investing",
       number: ownedRooms?.length || 0,
     },
   ];
@@ -156,12 +155,7 @@ export default function UserPage() {
             </div>
 
             <div className="tab-cotainer w-full mb-8">
-              <RoomTable
-                user={userData.name}
-                key={tab}
-                hideHeader
-                defaultFilter={tab}
-              />
+              <RoomTable user={userData.name} key={tab} hideHeader />
             </div>
           </div>
         </div>

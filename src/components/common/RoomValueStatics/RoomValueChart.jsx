@@ -20,7 +20,7 @@ ChartJS.register(
   Tooltip,
   Filler
 );
-export default function RoomValueChart({ chartsData, dataLvls }) {
+export default function RoomValueChart({ chartsData = [], dataLvls }) {
   const darkMode = useContext(DarkModeContext);
   const options = {
     responsive: true,

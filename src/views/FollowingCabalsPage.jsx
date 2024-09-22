@@ -10,12 +10,12 @@ const FollowingCabalsPage = () => {
           <div className="flex justify-between items-center mb-6">
             <div className="w-full">
               <h1 className="text-26 font-bold text-dark-gray dark:text-white">
-                <span>Following Cabals</span>
+                <span>Investing Cabals</span>
               </h1>
               <RoomTable
                 hideHeader
                 className="my-8"
-                defaultFilter="Following"
+                defaultFilter="Investing"
               />
 
               <CreateRoomBanner />

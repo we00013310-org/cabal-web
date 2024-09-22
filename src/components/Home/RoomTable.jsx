@@ -21,7 +21,7 @@ export default function RoomTable({
     queryKey: ["rooms"],
     queryFn: fetchRooms,
   });
-  const filterCategories = ["All", "Owned", "Following"];
+  const filterCategories = ["All", "Owned", "Investing"];
   const [selectedCategory, setCategory] = useState(
     defaultFilter || filterCategories[0]
   );
@@ -44,7 +44,7 @@ export default function RoomTable({
       results = rawData?.filter((o) => o.owned);
     }
 
-    if (selectedCategory === "Following") {
+    if (selectedCategory === "Investing") {
       results = rawData?.filter((o) => o.joined);
     }
 

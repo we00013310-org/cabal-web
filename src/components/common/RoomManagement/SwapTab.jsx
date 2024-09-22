@@ -30,10 +30,10 @@ const SwapTab = ({ roomData, onClose }) => {
   });
 
   const tokenABalance = useMemo(() => {
-    return roomData.assets.find((o) => o.id === tokenA)?.amount || 0;
+    return roomData.assets?.find((o) => o.id === tokenA)?.amount || 0;
   }, [roomData.assets, tokenA]);
   const tokenBBalance = useMemo(() => {
-    return roomData.assets.find((o) => o.id === tokenB)?.amount || 0;
+    return roomData.assets?.find((o) => o.id === tokenB)?.amount || 0;
   }, [roomData.assets, tokenB]);
 
   const handleRotate = () => {
@@ -179,6 +179,7 @@ const SwapTab = ({ roomData, onClose }) => {
 
       <div className="w-full mt-4 pt-4 sm:mt-8 sm:pt-8 bg-red border-t border-light-purple dark:border-[#FFAB3329] flex justify-center items-center">
         <button
+          disabled={!tokenABalance}
           onClick={handleSwap}
           className="flex justify-center items-center btn-gradient text-base sm:text-xl rounded-full text-white py-2 w-40 sm:py-2.5"
         >

@@ -17,6 +17,9 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
   const keyPrice = data.price;
 
   const sellPrice = useMemo(() => {
+    if (!data.members) {
+      return null;
+    }
     const solLeft = data.assets?.find((o) => o.id === "sol")?.amount || 0;
 
     return (solLeft * 1.0) / data.members;
@@ -128,7 +131,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
               Sell Price:{" "}
             </span>
             <span className="text-base sm:text-xl text-dark-white dark:text-white">
-              {+sellPrice.toFixed(4)}
+              {sellPrice ? +sellPrice.toFixed(4) : "-"}
             </span>
             <img
               className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] ml-2"

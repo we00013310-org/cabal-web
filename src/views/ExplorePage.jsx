@@ -27,7 +27,7 @@ const ExplorePage = () => {
       <div className="home-page-wrapper">
         <div className="mb-4 sm:mb-6">
           <h1 className="sm:text-2xl text-xl font-bold text-dark-gray dark:text-white">
-            <span>Cabals Explore</span>
+            <span>Explore Cabals</span>
           </h1>
         </div>
 

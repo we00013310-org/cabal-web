@@ -115,7 +115,7 @@ export default function MobileSidebar({ sidebar, action, onLogout }) {
                     <Icons name="heart" />
                   </span>
                   <span className="item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium active flex-1">
-                    Following Cabals
+                    Investing Cabals
                   </span>
                 </NavLink>
               </li>

@@ -19,7 +19,10 @@ export default function JoinRoomBanner({ className }) {
       </div>
       <div className="flex-1 flex justify-center lg:justify-end">
         <div className="flex items-center space-x-5">
-          <Link className="px-8 py-2 flex justify-center items-center btn-gradient text-base rounded-full text-white">
+          <Link
+            to="/explore"
+            className="px-8 py-2 flex justify-center items-center btn-gradient text-base rounded-full text-white"
+          >
             JOIN A CABAL
           </Link>
         </div>

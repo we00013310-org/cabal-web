@@ -126,7 +126,7 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                       sidebar ? "active flex-1" : "w-0"
                     }`}
                   >
-                    Cabals Explore
+                    Explore Cabals
                   </span>
                 </NavLink>
               </li>
@@ -166,7 +166,7 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                       sidebar ? "active flex-1" : "w-0"
                     }`}
                   >
-                    Following Cabals
+                    Investing Cabals
                   </span>
                 </NavLink>
               </li>

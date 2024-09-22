@@ -24,7 +24,7 @@ export default function RoomValueStatics({ data }) {
     }
   };
   const chartsData = useMemo(() => {
-    return data.assets.map((o) => {
+    return data.assets?.map((o) => {
       const token = tokens.find((i) => i.id === o.id);
       return {
         label: o.id,

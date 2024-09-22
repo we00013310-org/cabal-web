@@ -21,7 +21,7 @@ const calculatePercent = (room, value) => {
 export default function AssetsWidget({ data }) {
   const solToken = useSolToken();
   const roomValue = useRoomValue(data);
-  const roomPrice = (data.maxSolAmount * 1.0) / data.max;
+  const roomPrice = data.price;
   const formattedAssets = useMemo(() => {
     const results = [];
 

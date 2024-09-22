@@ -162,10 +162,10 @@ export default function AuthProfile() {
                   </div>
                   <div style={{ transform: "translateY(-22px)" }}>
                     <Link
-                      to="/create-room"
+                      to="/create-cabal"
                       className="btn-gradient lg:flex hidden w-[153px] h-[46px] rounded-full text-white justify-center items-center"
                     >
-                      Create Room
+                      Create Cabal
                     </Link>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function AuthProfile() {
             </div>
 
             <div className="tab-cotainer w-full mb-8">
-              <RoomTable key={tab} hideHeader defaultFilter={tab} />
+              <RoomTable key={tab} hideHeader user="Nuoanunu" />
             </div>
           </div>
         </div>

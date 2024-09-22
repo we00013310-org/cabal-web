@@ -636,9 +636,19 @@ TODO: components ===========================
   background-color: #1d1f2f;
 }
 html.dark body {
-  background-image: url("./assets/images/background-dark.svg");
+  /* background-image: url("./assets/images/background-dark.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background: linear-gradient(
+    195deg,
+    rgba(71, 63, 39, 1) 0%,
+    rgba(40, 40, 45, 1) 19%,
+    rgba(29, 31, 47, 1) 39%,
+    rgba(47, 45, 44, 1) 55%,
+    rgba(39, 39, 45, 1) 71%,
+    rgba(37, 37, 46, 1) 88%,
+    rgba(82, 71, 37, 1) 100%
+  );
 }
 .dark .preview-upload-product {
   background: none;
@@ -656,7 +666,17 @@ TODO: Responsive ===========================
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
   html.dark body {
-    background-image: url("./assets/images/background-dark.svg");
+    /* background-image: url("./assets/images/background-dark.svg"); */
+    background: linear-gradient(
+      195deg,
+      rgba(71, 63, 39, 1) 0%,
+      rgba(40, 40, 45, 1) 19%,
+      rgba(29, 31, 47, 1) 39%,
+      rgba(47, 45, 44, 1) 55%,
+      rgba(39, 39, 45, 1) 71%,
+      rgba(37, 37, 46, 1) 88%,
+      rgba(82, 71, 37, 1) 100%
+    );
   }
 }
 @media (max-width: 1536px) {

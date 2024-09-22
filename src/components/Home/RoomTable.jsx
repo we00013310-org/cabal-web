@@ -1,16 +1,22 @@
 import React, { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
+import orderBy from "lodash/orderBy";
 
 import SelectBox from "../Helpers/SelectBox";
 import RoomListItem from "../common/RoomListItem";
 import { fetchRooms } from "../../lib/apis/room";
+import { PER_PAGE } from "../../lib/constants";
 
 export default function RoomTable({
   className,
   hideHeader = false,
   defaultFilter,
   user,
+  hideShowMore = false,
+  sort,
+  search,
 }) {
+  const [nItems, setNItems] = useState(PER_PAGE);
   const { data: rawData } = useQuery({
     queryKey: ["rooms"],
     queryFn: fetchRooms,
@@ -20,24 +26,56 @@ export default function RoomTable({
     defaultFilter || filterCategories[0]
   );
 
+  const handleShowMore = () => {
+    setNItems((o) => o + PER_PAGE);
+  };
+
   const data = useMemo(() => {
+    if (!rawData) {
+      return [];
+    }
+
+    let results = rawData;
+
     if (user) {
-      return rawData?.filter((o) => o.owner === user);
+      results = rawData?.filter((o) => o.owner === user);
     }
     if (selectedCategory === "Owned") {
-      return rawData?.filter((o) => o.owned);
+      results = rawData?.filter((o) => o.owned);
     }
 
     if (selectedCategory === "Following") {
-      return rawData?.filter((o) => o.joined);
+      results = rawData?.filter((o) => o.joined);
     }
 
-    return rawData;
-  }, [rawData, selectedCategory]);
+    if (sort === "Trending") {
+      results = orderBy(results, ["value"], ["desc"]);
+    }
+    if (sort === "New") {
+      results = orderBy(results, ["createdAt"], ["desc"]);
+    }
+
+    if (search) {
+      results = results.filter((o) => {
+        return (
+          o.name.toLowerCase().includes(search.toLowerCase()) ||
+          o.owner.toLowerCase().includes(search.toLowerCase())
+        );
+      });
+    }
+
+    return results;
+  }, [rawData, user, selectedCategory, sort, search]);
 
   if (!data?.length) {
     return null;
   }
+
+  if (search && !data.length) {
+    <div className="w-full text-center">No Data</div>;
+  }
+
+  const hasShowMore = !hideShowMore && data.length > nItems;
 
   return (
     <div
@@ -49,7 +87,7 @@ export default function RoomTable({
         <div className="header w-full flex justify-between items-center mb-2">
           <div className="flex space-x-2 items-center mb-2 sm:mb-0">
             <h1 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white tracking-wide">
-              All Rooms
+              All Cabals
             </h1>
           </div>
           <SelectBox
@@ -66,7 +104,7 @@ export default function RoomTable({
             {/* table heading */}
             <tr className="text-sm md:text-base text-thin-light-gray whitespace-nowrap px-2 border-b dark:border-[#FFAB3329]  default-border-bottom ">
               <td className="py-2 w-[240px] md:w-[300px] block whitespace-nowrap">
-                Room
+                Cabal
               </td>
               <td className="py-2 whitespace-nowrap text-center">Value</td>
               <td className="py-2 whitespace-nowrap text-center">Sold Keys</td>
@@ -74,11 +112,21 @@ export default function RoomTable({
               <td className="py-2 whitespace-nowrap  text-right">Created At</td>
             </tr>
             {/* table heading end */}
-            {data?.map((o) => {
+            {data?.slice(0, nItems)?.map((o) => {
               return <RoomListItem key={o.id} data={o} />;
             })}
           </tbody>
         </table>
+        {!!hasShowMore && (
+          <div className="w-full flex justify-center items-center mt-2">
+            <button
+              onClick={handleShowMore}
+              className="w-full py-2 flex justify-center items-center hover:opacity-80 border border-dark-light-purple dark:border-purple text-base rounded-full text-dark-light-purple dark:text-purple"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

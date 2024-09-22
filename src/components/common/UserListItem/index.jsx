@@ -44,9 +44,9 @@ const UserListItem = ({ data, type = "creator" }) => {
       <div className="flex justify-center">
         <div className="flex space-x-1 items-center text-purple text-xs">
           {type === "creator" ? (
-            <span>Owned {data.owned_rooms} Rooms</span>
+            <span>Owned {data.owned_rooms} Cabals</span>
           ) : (
-            <span>Joined {data.joined_rooms} Rooms</span>
+            <span>Joined {data.joined_rooms} Cabals</span>
           )}
         </div>
       </div>

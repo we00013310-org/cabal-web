@@ -27,6 +27,7 @@ import CreateRoomPage from "./views/CreateRoomPage";
 import MyCabalsPage from "./views/MyCabalsPage";
 import FollowingCabalsPage from "./views/FollowingCabalsPage";
 import UserPage from "./views/UserPage";
+import ExplorePage from "./views/ExplorePage";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
               {
                 path: "/users/:id",
                 element: <UserPage />,
+              },
+              {
+                path: "/explore",
+                element: <ExplorePage />,
               },
               {
                 path: "/active-bids",

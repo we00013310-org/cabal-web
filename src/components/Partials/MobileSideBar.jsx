@@ -83,6 +83,19 @@ export default function MobileSidebar({ sidebar, action, onLogout }) {
               <li className="item group">
                 <NavLink
                   className="nav-item flex items-center justify-start space-x-3.5"
+                  to="/explore"
+                >
+                  <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full   text-dark-gray dark:text-white">
+                    <Icons name="deep-search" />
+                  </span>
+                  <span className="item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium active flex-1">
+                    Explore Cabals
+                  </span>
+                </NavLink>
+              </li>
+              <li className="item group">
+                <NavLink
+                  className="nav-item flex items-center justify-start space-x-3.5"
                   to="/my-cabals"
                 >
                   <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full   text-dark-gray dark:text-white">

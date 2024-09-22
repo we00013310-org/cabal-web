@@ -35,7 +35,7 @@ const RoomDetailPage = () => {
     return null;
   }
 
-  const roomPrice = (data.maxSolAmount * 1.0) / data.max;
+  const roomPrice = data.price;
   const initValue = solToken.price * data.members * roomPrice;
   const profit = roomValue - initValue;
 

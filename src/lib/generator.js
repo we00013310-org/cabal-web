@@ -22,9 +22,13 @@ export function generateNumbersInRange(x, y, z = 20) {
   return result;
 }
 
-export function getRandomMessages() {
+const getRandomUser = () => {
   const users = USERS_DATA.datas;
 
+  return users[Math.floor(Math.random() * users.length)];
+};
+
+export function getRandomMessages() {
   // Helper function to generate random text
   const getRandomText = () => {
     const texts = [
@@ -44,11 +48,6 @@ export function getRandomMessages() {
     return texts[Math.floor(Math.random() * texts.length)];
   };
 
-  // Randomly pick a user from the users array
-  const getRandomUser = () => {
-    return users[Math.floor(Math.random() * users.length)];
-  };
-
   // Generate a random number between 0 and 3 (inclusive)
   const numberOfMessages = Math.ceil(Math.random() * 4);
 
@@ -61,3 +60,54 @@ export function getRandomMessages() {
 
   return messages;
 }
+
+const getRandomCabalName = () => {
+  const groupNames = [
+    "Pump Chasers",
+    "HODL Army",
+    "Moonshot Crew",
+    "Whale Watchers",
+    "FOMO Squad",
+    "Crypto DeGens",
+    "To The Mooners",
+    "Diamond Hands Only",
+    "Altcoin Avengers",
+    "Bag Holders Anonymous",
+    "Lambo Dreamers",
+    "Pump & Chill",
+    "Dip Divers",
+    "Satoshi Seekers",
+    "Shill Masters",
+    "DeFi Degenerates",
+    "Whale Whisperers",
+    "Crypto Cult",
+    "Shill Society",
+    "Token Tossers",
+  ];
+
+  return groupNames[Math.floor(Math.random() * groupNames.length)];
+};
+
+const generateCabalAuto = () => {
+  const owner = getRandomUser();
+
+  return {
+    id: uuidv4(),
+    name: getRandomCabalName(),
+    owner: owner.name,
+    owned: owner.id === "u2", // Nuoanunu
+    joined: false,
+    createdAt: new Date().getTime(),
+    "24h": 0,
+    description: "",
+    members: 0,
+    value: 0,
+    assets: [],
+  };
+};
+
+export const getRandomCabals = (number) => {
+  const messages = Array.from({ length: number }, generateCabalAuto);
+
+  return messages;
+};

@@ -10,7 +10,7 @@ const CollateralTab = () => {
         <div className="text-sm sm:text-base tracking-wide text-dark-gray dark:text-white">
           <p>
             <span className="text-thin-light-gray">
-              Deposit your SOL to Spend more Room's SOL
+              Deposit your SOL to Spend more Cabal's SOL
             </span>
           </p>
         </div>

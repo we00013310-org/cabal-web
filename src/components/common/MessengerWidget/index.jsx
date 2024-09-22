@@ -6,7 +6,7 @@ import { getRandomMessages } from "../../../lib/generator";
 const DATA = [
   {
     id: 1,
-    text: "Welcome to our Room!",
+    text: "Welcome to our Cabal!",
     sender: {
       id: "u2",
       name: "Nuoanunu",

@@ -4,9 +4,7 @@
       "id": "r1",
       "name": "Meme Coin Millionaires",
       "owner": "Hunter",
-      "maxSolAmount": 100,
       "members": 10,
-      "max": 100,
       "24h": -20.34,
       "joined": true,
       "img": "https://cdn3d.iconscout.com/3d/premium/thumb/pepe-3d-icon-download-in-png-blend-fbx-gltf-file-formats--bitcoin-logo-coin-cryptocurrency-symbol-crypto-currency-coins-vol2-pack-science-technology-icons-7947909.png?f=webp",
@@ -15,15 +13,14 @@
           "id": "sol",
           "amount": 10
         }
-      ]
+      ],
+      "createdAt": 1726765200000
     },
     {
       "id": "r2",
       "name": "Layer 2 believer",
       "owner": "Hunter",
-      "maxSolAmount": 10,
       "members": 2,
-      "max": 100,
       "24h": 6.33,
       "img": "https://pics.craiyon.com/2023-06-07/1c96a136854046a796bcdb2d21d3240a.webp",
       "assets": [
@@ -39,15 +36,14 @@
           "id": "sol",
           "amount": 0.03
         }
-      ]
+      ],
+      "createdAt": 1726765200000
     },
     {
       "id": "r3",
       "name": "Moonshot Hunters",
       "owner": "Nivle",
-      "maxSolAmount": 20,
       "members": 1,
-      "max": 1000,
       "24h": -0.01,
       "joined": true,
       "img": "https://pics.craiyon.com/2023-11-16/Fs96CgbMTSihxfqvgUe-Kg.webp",
@@ -56,29 +52,28 @@
           "id": "sol",
           "amount": 0.02
         }
-      ]
+      ],
+      "createdAt": 1726765200000
     },
     {
       "id": "r4",
       "name": "WallStreetBets Crypto",
       "owner": "Naut",
       "members": 0,
-      "maxSolAmount": 50,
-      "max": 50,
       "24h": 0,
       "img": "https://cdn.dribbble.com/users/1019669/screenshots/15290420/media/8e60cd1f5333a778bfbd4abaaa858d2b.jpg?resize=400x0",
-      "assets": []
+      "assets": [],
+      "createdAt": 1726765200000
     },
     {
       "id": "r5",
       "name": "Crypto Degens",
       "owner": "Atod",
       "members": 0,
-      "maxSolAmount": 6,
-      "max": 60,
       "24h": 0,
       "img": "https://pics.craiyon.com/2023-11-05/e54602512d92414c8c5c07a209e11579.webp",
-      "assets": []
+      "assets": [],
+      "createdAt": 1726765200000
     }
   ]
 }

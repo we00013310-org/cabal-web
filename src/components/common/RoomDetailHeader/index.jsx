@@ -14,9 +14,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
   const queryClient = useQueryClient();
   const [modal, showModal] = useState(false);
 
-  const keyPrice = useMemo(() => {
-    return (data.maxSolAmount * 1.0) / data.max;
-  }, [data.max, data.maxSolAmount]);
+  const keyPrice = data.price;
 
   const sellPrice = useMemo(() => {
     const solLeft = data.assets?.find((o) => o.id === "sol")?.amount || 0;
@@ -45,7 +43,6 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
   const generateActions = () => {
     return (
       <button
-        disabled={data.members >= data.max}
         onClick={() => {
           buyKey();
         }}
@@ -93,7 +90,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
                   onClick={() => showModal(true)}
                   className="text-white btn-shine text-sm sm:text-base rounded-full tracking-wide bg-purple px-4 py-1.5 sm:px-4 sm:py-2.5 flex justify-center items-center"
                 >
-                  <span>Manage Room</span>
+                  <span>Manage Cabal</span>
                 </button>
               )}
             </div>
@@ -103,7 +100,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
           <p className="text-sm sm:text-base text-thin-light-gray">
             Sold Keys:{" "}
             <span className="text-base sm:text-xl text-dark-white dark:text-white">
-              {data.members} / {data.max}
+              {data.members}
             </span>
           </p>
           <p className="flex items-center space-x-2">

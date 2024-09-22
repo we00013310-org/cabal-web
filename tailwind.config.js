@@ -17,7 +17,7 @@ export default {
         "light-green": "#27AE60",
         "light-red": "#EB5757",
         "white-opacity": "#7B7EFC",
-        "dark-white": "#373737",
+        "dark-white": "#1D1F2F",
         "dark-light-purple": "#FFAB3329",
       },
       animation: {

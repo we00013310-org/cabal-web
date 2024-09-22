@@ -55,7 +55,7 @@ const RoomListItem = ({ data }) => {
       </td>
       <td className="text-center py-2 md:py-4">
         <span className="text-sm md:text-base text-dark-gray dark:text-white font-medium">
-          {data.members} / {data.max}
+          {data.members}
         </span>
       </td>
       <td className="text-center py-2 md:py-4 px-2">
@@ -67,7 +67,7 @@ const RoomListItem = ({ data }) => {
       </td>
       <td className="text-right py-2 md:py-4">
         <span className="text-sm md:text-base text-thin-light-gray whitespace-nowrap px-2">
-          {formatDate(new Date())}
+          {formatDate(new Date(data.createdAt || 1))}
         </span>
       </td>
     </tr>

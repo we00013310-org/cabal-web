@@ -3,15 +3,47 @@ import orderBy from "lodash/orderBy";
 
 import { ROOMS_DATA_KEY } from "../constants";
 import ROOMS_DATA from "../../data/room_data.json";
+import TOKENS_DATA from "../../data/token_data.json";
+import { getRandomCabals } from "../generator";
+import { getPrice } from "../room";
 
 export const fetchRooms = async () => {
   const cached = localStorage.getItem(ROOMS_DATA_KEY);
 
   if (cached) {
-    return JSON.parse(cached);
+    const data = JSON.parse(cached);
+    return data.map((o) => {
+      const tokensData = TOKENS_DATA.datas;
+      let result = 0;
+
+      o?.assets?.forEach((o) => {
+        const token = tokensData.find((i) => i.id === o.id);
+        result += token.price * o.amount;
+      });
+      return {
+        ...o,
+        value: +result.toFixed(4),
+        price: getPrice(o),
+      };
+    });
   }
 
-  return ROOMS_DATA.datas;
+  const rawData = ROOMS_DATA.datas;
+
+  return [...rawData, ...getRandomCabals(20)].map((o) => {
+    const tokensData = TOKENS_DATA.datas;
+    let result = 0;
+
+    o?.assets?.forEach((o) => {
+      const token = tokensData.find((i) => i.id === o.id);
+      result += token.price * o.amount;
+    });
+    return {
+      ...o,
+      value: +result.toFixed(4),
+      price: getPrice(o),
+    };
+  });
 };
 
 export const fetchRoomDetail = (id) => async () => {
@@ -24,6 +56,7 @@ export const createRoom = async (data) => {
   const newData = {
     ...data,
     id: uuidv4(),
+    createdAt: new Date().getTime(),
   };
   const roomsData = await fetchRooms();
 

@@ -9,9 +9,15 @@ import CloseIcon from "../../../assets/images/icons/close-ic.png";
 const tabsData = [
   {
     id: "swap",
-    label: "Swap token",
+    label: "Swap Token",
     selectedIcon: "hammer",
     icon: "gradient-hammer",
+  },
+  {
+    id: "point",
+    label: "Swap Point",
+    selectedIcon: "timeout",
+    icon: "gradient-timeout",
   },
   {
     id: "collateral",
@@ -57,6 +63,8 @@ const RoomManagement = ({ roomData, onClose }) => {
         <div className="mt-4 sm:mt-6">
           {tab === "swap" ? (
             <SwapTab roomData={roomData} onClose={onClose} />
+          ) : tab === "point" ? (
+            <SwapTab usePoint roomData={roomData} onClose={onClose} />
           ) : (
             <CollateralTab onClose={onClose} />
           )}

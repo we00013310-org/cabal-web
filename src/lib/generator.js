@@ -103,6 +103,12 @@ const generateCabalAuto = () => {
     members: 0,
     value: 0,
     assets: [],
+    pointAssets: [
+      {
+        id: "sol",
+        amount: 10,
+      },
+    ],
   };
 };
 

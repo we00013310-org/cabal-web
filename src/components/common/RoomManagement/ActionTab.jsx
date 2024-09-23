@@ -25,8 +25,13 @@ const ActionTab = ({ data, selected, onClick }) => {
       </div>
       {selected && (
         <div
-          className="w-[122px] h-[92px] primary-gradient rounded-md absolute z-10"
-          style={{ top: "-1px", left: "-1px" }}
+          className="primary-gradient rounded-md absolute z-10"
+          style={{
+            top: "-1px",
+            left: "-1px",
+            width: "calc(100% + 2px)",
+            height: "calc(100% + 2px)",
+          }}
         />
       )}
     </div>

@@ -90,10 +90,6 @@ const router = createBrowserRouter([
                 element: <UserPage />,
               },
               {
-                path: "/explore",
-                element: <ExplorePage />,
-              },
-              {
                 path: "/active-bids",
                 element: <ActiveBidsPage />,
               },

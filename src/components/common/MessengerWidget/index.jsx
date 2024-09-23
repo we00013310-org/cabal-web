@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import CloseIcon from "../../../assets/images/icons/close-ic.png";
 import { getRandomMessages } from "../../../lib/generator";
 
 const DATA = [
@@ -23,12 +22,68 @@ const DATA = [
       img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
     },
   },
+  {
+    id: 3,
+    text: "I've been looking at BTC's chart and I think we should go long.",
+    sender: {
+      id: "u1",
+      name: "Hunter",
+      img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
+    },
+  },
+  {
+    id: 4,
+    text: "Why do you think now is a good time to long BTC?",
+    sender: {
+      id: "u2",
+      name: "Nuoanunu",
+      img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
+      you: true,
+    },
+  },
+  {
+    id: 5,
+    text: "Check out the RSI on the 4-hour chart. It's been oversold for a while, and we're seeing bullish divergence.",
+    sender: {
+      id: "u1",
+      name: "Hunter",
+      img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
+    },
+  },
+  {
+    id: 6,
+    text: "Also, the moving averages just crossed — the 50-day MA broke above the 200-day MA. That golden cross usually signals a strong uptrend is coming.",
+    sender: {
+      id: "u1",
+      name: "Hunter",
+      img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
+    },
+  },
+  {
+    id: 7,
+    text: "Makes sense. I'll prepare the long command.",
+    sender: {
+      id: "u2",
+      name: "Nuoanunu",
+      img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
+      you: true,
+    },
+  },
+  {
+    id: 8,
+    text: "Yeah, I agree with Hunter. The indicators are pointing towards a bullish trend. It’s a good time to take a long position.",
+    sender: {
+      id: "u3",
+      name: "Nivle",
+      img: "https://img.craiyon.com/2024-09-16/CDHhcFXOTJC3vyA7je7p6A.webp",
+    },
+  },
 ];
 
 const MessengerWidget = () => {
   const [messages, setMessages] = useState(DATA);
   const [newMessage, setNewMessage] = useState("");
-  const [toggled, setToggled] = useState(false);
+  const [toggled, setToggled] = useState(true);
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
@@ -94,19 +149,11 @@ const MessengerWidget = () => {
   }
 
   return (
-    <div className="fixed z-[1000] h-full w-full bottom-0 right-0 md:bottom-10 md:right-10 md:w-[360px] md:h-[500px] rounded-2xl p-8 flex flex-col justify-between bg-blue-100 dark:bg-dark-white  border-4 dark:border-[#FFAB3329]">
+    <div className="h-full w-full rounded-2xl p-8 flex flex-col justify-between bg-blue-100 dark:bg-dark-white border-4 dark:border-purple">
       <div className="flex items-center justify-between pb-2 border-b dark:border-[#FFAB3329]  border-light-purple mb-4">
-        <h1 className="text-2xl font-bold text-dark-gray dark:text-white tracking-wide">
+        <h1 className="text-2xl font-bold text-dark-gray dark:text-white tracking-wide animate-heartBeat">
           Discussion
         </h1>
-        <button
-          onClick={() => {
-            setToggled(false);
-          }}
-          className="text-dark-gray dark:text-white cursor-pointer w-[24px] h-[24px] hover:opacity-80"
-        >
-          <img src={CloseIcon} />
-        </button>
       </div>
       {/* Chat Window */}
       <div

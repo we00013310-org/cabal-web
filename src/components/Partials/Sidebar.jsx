@@ -98,7 +98,7 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                   to="/"
                 >
                   <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full text-dark-gray dark:text-white ">
-                    <Icons name="dashboard" />
+                    <Icons name="home" />
                   </span>
                   <span
                     className={`item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium ${
@@ -106,27 +106,6 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                     }`}
                   >
                     Home
-                  </span>
-                </NavLink>
-              </li>
-
-              <li className="item group">
-                <NavLink
-                  to="/explore"
-                  className={`nav-item flex items-center ${
-                    ((navData) => (navData.isActive ? "active" : ""),
-                    sidebar ? "justify-start space-x-3.5" : "justify-center")
-                  }`}
-                >
-                  <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full text-dark-gray dark:text-white ">
-                    <Icons name="deep-search" />
-                  </span>
-                  <span
-                    className={`item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium ${
-                      sidebar ? "active flex-1" : "w-0"
-                    }`}
-                  >
-                    Explore Cabals
                   </span>
                 </NavLink>
               </li>
@@ -139,7 +118,7 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                   }`}
                 >
                   <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full text-dark-gray dark:text-white ">
-                    <Icons name="star" />
+                    <Icons name="cabals" />
                   </span>
                   <span
                     className={`item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium ${
@@ -159,7 +138,7 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                   }`}
                 >
                   <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full text-dark-gray dark:text-white ">
-                    <Icons name="heart" />
+                    <Icons name="investment" />
                   </span>
                   <span
                     className={`item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium ${

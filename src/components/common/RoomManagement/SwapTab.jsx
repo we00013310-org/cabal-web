@@ -6,8 +6,10 @@ import SwapInput from "../SwapInput";
 import { useToken, useTokens } from "../../../hooks/useToken";
 import { findAmountB } from "../../../lib/token";
 import { swapTokenApi } from "../../../lib/apis/room";
+import { generateLeverageColor } from "../../../lib/utils";
+import { MAX_LEVERAGE } from "../../../lib/constants";
 
-const SwapTab = ({ roomData, onClose }) => {
+const SwapTab = ({ roomData, onClose, usePoint = false }) => {
   const queryClient = useQueryClient();
   const [valueA, setValueA] = useState(0);
   const [valueB, setValueB] = useState(0);
@@ -17,11 +19,22 @@ const SwapTab = ({ roomData, onClose }) => {
   const tokB = useToken(tokenB);
   const listTokA = useTokens(tokenA);
   const listTokB = useTokens(tokenB);
+  const [leverage, setLeverage] = useState(1);
+  const assets = useMemo(() => {
+    return usePoint ? roomData?.pointAssets : roomData?.assets;
+  }, [roomData?.assets, roomData?.pointAssets, usePoint]);
 
   const [dip, setDip] = useState(false);
 
   const { mutate: swapToken } = useMutation({
-    mutationFn: swapTokenApi(roomData.id, tokenA, valueA, tokenB, valueB),
+    mutationFn: swapTokenApi(
+      roomData.id,
+      tokenA,
+      valueA,
+      tokenB,
+      valueB,
+      usePoint
+    ),
     onSuccess: () => {
       toast.success("Swapped successfully!!");
       queryClient.invalidateQueries({ queryKey: ["rooms", roomData.id] });
@@ -30,11 +43,11 @@ const SwapTab = ({ roomData, onClose }) => {
   });
 
   const tokenABalance = useMemo(() => {
-    return roomData.assets?.find((o) => o.id === tokenA)?.amount || 0;
-  }, [roomData.assets, tokenA]);
+    return assets?.find((o) => o.id === tokenA)?.amount || 0;
+  }, [assets, tokenA]);
   const tokenBBalance = useMemo(() => {
-    return roomData.assets?.find((o) => o.id === tokenB)?.amount || 0;
-  }, [roomData.assets, tokenB]);
+    return assets?.find((o) => o.id === tokenB)?.amount || 0;
+  }, [assets, tokenB]);
 
   const handleRotate = () => {
     let tmp = tokenA;
@@ -75,14 +88,29 @@ const SwapTab = ({ roomData, onClose }) => {
   return (
     <div className="w-full">
       <SwapInput
-        token={tokA}
+        token={
+          tokA.id === "sol" && usePoint
+            ? {
+                ...tokA,
+                slug: "pSol",
+              }
+            : tokA
+        }
         value={valueA}
         onChange={(e) => {
           const value = e.target.value;
           handleChangeValueA(value);
         }}
         tokenBalance={tokenABalance}
-        listTokens={listTokA}
+        listTokens={listTokA.map((o) => {
+          if (o.id === "sol" && usePoint) {
+            return {
+              ...o,
+              slug: "pSol",
+            };
+          }
+          return o;
+        })}
         onChangeToken={(token) => {
           setTokenA(token);
           handleChangeValueA(valueA);
@@ -98,19 +126,56 @@ const SwapTab = ({ roomData, onClose }) => {
       </div>
       <SwapInput
         output
-        token={tokB}
+        token={
+          tokB.id === "sol" && usePoint
+            ? {
+                ...tokB,
+                slug: "pSol",
+              }
+            : tokB
+        }
         value={valueB}
         onChange={(e) => {
           const value = e.target.value;
           handleChangeValueB(value);
         }}
         tokenBalance={tokenBBalance}
-        listTokens={listTokB}
+        listTokens={listTokB.map((o) => {
+          if (o.id === "sol" && usePoint) {
+            return {
+              ...o,
+              slug: "pSol",
+            };
+          }
+          return o;
+        })}
         onChangeToken={(token) => {
           setTokenB(token);
           handleChangeValueB(valueB);
         }}
       />
+      <div className="flex flex-col space-y-2 py-4 relative">
+        <div
+          className={`text-sm sm:text-base flex justify-center absolute left-0 top-6 w-full ${generateLeverageColor(leverage, "text")}`}
+        >
+          {leverage} X
+        </div>
+        <label
+          className="text-sm sm:text-base text-dark-gray dark:text-white"
+          htmlFor="leverage"
+        >
+          Leverage
+        </label>
+        <input
+          onChange={(e) => setLeverage(e.target.value)}
+          value={leverage}
+          className={`w-full ${generateLeverageColor(leverage)}`}
+          type="range"
+          name="leverage"
+          min="1"
+          max={MAX_LEVERAGE}
+        />
+      </div>
       <div
         onClick={() => setDip(!dip)}
         className="flex my-4 items-center space-x-2.5 cursor-pointer"

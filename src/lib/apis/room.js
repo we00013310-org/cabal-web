@@ -57,6 +57,12 @@ export const createRoom = async (data) => {
     ...data,
     id: uuidv4(),
     createdAt: new Date().getTime(),
+    pointAssets: [
+      {
+        id: "sol",
+        amount: 10,
+      },
+    ],
   };
   const roomsData = await fetchRooms();
 
@@ -132,12 +138,15 @@ export const updateRoomByBuyingKey = async (roomId, qtt, price) => {
 };
 
 export const swapTokenApi =
-  (roomId, tokenAId, amountA, tokenBId, amountB) => async () => {
+  (roomId, tokenAId, amountA, tokenBId, amountB, usePoint = false) =>
+  async () => {
     try {
       const rooms = await fetchRooms();
       const currentData = await fetchRoomDetail(roomId)();
       const histories = currentData.histories || [];
-      let newAssets = (currentData.assets || []).map((o) => {
+      const currentAssets =
+        (usePoint ? currentData.pointAssets : currentData.assets) || [];
+      let newAssets = currentAssets.map((o) => {
         if (o.id === tokenAId) {
           return {
             ...o,
@@ -160,26 +169,35 @@ export const swapTokenApi =
       }
 
       newAssets = newAssets.filter((o) => !!o.amount);
+
+      const tmpAId = tokenAId === "sol" && usePoint ? "pSol" : tokenAId;
+      const tmpBId = tokenBId === "sol" && usePoint ? "pSol" : tokenBId;
       histories.push({
         id: uuidv4(),
         createdAt: new Date().getTime(),
-        label: `Swapped <span class="text-purple">${tokenAId.toUpperCase()}</span> to <span class="text-purple">${tokenBId.toUpperCase()}</span>`,
+        label: `Swapped <span class="text-purple">${tmpAId.toUpperCase()}</span> to <span class="text-purple">${tmpBId.toUpperCase()}</span>`,
         assets: [
           {
-            id: tokenAId,
+            id: tmpAId,
             amount: -amountA,
           },
           {
-            id: tokenBId,
+            id: tmpBId,
             amount: amountB,
           },
         ],
       });
-      const updatedRoom = {
-        ...currentData,
-        assets: newAssets,
-        histories,
-      };
+      const updatedRoom = usePoint
+        ? {
+            ...currentData,
+            pointAssets: newAssets,
+            histories,
+          }
+        : {
+            ...currentData,
+            assets: newAssets,
+            histories,
+          };
 
       const newRooms = rooms.map((o) => {
         if (o.id !== updatedRoom.id) {

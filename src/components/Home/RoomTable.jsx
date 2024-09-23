@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import orderBy from "lodash/orderBy";
 
+import SearchCom from "../Helpers/SearchCom";
 import SelectBox from "../Helpers/SelectBox";
 import RoomListItem from "../common/RoomListItem";
 import { fetchRooms } from "../../lib/apis/room";
@@ -13,9 +14,23 @@ export default function RoomTable({
   defaultFilter,
   user,
   hideShowMore = false,
-  sort,
-  search,
+  explore = false,
 }) {
+  const tabs = [
+    {
+      id: 1,
+      name: "Trending",
+      content: "Trending",
+    },
+    {
+      id: 2,
+      name: "New",
+      content: "New",
+    },
+  ];
+  const [search, setSearch] = useState();
+
+  const [sort, setSort] = useState(tabs[0].name);
   const [nItems, setNItems] = useState(PER_PAGE);
   const { data: rawData } = useQuery({
     queryKey: ["rooms"],
@@ -84,18 +99,41 @@ export default function RoomTable({
       }`}
     >
       {!hideHeader && (
-        <div className="header w-full flex justify-between items-center mb-2">
+        <div className="header w-full flex items-center mb-2">
           <div className="flex space-x-2 items-center mb-2 sm:mb-0">
             <h1 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white tracking-wide">
               All Cabals
             </h1>
           </div>
-          <SelectBox
-            action={setCategory}
-            datas={filterCategories}
-            className="Update-table-dropdown"
-            contentBodyClasses="w-auto min-w-max"
-          />
+        </div>
+      )}
+      {!!explore && (
+        <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 space-y-2 justify-center items-center md:p-9 p-4 pb-8">
+          <div className="w-full sm:w-auto mt-4 sm:mt-0">
+            <ul className="flex justify-around">
+              {tabs?.length > 0 &&
+                tabs.map((tabValue) => (
+                  <li
+                    key={tabValue.id}
+                    className="relative group inline text-center w-[100px] cursor-pointer"
+                    onClick={() => setSort(tabValue.name)}
+                  >
+                    <span
+                      className={`py-4 sm:border-b-none border-b group-hover:border-purple lg:text-base text-sm tracking-wide font-bold  group-hover:text-purple text-dark-gray dark:text-white relative z-10 cursor-pointer ${
+                        sort === tabValue.name
+                          ? "text-purple border-purple border-b-2"
+                          : "text-dark-gray dark:text-white border-transparent "
+                      }`}
+                    >
+                      {tabValue.content}
+                    </span>
+                  </li>
+                ))}
+            </ul>
+          </div>
+          <div className="w-full sm:w-[200px] md:w-[240px] lg:w-[318px]">
+            <SearchCom onChange={(e) => setSearch(e.target.value)} />
+          </div>
         </div>
       )}
       <div className="relative w-full overflow-x-auto sm:rounded-lg">

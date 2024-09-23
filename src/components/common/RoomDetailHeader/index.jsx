@@ -7,6 +7,8 @@ import { buyKeyApi } from "../../../lib/apis/balance";
 import ModalCom from "../../Helpers/ModalCom";
 import RoomManagement from "../RoomManagement";
 
+import Img from "../../../assets/images/auth-profile-picture.png";
+
 import SolIcon from "../../../assets/images/tokens/sol.svg";
 import USERS_DATA from "../../../data/user_data.json";
 
@@ -66,7 +68,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
         <div className="flex-1 mb-4 lg:mb-0 flex justify-center lg:justify-start">
           <div className="flex space-x-4">
             <div className="w-16 h-16 sm:w-24 sm:h-24 flex justify-center items-center rounded-full overflow-hidden">
-              <img src={data.img} alt="" />
+              <img src={data.img || Img} alt="" />
             </div>
             <div className="flex flex-col">
               <h1 className="text-2xl sm:text-4xl text-dark-gray dark:text-white font-bold mb-2 sm:mb-3">

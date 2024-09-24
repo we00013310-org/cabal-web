@@ -7,11 +7,11 @@ import MiniLineChart from "../../Charts/MiniLineChart";
 const TokenRateStatics = ({ listTokens = [] }) => {
   const [rateStaticsDropdown, setRateStaticsDropdown] = useState(false);
   const tokensData = TOKENS_DATA.datas.filter((o) => {
-    if (!listTokens.length) {
+    if (!listTokens?.length) {
       return true;
     }
 
-    return listTokens.includes(o.id);
+    return listTokens?.includes(o.id);
   });
   const [selectedRate, setSelectedRate] = useState(tokensData[0].id);
   const [filterRateStatics, setFilterRateStatics] = useState(

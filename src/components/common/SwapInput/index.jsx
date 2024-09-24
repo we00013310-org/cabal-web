@@ -37,7 +37,7 @@ const SwapInput = ({
           onClick={triggerOpt}
           className="relative cursor-pointer space-x-2 p-2 sm:p-4 rounded-lg bg-[#FAFAFA] dark:bg-[#11131F] flex items-center "
         >
-          {!!showOpt && !!listTokens.length && (
+          {!!showOpt && !!listTokens?.length && (
             <>
               <div
                 className="fixed top-0 left-0 w-full h-full"
@@ -48,7 +48,7 @@ const SwapInput = ({
                 className="z-10 absolute left-0 top-0 w-[120px] bg-white dark:bg-dark-white rounded-md p-3 animate-fade"
               >
                 <ul className="flex flex-col space-y-4">
-                  {listTokens.map((o) => {
+                  {listTokens?.map((o) => {
                     return (
                       <li
                         key={o.id}

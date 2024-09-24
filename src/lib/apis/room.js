@@ -29,8 +29,7 @@ export const fetchRooms = async () => {
   }
 
   const rawData = ROOMS_DATA.datas;
-
-  return [...rawData, ...getRandomCabals(20)].map((o) => {
+  const tmp = [...rawData, ...getRandomCabals(20)].map((o) => {
     const tokensData = TOKENS_DATA.datas;
     let result = 0;
 
@@ -44,6 +43,9 @@ export const fetchRooms = async () => {
       price: getPrice(o),
     };
   });
+  localStorage.setItem(ROOMS_DATA_KEY, JSON.stringify(tmp));
+
+  return tmp;
 };
 
 export const fetchRoomDetail = (id) => async () => {

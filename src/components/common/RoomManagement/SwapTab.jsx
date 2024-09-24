@@ -102,7 +102,7 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
           handleChangeValueA(value);
         }}
         tokenBalance={tokenABalance}
-        listTokens={listTokA.map((o) => {
+        listTokens={listTokA?.map((o) => {
           if (o.id === "sol" && usePoint) {
             return {
               ...o,
@@ -140,7 +140,7 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
           handleChangeValueB(value);
         }}
         tokenBalance={tokenBBalance}
-        listTokens={listTokB.map((o) => {
+        listTokens={listTokB?.map((o) => {
           if (o.id === "sol" && usePoint) {
             return {
               ...o,

@@ -10,9 +10,11 @@ import MessengerWidget from "../components/common/MessengerWidget";
 import RoomHistory from "../components/common/RoomHistory";
 import { fetchRoomDetail } from "../lib/apis/room";
 import { fetchBalance } from "../lib/apis/balance";
+import { useTokens } from "../hooks/useToken";
 
 const RoomDetailPage = () => {
   const { id } = useParams();
+  const listTokens = useTokens();
 
   const { data, isFetching } = useQuery({
     queryKey: ["rooms", id],
@@ -23,7 +25,7 @@ const RoomDetailPage = () => {
     queryFn: fetchBalance,
   });
 
-  if (isFetching) {
+  if (isFetching || !data) {
     return null;
   }
 
@@ -32,6 +34,11 @@ const RoomDetailPage = () => {
       <div className="shop-details-wrapper w-full">
         <div className="main-wrapper w-full">
           <RoomDetailHeader ownedKeys={balanceData?.keys?.[id]} data={data} />
+
+          <div className="w-full h-[80vh] lg:h-[600px] mb-8">
+            <MessengerWidget />
+          </div>
+
           <div className="current_balance-bit-sell-widget w-full lg:h-[336px] mb-8">
             <div className="w-full h-full lg:flex lg:space-x-7">
               <div className="md:w-1/2 h-full mb-8 lg:mb-0">
@@ -43,10 +50,6 @@ const RoomDetailPage = () => {
             </div>
           </div>
 
-          <div className="w-full h-[80vh] lg:h-[600px] mb-8">
-            <MessengerWidget />
-          </div>
-
           <RoomValueStatics data={data} />
 
           <div className="w-full h-full lg:flex lg:space-x-7 lg:h-[436px] mb-8">
@@ -54,9 +57,7 @@ const RoomDetailPage = () => {
               <RoomHistory roomData={data} />
             </div>
             <div className="lg:w-1/2 h-full mb-8 lg:mb-0">
-              <TokenRateStatics
-                listTokens={data.assets?.map((o) => o.id)?.push("sol")}
-              />
+              <TokenRateStatics listTokens={listTokens.map((o) => o.id)} />
             </div>
           </div>
         </div>

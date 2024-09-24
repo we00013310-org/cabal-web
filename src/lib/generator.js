@@ -23,7 +23,7 @@ export function generateNumbersInRange(x, y, z = 20) {
 }
 
 const getRandomUser = () => {
-  const users = USERS_DATA.datas;
+  const users = USERS_DATA.datas.filter((o) => o.id !== "u2");
 
   return users[Math.floor(Math.random() * users.length)];
 };

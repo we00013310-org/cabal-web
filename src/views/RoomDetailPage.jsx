@@ -35,7 +35,7 @@ const RoomDetailPage = () => {
         <div className="main-wrapper w-full">
           <RoomDetailHeader ownedKeys={balanceData?.keys?.[id]} data={data} />
 
-          <div className="w-full h-[80vh] lg:h-[600px] mb-8">
+          <div className="w-full h-[80vh] lg:h-[800px] mb-8">
             <MessengerWidget />
           </div>
 

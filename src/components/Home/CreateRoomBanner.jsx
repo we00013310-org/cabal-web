@@ -10,10 +10,11 @@ export default function CreateRoomBanner({ className }) {
     >
       <div className="lg:w-8/12 w-full mb-4 lg:mb-0">
         <h1 className="text-base sm:text-xl text-dark-gray dark:text-white font-bold mb-1 sm:mb-2">
-          Become a Trader
+          Start Your Cabal
         </h1>
         <p className="text-xs md:text-sm text-thin-light-gray tracking-wide">
-          Build your portfolio, build your followers, build wealth together
+          Start your inner circle, grow your following and build gen wealth
+          together
         </p>
       </div>
       <div className="flex-1 flex justify-center lg:justify-end">

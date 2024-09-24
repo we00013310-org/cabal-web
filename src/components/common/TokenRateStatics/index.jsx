@@ -29,6 +29,13 @@ const TokenRateStatics = ({ listTokens = [] }) => {
   return (
     <div className="chart-two bg-white dark:bg-dark-white h-full rounded-2xl p-4 sm:p-8 2xl:w-[268px] w-full 2xl:mb-10 flex flex-col justify-between">
       <div>
+        <div className="heading sm:flex items-center mb-2 sm:mb-4">
+          <div>
+            <h1 className="text-base sm:text-xl font-bold tracking-wide text-dark-gray dark:text-white">
+              Market Feed
+            </h1>
+          </div>
+        </div>
         {/* dropdown heading */}
         <div className="flex space-x-2 items-center mb-2 sm:mb-5 relative cursor-pointer">
           {/* icon area */}

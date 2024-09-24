@@ -42,7 +42,7 @@ const WalletConnectButton = ({ onSuccess }) => {
 
   useEffect(() => {
     if (publicKey) {
-      onSuccess?.();
+      onSuccess?.(publicKey);
     }
   }, [onSuccess, publicKey]);
 

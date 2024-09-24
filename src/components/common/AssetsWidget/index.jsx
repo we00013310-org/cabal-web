@@ -55,7 +55,9 @@ export default function AssetsWidget({ data, usePoint = false }) {
       <div className="flex justify-between mb-2">
         <div className="balance">
           <p className="text-base sm:text-lg text-white opacity-[70%] tracking-wide mb-2 sm:mb-4">
-            {usePoint ? "Point Value" : "Current Value"}
+            {usePoint
+              ? "Cabal Current Point Value"
+              : "Cabal Current Treasury Value"}
           </p>
           <p className="text-4xl sm:text-5xl font-bold text-white tracking-wide leading-10 mb-1">
             $ {roomValue}

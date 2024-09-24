@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 import Layout from "../components/Partials/Layout";
 import { fetchRooms } from "../lib/apis/room";
 import RoomTable from "../components/Home/RoomTable";
+import { formatUsersData } from "../lib/utils";
 
 import USERS_DATA from "../data/user_data.json";
 import profileBanner from "../assets/images/profile-cover.png";
 
 export default function UserPage() {
+  const { publicKey } = useWallet();
   const { id } = useParams();
   const { data: rawData } = useQuery({
     queryKey: ["rooms"],
     queryFn: fetchRooms,
   });
-  const userData = USERS_DATA.datas.find((o) => o.id === id);
+  const userData = formatUsersData(USERS_DATA.datas, publicKey).find(
+    (o) => o.id === id
+  );
   const ownedRooms = rawData?.filter((o) => o.owner === userData.name);
 
   const tabs = [

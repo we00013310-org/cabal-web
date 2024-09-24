@@ -2,19 +2,25 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 import profileImg from "../../assets/images/profile-pic.jpg";
 import useToggle from "../../hooks/useToggle";
 import DarkModeContext from "../Contexts/DarkModeContext";
 import Icons from "../Helpers/Icons";
 import { fetchBalance } from "../../lib/apis/balance";
+import { formatNumb } from "../../lib/number";
+import { formatUsersData } from "../../lib/utils";
 
 import SolIcon from "../../assets/images/tokens/sol.svg";
 import USERS_DATA from "../../data/user_data.json";
-import { formatNumb } from "../../lib/number";
 
 export default function Header({ onLogout, sidebarHandler }) {
-  const userData = USERS_DATA.datas.find((o) => o.id === "u2");
+  const { publicKey } = useWallet();
+  const userData = formatUsersData(USERS_DATA.datas, publicKey).find(
+    (o) => o.id === "u2"
+  );
+  const userName = userData.name;
   const [balanceDropdown, setbalanceValue] = useToggle(false);
   const [notificationDropdown, setNotificationValue] = useToggle(false);
   const [userProfileDropdown, setProfileDropdown] = useToggle(false);
@@ -340,9 +346,11 @@ export default function Header({ onLogout, sidebarHandler }) {
                 </div>
                 <div className="lg:block hidden">
                   <h1 className="text-xl font-bold   text-dark-gray dark:text-white">
-                    {userData.name}
+                    {userName}
                   </h1>
-                  <p className="text-sm text-thin-light-gray">@nuoanunu</p>
+                  <p className="text-sm text-thin-light-gray">
+                    @{userName.toLowerCase()}
+                  </p>
                 </div>
               </div>
               <div

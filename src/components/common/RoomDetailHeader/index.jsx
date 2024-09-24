@@ -1,9 +1,11 @@
 import React, { useMemo, useState } from "react";
 import { toast } from "react-toastify";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 import { formatDate } from "../../../lib/date";
 import { buyKeyApi } from "../../../lib/apis/balance";
+import { formatUsersData } from "../../../lib/utils";
 import ModalCom from "../../Helpers/ModalCom";
 import RoomManagement from "../RoomManagement";
 
@@ -15,6 +17,7 @@ import USERS_DATA from "../../../data/user_data.json";
 export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
   const queryClient = useQueryClient();
   const [modal, showModal] = useState(false);
+  const { publicKey } = useWallet();
 
   const keyPrice = data.price;
 
@@ -43,7 +46,9 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
       queryClient.invalidateQueries({ queryKey: ["rooms", data.id] });
     },
   });
-  const ownerData = USERS_DATA.datas.find((o) => o.name === data.owner);
+  const ownerData = formatUsersData(USERS_DATA.datas, publicKey).find(
+    (o) => o.name === data.owner
+  );
 
   const generateActions = () => {
     return (
@@ -85,7 +90,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
                     </p>
                   </div>
                 </div>
-                <span className="hidden sm:block">created at </span>
+                <span className="hidden sm:block">created on </span>
                 <span className="italic text-dark-white dark:text-white mb-2 sm:mb-0 ml-1">
                   {formatDate(new Date())}
                 </span>
@@ -103,7 +108,7 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
         </div>
         <div className="flex flex-col items-center lg:items-start py-4 lg:py-0 lg:justify-end space-y-2 lg:mr-8 border-t lg:border-t-0 border-light-purple dark:border-[#FFAB3329]">
           <p className="text-sm sm:text-base text-thin-light-gray">
-            Sold Keys:{" "}
+            Keys Sold:{" "}
             <span className="text-base sm:text-xl text-dark-white dark:text-white">
               {data.members}
             </span>

@@ -1,13 +1,16 @@
 import React, { useRef } from "react";
 import orderBy from "lodash/orderBy";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 import Icons from "../Helpers/Icons";
 import SliderCom from "../Helpers/SliderCom";
 import UserListItem from "../common/UserListItem";
+import { formatUsersData } from "../../lib/utils";
 
 import USERS_DATA from "../../data/user_data.json";
 
 export default function TopSellerTopBuyerSliderSection({ className }) {
+  const { publicKey } = useWallet();
   const settings = {
     arrows: false,
     dots: false,
@@ -53,9 +56,10 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
     }
   };
 
-  const creatorsData = USERS_DATA.datas.filter((o) => !!+o.owned_rooms);
+  const datas = formatUsersData(USERS_DATA.datas, publicKey);
+  const creatorsData = datas.filter((o) => !!+o.owned_rooms);
   const usersData = orderBy(
-    USERS_DATA.datas.filter((o) => !!+o.joined_rooms),
+    datas.filter((o) => !!+o.joined_rooms),
     (o) => +o.joined_rooms,
     "desc"
   );
@@ -68,7 +72,7 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
             <div className="lg:w-1/2 w-full mb-10 lg:mb-0 sm:p-8 p-4 bg-white dark:bg-dark-white   rounded-2xl section-shadow">
               <div className="heading flex justify-between items-center mb-4">
                 <h1 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white tracking-wide">
-                  Best Cabals
+                  Top Cabals
                 </h1>
                 <div className="slider-btns flex space-x-4">
                   <button
@@ -128,7 +132,7 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
             <div className="flex-1 sm:p-8 p-4 bg-white dark:bg-dark-white   rounded-2xl section-shadow">
               <div className="heading flex justify-between items-center mb-4">
                 <h1 className="text-base sm:text-xl font-bold text-dark-gray dark:text-white tracking-wide">
-                  Richest Investors
+                  Top Performers
                 </h1>
                 <div className="slider-btns flex space-x-4">
                   <button

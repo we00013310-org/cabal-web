@@ -6,13 +6,15 @@ import titleShape from "../../../assets/images/shape/title-shape.svg";
 import AuthLayout from "../AuthLayout";
 import WalletConnectButton from "../../common/WalletConnectButton";
 import { LOGIN_KEY } from "../../../lib/constants";
+import { setCurrentUsername } from "../../../lib/utils";
 
 export default function Login() {
   const navigate = useNavigate();
 
-  const onLoginSuccess = () => {
+  const onLoginSuccess = (publicKey) => {
     toast.success("Login Successfully");
     localStorage.setItem(LOGIN_KEY, true);
+    setCurrentUsername(publicKey);
     navigate("/", { replace: true });
   };
 

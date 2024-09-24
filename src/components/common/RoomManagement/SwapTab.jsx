@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import SwapInput from "../SwapInput";
-import { useToken, useTokens } from "../../../hooks/useToken";
+import { getToken, useToken, useTokens } from "../../../hooks/useToken";
 import { findAmountB } from "../../../lib/token";
 import { swapTokenApi } from "../../../lib/apis/room";
 import { generateLeverageColor } from "../../../lib/utils";
@@ -80,6 +80,7 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
 
   const handleChangeValueB = (value) => {
     setValueB(value);
+
     if (!isNaN(value)) {
       setValueA(findAmountB(value, tokB, tokA));
     }
@@ -113,7 +114,12 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
         })}
         onChangeToken={(token) => {
           setTokenA(token);
-          handleChangeValueA(valueA);
+
+          if (!isNaN(valueA)) {
+            const tokA = getToken(token);
+
+            setValueB(findAmountB(valueA, tokA, tokB));
+          }
         }}
       />
       <div className="relative h-6 full flex justify-center">
@@ -151,7 +157,12 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
         })}
         onChangeToken={(token) => {
           setTokenB(token);
-          handleChangeValueB(valueB);
+
+          if (!isNaN(valueB)) {
+            const tokB = getToken(token);
+
+            setValueA(findAmountB(valueB, tokB, tokA));
+          }
         }}
       />
       <div className="flex flex-col space-y-2 py-4 relative">

@@ -65,7 +65,7 @@ const RoomListItem = ({ data }) => {
           {data["24h"]} ({calculatePercent(data, roomValue)}%)
         </span>
       </td>
-      <td className="text-right py-2 md:py-4">
+      <td className="text-center py-2 md:py-4">
         <span className="text-sm md:text-base text-thin-light-gray whitespace-nowrap px-2">
           {formatDate(new Date(data.createdAt || 1))}
         </span>

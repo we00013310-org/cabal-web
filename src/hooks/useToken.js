@@ -11,3 +11,7 @@ export const useToken = (id) => {
 export const useTokens = (exceptionalIds = []) => {
   return TOKENS_DATA.datas.filter((o) => !exceptionalIds.includes(o.id));
 };
+
+export const getToken = (id) => {
+  return TOKENS_DATA.datas.find((o) => o.id === id);
+};

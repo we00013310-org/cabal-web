@@ -108,21 +108,21 @@ export default function RoomTable({
         </div>
       )}
       {!!explore && (
-        <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 space-y-2 justify-center items-center md:p-9 p-4 pb-8">
+        <div className="flex flex-col-reverse sm:flex-row sm:space-x-2 space-y-2 justify-center sm:justify-between items-center md:py-9 py-4 pb-8">
           <div className="w-full sm:w-auto mt-4 sm:mt-0">
             <ul className="flex justify-around">
               {tabs?.length > 0 &&
                 tabs.map((tabValue) => (
                   <li
                     key={tabValue.id}
-                    className="relative group inline text-center w-[100px] cursor-pointer"
+                    className={`py-4 relative group inline text-center w-[100px] cursor-pointer sm:border-b-none border-b ${sort === tabValue.name ? "border-purple border-b-2" : " border-transparent "}`}
                     onClick={() => setSort(tabValue.name)}
                   >
                     <span
-                      className={`py-4 sm:border-b-none border-b group-hover:border-purple lg:text-base text-sm tracking-wide font-bold  group-hover:text-purple text-dark-gray dark:text-white relative z-10 cursor-pointer ${
+                      className={`group-hover:border-purple lg:text-base text-sm tracking-wide font-bold group-hover:text-purple text-dark-gray dark:text-white relative z-10 cursor-pointer ${
                         sort === tabValue.name
-                          ? "text-purple border-purple border-b-2"
-                          : "text-dark-gray dark:text-white border-transparent "
+                          ? "text-purple "
+                          : "text-dark-gray dark:text-white"
                       }`}
                     >
                       {tabValue.content}
@@ -145,9 +145,9 @@ export default function RoomTable({
                 Cabal
               </td>
               <td className="py-2 whitespace-nowrap text-center">Value</td>
-              <td className="py-2 whitespace-nowrap text-center">Sold Keys</td>
+              <td className="py-2 whitespace-nowrap text-center">Keys Sold</td>
               <td className="py-2 whitespace-nowrap text-center">24H%</td>
-              <td className="py-2 whitespace-nowrap  text-right">Created At</td>
+              <td className="py-2 whitespace-nowrap text-center">Created On</td>
             </tr>
             {/* table heading end */}
             {data?.slice(0, nItems)?.map((o) => {

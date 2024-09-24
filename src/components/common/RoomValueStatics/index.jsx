@@ -43,7 +43,7 @@ export default function RoomValueStatics({ data }) {
         <div className="content flex justify-between items-center mb-5">
           <div>
             <h1 className="text-base sm:text-xl text-dark-gray dark:text-white tracking-wide">
-              Cabal Value Analize
+              Cabal Historical Value
             </h1>
           </div>
           <SelectBox datas={filterDatas} action={dataSetHandler} />

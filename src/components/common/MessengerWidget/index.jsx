@@ -75,7 +75,7 @@ const DATA = [
     sender: {
       id: "u3",
       name: "Nivle",
-      img: "https://img.craiyon.com/2024-09-16/CDHhcFXOTJC3vyA7je7p6A.webp",
+      img: "https://pics.craiyon.com/2024-09-04/v-5PWpdBSuyXWcGzALO1iw.webp",
     },
   },
 ];

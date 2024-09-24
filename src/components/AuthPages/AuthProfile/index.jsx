@@ -9,7 +9,7 @@ import RoomTable from "../../Home/RoomTable";
 
 import USERS_DATA from "../../../data/user_data.json";
 import profileBanner from "../../../assets/images/profile-cover.png";
-import { formatAddress } from "../../../lib/utils";
+import { formatAddress, formatUsersData } from "../../../lib/utils";
 
 export default function AuthProfile() {
   const { publicKey } = useWallet();
@@ -17,7 +17,10 @@ export default function AuthProfile() {
     queryKey: ["rooms"],
     queryFn: fetchRooms,
   });
-  const userData = USERS_DATA.datas.find((o) => o.id === "u2");
+  const userData = formatUsersData(USERS_DATA.datas, publicKey).find(
+    (o) => o.id === "u2"
+  );
+  const userName = userData.name;
   const ownedRooms = rawData?.filter((o) => o.owned);
   const joinedRooms = rawData?.filter((o) => o.joined);
 
@@ -69,7 +72,7 @@ export default function AuthProfile() {
                   <div className="auth-user-profile-content">
                     <div className="mb-2 sm:mb-4">
                       <h1 className="text-2xl sm:text-3xl text-dark-gray dark:text-white tracking-wide sm:text-26 font-bold">
-                        {userData.name}
+                        {userName}
                       </h1>
                     </div>
                     {!!publicKey && (
@@ -187,7 +190,7 @@ export default function AuthProfile() {
             </div>
 
             <div className="tab-cotainer w-full mb-8">
-              <RoomTable key={tab} hideHeader user="Nuoanunu" />
+              <RoomTable key={tab} hideHeader user={userName} />
             </div>
           </div>
         </div>

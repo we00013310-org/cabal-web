@@ -6,6 +6,7 @@ import ROOMS_DATA from "../../data/room_data.json";
 import TOKENS_DATA from "../../data/token_data.json";
 import { getRandomCabals } from "../generator";
 import { getPrice } from "../room";
+import { getCurrentUsername } from "../utils";
 
 export const fetchRooms = async () => {
   const cached = localStorage.getItem(ROOMS_DATA_KEY);
@@ -101,10 +102,11 @@ export const updateRoomByBuyingKey = async (roomId, qtt, price) => {
         amount,
       });
     }
+
     histories.push({
       id: uuidv4(),
       createdAt: new Date().getTime(),
-      label: `<span class="text-purple">Nuoanunu</span> ${amount >= 0 ? "bought" : "sold"} a Key`,
+      label: `<span class="text-purple">${getCurrentUsername()}</span> ${amount >= 0 ? "bought" : "sold"} a Key`,
       assets: [
         {
           id: "sol",

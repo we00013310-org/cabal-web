@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../components/Partials/Layout";
 import InputCom from "../components/Helpers/Inputs/InputCom";
 import { createRoom } from "../lib/apis/room";
+import { getCurrentUsername } from "../lib/utils";
 
 const CreateRoomPage = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const CreateRoomPage = () => {
 
     mutate({
       name,
-      owner: "Nuoanunu",
+      owner: getCurrentUsername(),
       owned: true,
       "24h": 0,
       members: 0,

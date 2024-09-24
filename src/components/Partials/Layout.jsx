@@ -23,9 +23,13 @@ export default function Layout({ children }) {
   const { disconnect } = useWallet();
 
   const logOut = async () => {
-    await disconnect();
-    localStorage.removeItem(LOGIN_KEY);
-    navigate("/login", { replace: true });
+    try {
+      await disconnect();
+      localStorage.removeItem(LOGIN_KEY);
+      navigate("/login", { replace: true });
+    } catch (err) {
+      console.log("err", err);
+    }
   };
   return (
     <>

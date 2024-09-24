@@ -25,7 +25,7 @@ const RoomDetailPage = () => {
     queryFn: fetchBalance,
   });
 
-  if (isFetching || !data) {
+  if (isFetching) {
     return null;
   }
 

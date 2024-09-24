@@ -19,3 +19,7 @@ export const generateLeverageColor = (input, type = "accent") => {
 
   return "text-red-500 animate-heartBeat";
 };
+
+export const formatAddress = (publicKey) => {
+  return publicKey?.toBase58();
+};

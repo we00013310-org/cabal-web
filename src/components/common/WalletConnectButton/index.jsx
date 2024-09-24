@@ -4,12 +4,6 @@ import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 import phantomLogo from "../../../assets/images/wallets/phantom.svg";
 
-//handle wallet balance fixed to 2 decimal numbers without rounding
-export function toFixed(num, fixed) {
-  const re = new RegExp(`^-?\\d+(?:\\.\\d{0,${fixed || -1}})?`);
-  return num.toString()?.match(re);
-}
-
 const WalletConnectButton = ({ onSuccess }) => {
   const { connection } = useConnection();
   const { select, wallets, wallet, publicKey, disconnect, connecting } =
@@ -40,7 +34,6 @@ const WalletConnectButton = ({ onSuccess }) => {
     if (walletName) {
       try {
         select(walletName);
-        onSuccess?.();
       } catch (error) {
         console.log("wallet connection err : ", error);
       }

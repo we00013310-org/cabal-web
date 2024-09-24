@@ -32,7 +32,7 @@ export default function Login() {
             <div className="input-area">
               <div className="signin-area mb-3.5">
                 <div className="flex justify-center">
-                  <div className="w-full max-w-[300px] py-8">
+                  <div className="w-full max-w-[300px] py-8 flex justify-center">
                     <WalletConnectButton onSuccess={onLoginSuccess} />
                   </div>
                 </div>

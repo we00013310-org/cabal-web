@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 import Layout from "../../Partials/Layout";
 import { fetchRooms } from "../../../lib/apis/room";
@@ -8,8 +9,10 @@ import RoomTable from "../../Home/RoomTable";
 
 import USERS_DATA from "../../../data/user_data.json";
 import profileBanner from "../../../assets/images/profile-cover.png";
+import { formatAddress } from "../../../lib/utils";
 
 export default function AuthProfile() {
+  const { publicKey } = useWallet();
   const { data: rawData } = useQuery({
     queryKey: ["rooms"],
     queryFn: fetchRooms,
@@ -69,6 +72,16 @@ export default function AuthProfile() {
                         {userData.name}
                       </h1>
                     </div>
+                    {!!publicKey && (
+                      <div className="mb-2 sm:mb-4 text-thin-light-gray text-sm sm:text-base tracking-wide leading-2">
+                        <p>
+                          Wallet Address:
+                          <span className="ml-2 underline">
+                            {formatAddress(publicKey)}
+                          </span>
+                        </p>
+                      </div>
+                    )}
                     <div className="mb-2 sm:mb-4">
                       <p className="text-thin-light-gray text-sm sm:text-base tracking-wide leading-2">
                         Referral Code:

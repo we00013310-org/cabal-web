@@ -57,7 +57,11 @@ export default function TopSellerTopBuyerSliderSection({ className }) {
   };
 
   const datas = formatUsersData(USERS_DATA.datas, publicKey);
-  const creatorsData = datas.filter((o) => !!+o.owned_rooms);
+  const creatorsData = orderBy(
+    datas.filter((o) => !!+o.owned_rooms),
+    (o) => +o.owned_rooms,
+    "desc"
+  );
   const usersData = orderBy(
     datas.filter((o) => !!+o.joined_rooms),
     (o) => +o.joined_rooms,

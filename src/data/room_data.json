@@ -2,12 +2,13 @@
   "datas": [
     {
       "id": "r1",
-      "name": "Meme Coin Millionaires",
+      "name": "Underground",
       "owner": "Hunter",
+      "owned": true,
       "members": 10,
       "24h": -20.34,
       "joined": true,
-      "img": "https://cdn3d.iconscout.com/3d/premium/thumb/pepe-3d-icon-download-in-png-blend-fbx-gltf-file-formats--bitcoin-logo-coin-cryptocurrency-symbol-crypto-currency-coins-vol2-pack-science-technology-icons-7947909.png?f=webp",
+      "img": "https://pbs.twimg.com/profile_images/1742157968433422337/VAi6UGuX_400x400.jpg",
       "assets": [
         {
           "id": "sol",
@@ -24,11 +25,11 @@
     },
     {
       "id": "r2",
-      "name": "Layer 2 believer",
-      "owner": "Hunter",
+      "name": "Momentum",
+      "owner": "Cbb0fe",
       "members": 2,
       "24h": 6.33,
-      "img": "https://pics.craiyon.com/2023-06-07/1c96a136854046a796bcdb2d21d3240a.webp",
+      "img": "https://pbs.twimg.com/profile_images/1671838622356590592/Sz4trKwS_400x400.jpg",
       "assets": [
         {
           "id": "usdc",
@@ -53,12 +54,11 @@
     },
     {
       "id": "r3",
-      "name": "Moonshot Hunters",
-      "owner": "Nivle",
+      "name": "Arabian Carpet Store",
+      "owner": "Clemente",
       "members": 1,
       "24h": -0.01,
-      "joined": true,
-      "img": "https://pics.craiyon.com/2023-11-16/Fs96CgbMTSihxfqvgUe-Kg.webp",
+      "img": "https://img1.wsimg.com/isteam/ip/9e7e28bc-f690-4cf2-a59d-f6137bfd8797/fb_2313665278708645_960x540/:/rs=h:1000,cg:true,m",
       "assets": [
         {
           "id": "sol",
@@ -74,12 +74,29 @@
       "createdAt": 1726765200000
     },
     {
+      "id": "r17",
+      "name": "Pastel Alpha",
+      "owner": "thiccy",
+      "members": 1,
+      "24h": 0,
+      "joined": true,
+      "img": "https://pbs.twimg.com/profile_images/1609272591184965632/m_rBSpYX_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
       "id": "r4",
-      "name": "WallStreetBets Crypto",
-      "owner": "Naut",
+      "name": "Hideout",
+      "owner": "trader1sz",
       "members": 0,
       "24h": 0,
-      "img": "https://cdn.dribbble.com/users/1019669/screenshots/15290420/media/8e60cd1f5333a778bfbd4abaaa858d2b.jpg?resize=400x0",
+      "img": "https://pbs.twimg.com/profile_images/1593702516453154821/JbJqd7-X_400x400.jpg",
       "assets": [],
       "pointAssets": [
         {
@@ -91,11 +108,206 @@
     },
     {
       "id": "r5",
-      "name": "Crypto Degens",
-      "owner": "Atod",
+      "name": "Anteater's Amazon",
+      "owner": "tre",
       "members": 0,
       "24h": 0,
-      "img": "https://pics.craiyon.com/2023-11-05/e54602512d92414c8c5c07a209e11579.webp",
+      "img": "https://i.ibb.co/0YrjXwn/anteater.png",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r6",
+      "name": "MetaverseHQ",
+      "owner": "kush",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1612877061135208452/F66uwEds_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r7",
+      "name": "Hyung Prada",
+      "owner": "Hyung Prada",
+      "owned": true,
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1837674325857484801/rniUEBZ0_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r8",
+      "name": "Giba | Kingdom X100 ",
+      "owner": "mochi",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1504791959172485126/ZbJqb_o0_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r9",
+      "name": "wuzie makes money",
+      "owner": "Charlotte Fang",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1825518618299248640/aZIIeWPL_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r10",
+      "name": "Luffy's Diary",
+      "owner": "Aura",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1513273998393622530/es3y9qFt_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r11",
+      "name": "macnbtc",
+      "owner": "Impossible Finance",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1815480719302381568/cnt9ekJQ_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r12",
+      "name": "trader1sz",
+      "owner": "smolting",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1829911783164788736/_lW5FWLz_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r13",
+      "name": "Crypto Chase",
+      "owner": "cnig69",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/932160556441600000/6Kpv5u46_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r14",
+      "name": "DonAlt",
+      "owner": "DonAlt",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1805463878471417857/hXKyF93b_400x400.png",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r15",
+      "name": "0xENAS",
+      "owner": "Atod",
+      "members": 0,
+      "owned": true,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1663505820833955842/anBwGtM2_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r16",
+      "name": "smartestmoney",
+      "owner": "RonnieDcky",
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1748215940339437568/GEMtUguP_400x400.jpg",
+      "assets": [],
+      "pointAssets": [
+        {
+          "id": "sol",
+          "amount": 10
+        }
+      ],
+      "createdAt": 1726765200000
+    },
+    {
+      "id": "r18",
+      "name": "kongee",
+      "owner": "kongee",
+      "owned": true,
+      "members": 0,
+      "24h": 0,
+      "img": "https://pbs.twimg.com/profile_images/1777121375079022592/KjBqi4ZG_400x400.jpg",
       "assets": [],
       "pointAssets": [
         {

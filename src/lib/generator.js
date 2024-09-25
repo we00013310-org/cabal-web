@@ -22,10 +22,14 @@ export function generateNumbersInRange(x, y, z = 20) {
   return result;
 }
 
-const getRandomUser = () => {
-  const users = USERS_DATA.datas.filter((o) => o.id !== "u2");
+export const getRandomUser = () => {
+  const users = USERS_DATA.datas.filter((o) => o.id !== "u2" && !o.bot);
 
   return users[Math.floor(Math.random() * users.length)];
+};
+
+export const getBot = () => {
+  return USERS_DATA.datas.find((o) => o.bot);
 };
 
 export function getRandomMessages() {
@@ -116,4 +120,54 @@ export const getRandomCabals = (number) => {
   const messages = Array.from({ length: number }, generateCabalAuto);
 
   return messages;
+};
+
+export const generateBotMessages = (newMessage) => {
+  const triggerSentence = "anything interesting today";
+  if (newMessage?.toLowerCase().includes(triggerSentence)) {
+    const user1 = getRandomUser();
+    const user2 = getRandomUser();
+    const bot = getBot();
+
+    return [
+      {
+        id: uuidv4(),
+        text: "been looking at Solana Breakpoint projects",
+        sender: user1,
+      },
+      {
+        id: uuidv4(),
+        text: "oh yea i heard that was the hypest event at token",
+        sender: user2,
+      },
+      {
+        id: uuidv4(),
+        text: "def was, i think sanctum is a dark horse. They launched creator coins and cloud card at breakpoint, $CLOUD been on an up only trend",
+        sender: user1,
+      },
+      {
+        id: uuidv4(),
+        text: "CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu",
+        sender: user2,
+      },
+      {
+        id: uuidv4(),
+        text: `Solana @ Meteora Dlmm
+💰 USD: $0.4419
+💎 FDV: $442.0M
+💦 Liq: $16.3M 🐡[x54.2]
+📊 Vol: $1M 🕰 Age: 2mo
+⛰ ATH: $458.2M [1d ago]
+📉 1H: -0.4% ⋅ $17.8K 🅑 11 🅢 28
+🖨 Mint: ✅ ⋅ LP: 🔥
+🧰 More: ch ⋅ bm 🐦 x ⋅ web
+
+CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu
+MAE⋅BAN⋅BNK⋅SHU⋅PEP⋅DEX⋅BRD
+TRO⋅STB⋅PHO⋅BLX⋅EXP⋅RUG⋅TW
+💥 NEW: Fastest sniper & trading - MevX on SOL`,
+        sender: bot,
+      },
+    ];
+  }
 };

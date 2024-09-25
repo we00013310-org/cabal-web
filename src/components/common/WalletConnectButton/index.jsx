@@ -6,8 +6,7 @@ import phantomLogo from "../../../assets/images/wallets/phantom.svg";
 
 const WalletConnectButton = ({ onSuccess }) => {
   const { connection } = useConnection();
-  const { select, wallets, wallet, publicKey, disconnect, connecting } =
-    useWallet();
+  const { select, publicKey, connecting } = useWallet();
   const [balance, setBalance] = useState(null);
 
   useEffect(() => {

@@ -1,6 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import { getRandomMessages } from "../../../lib/generator";
+import {
+  generateBotMessages,
+  getRandomMessages,
+  getRandomUser,
+} from "../../../lib/generator";
+
+const user1 = getRandomUser();
+const user2 = getRandomUser();
 
 const DATA = [
   {
@@ -16,20 +23,12 @@ const DATA = [
   {
     id: 2,
     text: "Hello, nice to meet you",
-    sender: {
-      id: "u1",
-      name: "Hunter",
-      img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
-    },
+    sender: user1,
   },
   {
     id: 3,
     text: "I've been looking at BTC's chart and I think we should go long.",
-    sender: {
-      id: "u1",
-      name: "Hunter",
-      img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
-    },
+    sender: user1,
   },
   {
     id: 4,
@@ -44,20 +43,12 @@ const DATA = [
   {
     id: 5,
     text: "Check out the RSI on the 4-hour chart. It's been oversold for a while, and we're seeing bullish divergence.",
-    sender: {
-      id: "u1",
-      name: "Hunter",
-      img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
-    },
+    sender: user1,
   },
   {
     id: 6,
     text: "Also, the moving averages just crossed — the 50-day MA broke above the 200-day MA. That golden cross usually signals a strong uptrend is coming.",
-    sender: {
-      id: "u1",
-      name: "Hunter",
-      img: "https://imgcdn.stablediffusionweb.com/2024/5/28/1f61f844-f7fa-4e15-978a-650c14b126a9.jpg",
-    },
+    sender: user1,
   },
   {
     id: 7,
@@ -72,13 +63,11 @@ const DATA = [
   {
     id: 8,
     text: "Yeah, I agree with Hunter. The indicators are pointing towards a bullish trend. It’s a good time to take a long position.",
-    sender: {
-      id: "u3",
-      name: "Nivle",
-      img: "https://pics.craiyon.com/2024-09-04/v-5PWpdBSuyXWcGzALO1iw.webp",
-    },
+    sender: user2,
   },
 ];
+
+const MESSAGE_DELAY = 1000;
 
 const MessengerWidget = () => {
   const [messages, setMessages] = useState(DATA);
@@ -111,12 +100,28 @@ const MessengerWidget = () => {
     ]);
 
     setNewMessage(""); // Clear the input after sending a message
+    if (!triggerBotMessage(newMessage)) {
+      setTimeout(() => {
+        const newMessages = getRandomMessages();
 
-    setTimeout(() => {
-      const newMessages = getRandomMessages();
+        setMessages((prevMessages) => [...prevMessages, ...newMessages]);
+      }, MESSAGE_DELAY);
+    }
+  };
 
-      setMessages((prevMessages) => [...prevMessages, ...newMessages]);
-    }, 1000);
+  const triggerBotMessage = (newMessage) => {
+    const messages = generateBotMessages(newMessage);
+
+    messages?.forEach((o, i) => {
+      setTimeout(
+        () => {
+          setMessages((prevMessages) => [...prevMessages, o]);
+        },
+        (i + 1) * MESSAGE_DELAY
+      );
+    });
+
+    return messages;
   };
 
   if (!toggled) {
@@ -174,7 +179,7 @@ const MessengerWidget = () => {
                   : "bg-gray-300 text-black"
               }`}
             >
-              {message.text}
+              <pre className="whitespace-break-spaces">{message.text}</pre>
               {!message.sender.you && (
                 <div className="border-t border-light-purple dark:border-[#FFAB3329] mt-2 pt-2  flex items-center space-x-2 lg:mb-0 mr-2">
                   <div className="w-4 h-4 flex justify-center items-center rounded-full overflow-hidden">

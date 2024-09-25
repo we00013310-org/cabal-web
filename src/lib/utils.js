@@ -1,4 +1,8 @@
-import { USER_KEY } from "./constants";
+import { USER_KEY, LOGIN_KEY } from "./constants";
+
+const checkLogined = () => {
+  return localStorage.getItem(LOGIN_KEY);
+};
 
 export const generateLeverageColor = (input, type = "accent") => {
   if (type === "accent") {
@@ -27,15 +31,20 @@ export const formatAddress = (publicKey) => {
 };
 
 export const generateName = (publicKey) => {
+  if (!publicKey) {
+    return;
+  }
   return `User_${formatAddress(publicKey).slice(-5)}`;
 };
 
 export const formatUsersData = (users, publicKey) => {
+  const logined = checkLogined();
+
   return users.map((o) => {
     return o.id === "u2"
       ? {
           ...o,
-          name: publicKey ? generateName(publicKey) : o.name,
+          name: logined ? generateName(publicKey) || o.name : o.name,
         }
       : o;
   });

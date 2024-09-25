@@ -4,7 +4,7 @@ import orderBy from "lodash/orderBy";
 import { ROOMS_DATA_KEY } from "../constants";
 import ROOMS_DATA from "../../data/room_data.json";
 import TOKENS_DATA from "../../data/token_data.json";
-import { getRandomCabals } from "../generator";
+// import { getRandomCabals } from "../generator";
 import { getPrice } from "../room";
 import { getCurrentUsername } from "../utils";
 
@@ -25,12 +25,13 @@ export const fetchRooms = async () => {
         ...o,
         value: +result.toFixed(4),
         price: getPrice(o),
+        owner: o.owned ? getCurrentUsername() : o.owner,
       };
     });
   }
 
   const rawData = ROOMS_DATA.datas;
-  const tmp = [...rawData, ...getRandomCabals(20)].map((o) => {
+  const tmp = [...rawData].map((o) => {
     const tokensData = TOKENS_DATA.datas;
     let result = 0;
 
@@ -42,6 +43,7 @@ export const fetchRooms = async () => {
       ...o,
       value: +result.toFixed(4),
       price: getPrice(o),
+      owner: o.owned ? getCurrentUsername() : o.owner,
     };
   });
   localStorage.setItem(ROOMS_DATA_KEY, JSON.stringify(tmp));

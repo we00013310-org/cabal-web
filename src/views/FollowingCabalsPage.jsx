@@ -10,7 +10,7 @@ const FollowingCabalsPage = () => {
           <div className="flex justify-between items-center mb-6">
             <div className="w-full">
               <h1 className="text-26 font-bold text-dark-gray dark:text-white">
-                <span>Investing Cabals</span>
+                <span>Cabal Performance</span>
               </h1>
               <RoomTable
                 hideHeader

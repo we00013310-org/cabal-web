@@ -145,7 +145,7 @@ export default function Sidebar({ sidebar, action, onLogout }) {
                       sidebar ? "active flex-1" : "w-0"
                     }`}
                   >
-                    Investing Cabals
+                    Cabal Performance
                   </span>
                 </NavLink>
               </li>

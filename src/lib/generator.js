@@ -168,6 +168,16 @@ TRO⋅STB⋅PHO⋅BLX⋅EXP⋅RUG⋅TW
 💥 NEW: Fastest sniper & trading - MevX on SOL`,
         sender: bot,
       },
+      {
+        id: uuidv4(),
+        text: "actually $CLOUD looks like a really good set up, im deploying. you get bonus if we profit on this! Lets go! 🚀",
+        sender: {
+          id: "u2",
+          name: "Nuoanunu",
+          img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
+          you: true,
+        },
+      },
     ];
   }
 };

@@ -36,7 +36,7 @@ const UserListItem = ({ data, type = "creator" }) => {
       </div>
       {/* name */}
       <div className="flex justify-center">
-        <p className="text-sm sm:text-base font-bold text-dark-gray dark:text-white">
+        <p className="text-sm sm:text-base font-bold text-dark-gray dark:text-white whitespace-nowrap">
           {data.name}
         </p>
       </div>

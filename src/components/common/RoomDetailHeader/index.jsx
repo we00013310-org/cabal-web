@@ -81,12 +81,9 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
               </h1>
               <span className="text-base text-thin-light-gray tracking-wide mb-4 flex flex-col-reverse sm:flex-row sm:items-center">
                 <div className="flex items-center space-x-2 lg:mb-0 mr-2">
-                  <div className="w-8 h-8 flex justify-center items-center rounded-full overflow-hidden">
-                    <img src={ownerData.img} alt="" />
-                  </div>
                   <div>
                     <p className="text-base tracking-wide font-bold antise text-purple">
-                      {ownerData.name}
+                      {data.name}
                     </p>
                   </div>
                 </div>

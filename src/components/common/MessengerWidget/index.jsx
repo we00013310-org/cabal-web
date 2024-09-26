@@ -62,7 +62,7 @@ const DATA = [
   },
   {
     id: 8,
-    text: "Yeah, I agree with Hunter. The indicators are pointing towards a bullish trend. It’s a good time to take a long position.",
+    text: "Yeah, I agree with him. The indicators are pointing towards a bullish trend. It’s a good time to take a long position.",
     sender: user2,
   },
 ];
@@ -168,30 +168,36 @@ const MessengerWidget = () => {
         {messages.map((message) => (
           <div
             key={message.id}
-            className={`animate-fade flex mb-2 ${
+            className={`animate-fade flex mb-4 items-end ${
               message.sender.you ? "justify-end" : "justify-start"
             }`}
           >
+            {!message.sender.you && (
+              <div className="w-8 h-8 mr-2">
+                <div className="w-full h-full flex justify-center items-center rounded-full overflow-hidden">
+                  <img src={message.sender.img} alt="" />
+                </div>
+              </div>
+            )}
             <div
-              className={`p-2 max-w-[80%] rounded-lg ${
-                message.sender.you
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-300 text-black"
-              }`}
+              className={`flex flex-1 flex-col ${message.sender.you ? "items-end" : "items-start"}`}
             >
-              <pre className="whitespace-break-spaces">{message.text}</pre>
               {!message.sender.you && (
-                <div className="border-t border-light-purple dark:border-[#FFAB3329] mt-2 pt-2  flex items-center space-x-2 lg:mb-0 mr-2">
-                  <div className="w-4 h-4 flex justify-center items-center rounded-full overflow-hidden">
-                    <img src={message.sender.img} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-xs tracking-wide font-bold antise text-purple">
-                      {message.sender.name}
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-xs tracking-wide font-bold antise text-purple">
+                    {message.sender.name}
+                  </p>
                 </div>
               )}
+              <div
+                className={`p-2 max-w-[80%] rounded-lg ${
+                  message.sender.you
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-300 text-black"
+                }`}
+              >
+                <pre className="whitespace-break-spaces">{message.text}</pre>
+              </div>
             </div>
           </div>
         ))}

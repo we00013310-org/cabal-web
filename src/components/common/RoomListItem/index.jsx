@@ -40,7 +40,7 @@ const RoomListItem = ({ data }) => {
               {data.name}
             </h1>
             <span className="text-sm text-thin-light-gray">
-              Owned by <span className="text-purple">{data.owner}</span>
+              Owned by <span className="text-purple">{data.name}</span>
             </span>
           </div>
         </div>

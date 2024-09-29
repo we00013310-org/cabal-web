@@ -7,6 +7,9 @@ import TOKENS_DATA from "../../data/token_data.json";
 // import { getRandomCabals } from "../generator";
 import { getPrice } from "../room";
 import { getCurrentUsername } from "../utils";
+import { sendMessageApi } from "./message";
+import { generateNumbersInRange } from "../generator";
+import { formatNumb } from "../number";
 
 export const fetchRooms = async () => {
   const cached = localStorage.getItem(ROOMS_DATA_KEY);
@@ -217,6 +220,23 @@ export const swapTokenApi =
         ROOMS_DATA_KEY,
         JSON.stringify(orderBy(newRooms, ["value"], ["desc"]))
       );
+
+      if (!usePoint) {
+        const pnl = formatNumb(generateNumbersInRange(2, 10, 200)[0]);
+        await sendMessageApi({
+          roomId,
+          datas: [
+            {
+              id: uuidv4(),
+              sender: "command",
+              text:
+                tokenBId === "sol"
+                  ? `Position closed: ${amountA} ${tokenAId.toUpperCase()} for ${amountB} ${tokenBId.toUpperCase()}. PNL: ${pnl > 0 ? `+${pnl}` : pnl}%`
+                  : `Position opened: ${amountA} ${tokenAId.toUpperCase()} for ${amountB} ${tokenBId.toUpperCase()}`,
+            },
+          ],
+        });
+      }
 
       return updatedRoom;
     } catch (err) {

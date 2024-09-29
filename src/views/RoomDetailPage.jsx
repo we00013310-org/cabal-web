@@ -36,7 +36,7 @@ const RoomDetailPage = () => {
           <RoomDetailHeader ownedKeys={balanceData?.keys?.[id]} data={data} />
 
           <div className="w-full h-[80vh] lg:h-[800px] mb-8">
-            <MessengerWidget />
+            <MessengerWidget roomId={id} />
           </div>
 
           <div className="current_balance-bit-sell-widget w-full lg:h-[336px] mb-8">

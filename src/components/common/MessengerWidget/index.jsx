@@ -1,76 +1,23 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
-import {
-  generateBotMessages,
-  getRandomMessages,
-  getRandomUser,
-} from "../../../lib/generator";
-
-const user1 = getRandomUser();
-const user2 = getRandomUser();
-
-const DATA = [
-  {
-    id: 1,
-    text: "Welcome to our Cabal!",
-    sender: {
-      id: "u2",
-      name: "Nuoanunu",
-      img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
-      you: true,
-    },
-  },
-  {
-    id: 2,
-    text: "Hello, nice to meet you",
-    sender: user1,
-  },
-  {
-    id: 3,
-    text: "I've been looking at BTC's chart and I think we should go long.",
-    sender: user1,
-  },
-  {
-    id: 4,
-    text: "Why do you think now is a good time to long BTC?",
-    sender: {
-      id: "u2",
-      name: "Nuoanunu",
-      img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
-      you: true,
-    },
-  },
-  {
-    id: 5,
-    text: "Check out the RSI on the 4-hour chart. It's been oversold for a while, and we're seeing bullish divergence.",
-    sender: user1,
-  },
-  {
-    id: 6,
-    text: "Also, the moving averages just crossed — the 50-day MA broke above the 200-day MA. That golden cross usually signals a strong uptrend is coming.",
-    sender: user1,
-  },
-  {
-    id: 7,
-    text: "Makes sense. I'll prepare the long command.",
-    sender: {
-      id: "u2",
-      name: "Nuoanunu",
-      img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
-      you: true,
-    },
-  },
-  {
-    id: 8,
-    text: "Yeah, I agree with him. The indicators are pointing towards a bullish trend. It’s a good time to take a long position.",
-    sender: user2,
-  },
-];
+import { generateBotMessages, getRandomMessages } from "../../../lib/generator";
+import { fetchMessages, sendMessageApi } from "../../../lib/apis/message";
 
 const MESSAGE_DELAY = 1000;
 
-const MessengerWidget = () => {
-  const [messages, setMessages] = useState(DATA);
+const MessengerWidget = ({ roomId }) => {
+  const queryClient = useQueryClient();
+  const { data: rawData } = useQuery({
+    queryKey: ["messages", roomId],
+    queryFn: fetchMessages(roomId),
+  });
+  const { mutate } = useMutation({
+    mutationFn: sendMessageApi,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["messages", roomId] });
+    },
+  });
   const [newMessage, setNewMessage] = useState("");
   const [toggled, setToggled] = useState(true);
   const chatContainerRef = useRef(null);
@@ -80,31 +27,34 @@ const MessengerWidget = () => {
       chatContainerRef.current.scrollTop =
         chatContainerRef.current.scrollHeight;
     }
-  }, [messages?.length, toggled]);
+  }, [rawData?.length, toggled]);
 
   const sendMessage = () => {
     if (newMessage.trim() === "") return;
 
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      {
-        id: prevMessages.length + 1,
-        text: newMessage,
-        sender: {
-          id: "u2",
-          name: "Nuoanunu",
-          img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
-          you: true,
+    mutate({
+      roomId,
+      datas: [
+        {
+          text: newMessage,
+          sender: {
+            id: "u2",
+            name: "Nuoanunu",
+            img: "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
+            you: true,
+          },
         },
-      },
-    ]);
+      ],
+    });
 
     setNewMessage(""); // Clear the input after sending a message
     if (!triggerBotMessage(newMessage)) {
       setTimeout(() => {
         const newMessages = getRandomMessages();
-
-        setMessages((prevMessages) => [...prevMessages, ...newMessages]);
+        mutate({
+          roomId,
+          datas: newMessages,
+        });
       }, MESSAGE_DELAY);
     }
   };
@@ -115,7 +65,10 @@ const MessengerWidget = () => {
     messages?.forEach((o, i) => {
       setTimeout(
         () => {
-          setMessages((prevMessages) => [...prevMessages, o]);
+          mutate({
+            roomId,
+            datas: [o],
+          });
         },
         (i + 1) * MESSAGE_DELAY
       );
@@ -165,42 +118,58 @@ const MessengerWidget = () => {
         ref={chatContainerRef}
         className="flex-1 overflow-y-auto rounded-md px-4"
       >
-        {messages.map((message) => (
-          <div
-            key={message.id}
-            className={`animate-fade flex mb-4 items-end ${
-              message.sender.you ? "justify-end" : "justify-start"
-            }`}
-          >
-            {!message.sender.you && (
-              <div className="w-8 h-8 mr-2">
-                <div className="w-full h-full flex justify-center items-center rounded-full overflow-hidden">
-                  <img src={message.sender.img} alt="" />
+        {rawData?.map((message) => {
+          if (message.sender === "command") {
+            return (
+              <div
+                key={message.id}
+                className="animate-fade flex my-8 items-end justify-center relative"
+              >
+                <div className="absolute top-[50%] w-full h-[1px] dark:bg-light-purple bg-dark-light-purple opacity-50" />
+                <div className="z-10 p-2 max-w-[80%] rounded-lg bg-gray-500">
+                  {message.text}
                 </div>
               </div>
-            )}
+            );
+          }
+
+          return (
             <div
-              className={`flex flex-1 flex-col ${message.sender.you ? "items-end" : "items-start"}`}
+              key={message.id}
+              className={`animate-fade flex mb-4 items-end ${
+                message.sender.you ? "justify-end" : "justify-start"
+              }`}
             >
               {!message.sender.you && (
-                <div>
-                  <p className="text-xs tracking-wide font-bold antise text-purple">
-                    {message.sender.name}
-                  </p>
+                <div className="w-8 h-8 mr-2">
+                  <div className="w-full h-full flex justify-center items-center rounded-full overflow-hidden">
+                    <img src={message.sender.img} alt="" />
+                  </div>
                 </div>
               )}
               <div
-                className={`p-2 max-w-[80%] rounded-lg ${
-                  message.sender.you
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-300 text-black"
-                }`}
+                className={`flex flex-1 flex-col ${message.sender.you ? "items-end" : "items-start"}`}
               >
-                <pre className="whitespace-break-spaces">{message.text}</pre>
+                {!message.sender.you && (
+                  <div>
+                    <p className="text-xs tracking-wide font-bold antise text-purple">
+                      {message.sender.name}
+                    </p>
+                  </div>
+                )}
+                <div
+                  className={`p-2 max-w-[80%] rounded-lg ${
+                    message.sender.you
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-300 text-black"
+                  }`}
+                >
+                  <pre className="whitespace-break-spaces">{message.text}</pre>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Message Input */}

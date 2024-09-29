@@ -38,6 +38,7 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
     onSuccess: () => {
       toast.success("Swapped successfully!!");
       queryClient.invalidateQueries({ queryKey: ["rooms", roomData.id] });
+      queryClient.invalidateQueries({ queryKey: ["messages", roomData.id] });
       onClose();
     },
   });

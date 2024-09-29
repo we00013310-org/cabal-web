@@ -1,0 +1,67 @@
+{
+  "datas": [
+    {
+      "id": 1,
+      "text": "Welcome to our Cabal!",
+      "sender": {
+        "id": "u2",
+        "name": "Nuoanunu",
+        "you": true
+      }
+    },
+    {
+      "id": 2,
+      "text": "Hello, nice to meet you",
+      "sender": "user1"
+    },
+    {
+      "id": 3,
+      "text": "I've been looking at BTC's chart and I think we should go long.",
+      "sender": "user1"
+    },
+    {
+      "id": 4,
+      "text": "Why do you think now is a good time to long BTC?",
+      "sender": {
+        "id": "u2",
+        "name": "Nuoanunu",
+        "img": "https://img.craiyon.com/2024-09-16/ugXwRKGiRhWpvM-T-1TyxA.webp",
+        "you": true
+      }
+    },
+    {
+      "id": 5,
+      "text": "Check out the RSI on the 4-hour chart. It's been oversold for a while, and we're seeing bullish divergence.",
+      "sender": "user1"
+    },
+    {
+      "id": 6,
+      "text": "Also, the moving averages just crossed — the 50-day MA broke above the 200-day MA. That golden cross usually signals a strong uptrend is coming.",
+      "sender": "user1"
+    },
+    {
+      "id": 7,
+      "text": "Makes sense. I'll prepare the long command.",
+      "sender": {
+        "id": "u2",
+        "name": "Nuoanunu",
+        "you": true
+      }
+    },
+    {
+      "id": 9,
+      "text": "Position opend: 10 BTC for 2000 SOL",
+      "sender": "command"
+    },
+    {
+      "id": 8,
+      "text": "Yeah, I agree with him. The indicators are pointing towards a bullish trend. It’s a good time to take a long position.",
+      "sender": "user2"
+    },
+    {
+      "id": 10,
+      "text": "Position closed: 10 BTC for 3000 SOL. PNL +50%",
+      "sender": "command"
+    }
+  ]
+}

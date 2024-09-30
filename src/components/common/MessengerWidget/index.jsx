@@ -125,10 +125,11 @@ const MessengerWidget = ({ roomId }) => {
                 key={message.id}
                 className="animate-fade flex my-8 items-end justify-center relative"
               >
-                <div className="absolute top-[50%] w-full h-[1px] dark:bg-light-purple bg-dark-light-purple opacity-50" />
-                <div className="z-10 p-2 max-w-[80%] rounded-lg bg-gray-500">
-                  {message.text}
-                </div>
+                <div className="absolute top-[50%] w-full h-[1px] bg-purple opacity-50" />
+                <div
+                  className="z-10 p-2 max-w-[80%] rounded-lg bg-purple"
+                  dangerouslySetInnerHTML={{ __html: message.text }}
+                />
               </div>
             );
           }

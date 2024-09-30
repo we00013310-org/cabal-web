@@ -106,6 +106,19 @@ export default function MobileSidebar({ sidebar, action, onLogout }) {
                   </span>
                 </NavLink>
               </li>
+              <li className="item group">
+                <NavLink
+                  className="nav-item flex items-center justify-start space-x-3.5"
+                  to="/leaderboard"
+                >
+                  <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple dark:bg-dark-light-purple  rounded-full   text-dark-gray dark:text-white">
+                    <Icons name="leaderboard" />
+                  </span>
+                  <span className="item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium active flex-1">
+                    Leaderboard
+                  </span>
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

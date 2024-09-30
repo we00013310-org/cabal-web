@@ -231,7 +231,7 @@ export const swapTokenApi =
               sender: "command",
               text:
                 tokenBId === "sol"
-                  ? `Position closed: ${amountA} ${tokenAId.toUpperCase()} for ${amountB} ${tokenBId.toUpperCase()}. PNL: ${pnl > 0 ? `+${pnl}` : pnl}%`
+                  ? `Position closed: ${amountA} ${tokenAId.toUpperCase()} for ${amountB} ${tokenBId.toUpperCase()}. ${pnl > 0 ? `<b class='text-light-green'>PNL +${pnl}%</b>` : `<b class="text-light-red">PNL ${pnl}%</b>`}`
                   : `Position opened: ${amountA} ${tokenAId.toUpperCase()} for ${amountB} ${tokenBId.toUpperCase()}`,
             },
           ],

@@ -181,3 +181,19 @@ TRO⋅STB⋅PHO⋅BLX⋅EXP⋅RUG⋅TW
     ];
   }
 };
+
+export const generateTonWalletAddress = () => {
+  // Prefix for TON addresses (usually starts with 'EQ')
+  const prefix = "EQ";
+
+  // Generate a random string of 48 characters (mimicking the address body)
+  const randomPart = [...Array(48)]
+    .map(() => Math.floor(Math.random() * 36).toString(36))
+    .join("")
+    .toUpperCase();
+
+  // Combine the prefix with the random part to form the address
+  const tonWalletAddress = prefix + randomPart;
+
+  return tonWalletAddress;
+};

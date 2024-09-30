@@ -60,7 +60,7 @@
     },
     {
       "id": 10,
-      "text": "Position closed: 10 BTC for 3000 SOL. PNL +50%",
+      "text": "Position closed: 10 BTC for 3000 SOL. <b class='text-light-green'>PNL +50%</b>",
       "sender": "command"
     }
   ]

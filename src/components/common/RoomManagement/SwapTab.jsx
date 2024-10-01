@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { toast } from "react-toastify";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
@@ -8,6 +8,7 @@ import { findAmountB } from "../../../lib/token";
 import { swapTokenApi } from "../../../lib/apis/room";
 import { generateLeverageColor } from "../../../lib/utils";
 import { MAX_LEVERAGE } from "../../../lib/constants";
+import { formatNumb } from "../../../lib/number";
 
 const SwapTab = ({ roomData, onClose, usePoint = false }) => {
   const queryClient = useQueryClient();
@@ -25,6 +26,14 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
   }, [roomData?.assets, roomData?.pointAssets, usePoint]);
 
   const [dip, setDip] = useState(false);
+  const [profit, setProfit] = useState(false);
+  const [profitVal, setProfitVal] = useState();
+  const [loss, setLoss] = useState(false);
+  const [lossVal, setLossVal] = useState();
+
+  const rate = useMemo(() => {
+    return tokA.price / tokB.price;
+  }, [tokA.price, tokB.price]);
 
   const { mutate: swapToken } = useMutation({
     mutationFn: swapTokenApi(
@@ -49,6 +58,18 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
   const tokenBBalance = useMemo(() => {
     return assets?.find((o) => o.id === tokenB)?.amount || 0;
   }, [assets, tokenB]);
+
+  useEffect(() => {
+    if (rate) {
+      setProfitVal(formatNumb(rate * 1.1, 6));
+    }
+  }, [rate]);
+
+  useEffect(() => {
+    if (rate) {
+      setLossVal(formatNumb(rate * 0.9, 6));
+    }
+  }, [rate]);
 
   const handleRotate = () => {
     let tmp = tokenA;
@@ -166,6 +187,10 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
           }
         }}
       />
+      <span className="text-dark-gray dark:text-white mt-2 flex justify-center">
+        1 {tokA.slug.toUpperCase()} ~ {formatNumb(rate, 6)}{" "}
+        {tokB.slug.toUpperCase()}
+      </span>
       <div className="flex flex-col space-y-2 py-4 relative">
         <div
           className={`text-sm sm:text-base flex justify-center absolute left-0 top-6 w-full ${generateLeverageColor(leverage, "text")}`}
@@ -247,6 +272,133 @@ const SwapTab = ({ roomData, onClose, usePoint = false }) => {
                 placeholder="20"
                 className="input-field placeholder:text-base text-base px-6 text-dark-gray dark:text-white flex-1 h-full bg-[#FAFAFA] dark:bg-[#11131F]  focus:ring-0 focus:outline-none"
                 type="number"
+              />
+              %
+            </span>
+          </div>
+        </div>
+      )}
+      <div
+        onClick={() => setProfit(!profit)}
+        className="flex my-4 items-center space-x-2.5 cursor-pointer"
+      >
+        <button
+          type="button"
+          className="w-5 h-5 text-dark-gray dark:text-white flex justify-center items-center border border-light-gray"
+        >
+          {profit && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          )}
+        </button>
+        <span className="text-sm sm:text-base text-dark-gray dark:text-white">
+          Take Profit
+        </span>
+      </div>
+      {!!profit && (
+        <div className="input-field my-2 animate-fade">
+          <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  w-full rounded-full h-[58px] flex items-center overflow-hidden">
+            <div className="flex-1 pl-4 sm:pl-8 flex h-full items-center bg-[#FAFAFA] dark:bg-[#11131F] ">
+              <div className="flex space-x-1 items-center">
+                <span className="text-dark-gray dark:text-white text-xs mr-1 sm:mr-2">
+                  Trigger Price
+                </span>
+              </div>
+            </div>
+            <div className="w-[1px] h-[33px] bg-light-purple dark:bg-dark-light-purple "></div>
+            <span className="px-2 items-center w-4/12 flex text-dark-gray dark:text-white text-base h-full bg-[#FAFAFA] dark:bg-[#11131F] ">
+              <input
+                placeholder="20"
+                className="input-field placeholder:text-base text-base w-full text-dark-gray dark:text-white flex-1 h-full bg-[#FAFAFA] dark:bg-[#11131F] focus:ring-0 focus:outline-none"
+                type="number"
+                value={profitVal}
+                onChange={(e) => setProfitVal(e.target.value)}
+              />
+              <span className="text-dark-gray text-xs">
+                {tokB.slug.toUpperCase()}
+              </span>
+            </span>
+            <div className="w-[1px] h-[33px] bg-light-purple dark:bg-dark-light-purple " />
+            <span className="px-2 items-center w-4/12 flex text-dark-gray dark:text-white text-base h-full bg-[#FAFAFA] dark:bg-[#11131F] ">
+              <input
+                disabled
+                className="input-field placeholder:text-base text-base w-full text-dark-gray dark:text-white flex-1 h-full bg-[#FAFAFA] dark:bg-[#11131F] focus:ring-0 focus:outline-none"
+                type="number"
+                value={formatNumb(((profitVal - rate) * 100.0) / rate)}
+              />
+              %
+            </span>
+          </div>
+        </div>
+      )}
+
+      <div
+        onClick={() => setLoss(!loss)}
+        className="flex my-4 items-center space-x-2.5 cursor-pointer"
+      >
+        <button
+          type="button"
+          className="w-5 h-5 text-dark-gray dark:text-white flex justify-center items-center border border-light-gray"
+        >
+          {loss && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          )}
+        </button>
+        <span className="text-sm sm:text-base text-dark-gray dark:text-white">
+          Stop Loss
+        </span>
+      </div>
+      {!!loss && (
+        <div className="input-field my-2 animate-fade">
+          <div className="input-wrapper border border-light-purple dark:border-[#FFAB3329]  w-full rounded-full h-[58px] flex items-center overflow-hidden">
+            <div className="flex-1 pl-4 sm:pl-8 flex h-full items-center bg-[#FAFAFA] dark:bg-[#11131F] ">
+              <div className="flex space-x-1 items-center">
+                <span className="text-dark-gray dark:text-white text-xs mr-1 sm:mr-2">
+                  Trigger Price
+                </span>
+              </div>
+            </div>
+            <div className="w-[1px] h-[33px] bg-light-purple dark:bg-dark-light-purple "></div>
+            <span className="px-2 items-center w-4/12 flex text-dark-gray dark:text-white text-base h-full bg-[#FAFAFA] dark:bg-[#11131F] ">
+              <input
+                placeholder="20"
+                className="input-field placeholder:text-base text-base w-full text-dark-gray dark:text-white flex-1 h-full bg-[#FAFAFA] dark:bg-[#11131F] focus:ring-0 focus:outline-none"
+                type="number"
+                value={lossVal}
+                onChange={(e) => setLossVal(e.target.value)}
+              />
+              <span className="text-dark-gray text-xs">
+                {tokB.slug.toUpperCase()}
+              </span>
+            </span>
+            <div className="w-[1px] h-[33px] bg-light-purple dark:bg-dark-light-purple " />
+            <span className="px-2 items-center w-4/12 flex text-dark-gray dark:text-white text-base h-full bg-[#FAFAFA] dark:bg-[#11131F] ">
+              <input
+                disabled
+                className="input-field placeholder:text-base text-base w-full text-dark-gray dark:text-white flex-1 h-full bg-[#FAFAFA] dark:bg-[#11131F] focus:ring-0 focus:outline-none"
+                type="number"
+                value={formatNumb(((rate - lossVal) * 100.0) / rate)}
               />
               %
             </span>

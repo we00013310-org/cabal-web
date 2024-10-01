@@ -1,23 +1,23 @@
 import React, { useMemo, useState } from "react";
 import { toast } from "react-toastify";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useWallet } from "@solana/wallet-adapter-react";
 
 import { formatDate } from "../../../lib/date";
 import { buyKeyApi } from "../../../lib/apis/balance";
-import { formatUsersData } from "../../../lib/utils";
-import ModalCom from "../../Helpers/ModalCom";
-import RoomManagement from "../RoomManagement";
 
 import Img from "../../../assets/images/auth-profile-picture.png";
-
 import SolIcon from "../../../assets/images/tokens/sol.svg";
-import USERS_DATA from "../../../data/user_data.json";
+import { useNavigate } from "react-router-dom";
+import Icons from "../../Helpers/Icons";
 
-export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
+export default function RoomDetailHeader({
+  data,
+  ownedKeys = 0,
+  className,
+  onManagementPage = false,
+}) {
+  const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const [modal, showModal] = useState(false);
-  const { publicKey } = useWallet();
 
   const keyPrice = data.price;
 
@@ -46,9 +46,6 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
       queryClient.invalidateQueries({ queryKey: ["rooms", data.id] });
     },
   });
-  const ownerData = formatUsersData(USERS_DATA.datas, publicKey).find(
-    (o) => o.name === data.owner
-  );
 
   const generateActions = () => {
     return (
@@ -65,6 +62,15 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
 
   return (
     <>
+      {!!onManagementPage && (
+        <button
+          onClick={() => navigate(`/rooms/${data.id}`)}
+          className="w-full flex items-center text-base sm:text-xl rounded-full text-white underline hover:text-purple"
+        >
+          <Icons name="back" />
+          <span className="ml-1">Back</span>
+        </button>
+      )}
       <div
         className={`w-full shadow lg:flex rounded-lg justify-between items-center p-4 md:p-8 py-4 md:py-8 bg-white dark:bg-dark-white  border-b dark:border-[#FFAB3329] -2 border-pink mb-8 ${
           className || ""
@@ -92,9 +98,9 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
                   {formatDate(new Date())}
                 </span>
               </span>
-              {!!data?.owned && (
+              {!!data?.owned && !onManagementPage && (
                 <button
-                  onClick={() => showModal(true)}
+                  onClick={() => navigate(`/rooms/${data.id}/management`)}
                   className="text-white btn-shine text-sm sm:text-base rounded-full tracking-wide bg-purple px-4 py-1.5 sm:px-4 sm:py-2.5 flex justify-center items-center"
                 >
                   <span>Manage Cabal</span>
@@ -155,11 +161,6 @@ export default function RoomDetailHeader({ data, ownedKeys = 0, className }) {
           </div>
         </div>
       </div>
-      {!!modal && (
-        <ModalCom action={() => showModal(false)} situation={modal}>
-          <RoomManagement onClose={() => showModal(false)} roomData={data} />
-        </ModalCom>
-      )}
     </>
   );
 }

@@ -28,6 +28,7 @@ import MyCabalsPage from "./views/MyCabalsPage";
 import FollowingCabalsPage from "./views/FollowingCabalsPage";
 import UserPage from "./views/UserPage";
 import LeaderboardPage from "./views/LeaderboardPage";
+import RoomManagementPage from "./views/RoomManagementPage";
 
 const router = createBrowserRouter([
   {
@@ -66,9 +67,14 @@ const router = createBrowserRouter([
                 element: <HomePages />,
               },
               {
+                path: "/rooms/:id/management",
+                element: <RoomManagementPage />,
+              },
+              {
                 path: "/rooms/:id",
                 element: <RoomDetailPage />,
               },
+
               {
                 path: "/create-cabal",
                 element: <CreateRoomPage />,

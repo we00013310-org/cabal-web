@@ -70,7 +70,7 @@ const AssetItem = ({ tokenData, onBuy, myAsset = false }) => {
         </span>
       </td>
       <td className="text-right py-2 md:py-4 align-top">
-        <div className="flex justify-end">
+        <div className="flex justify-center">
           <div className="w-[80px] text-left">
             <div className="text-light-green mb-1">
               <Icons name="checked" />
@@ -97,10 +97,10 @@ const AssetItem = ({ tokenData, onBuy, myAsset = false }) => {
           </div>
         </div>
       </td>
-      <td className="text-right py-2 md:py-4 align-top">
+      <td className="text-right py-2 md:py-4 align-center">
         <button
           onClick={onBuy}
-          className="w-full text-right text-xs sm:text-sm rounded-full text-white underline hover:text-purple"
+          className="w-full py-2 text-right text-xs sm:text-sm rounded-full btn-gradient flex justify-center items-center"
         >
           Swap
         </button>

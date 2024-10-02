@@ -178,6 +178,27 @@ TRO⋅STB⋅PHO⋅BLX⋅EXP⋅RUG⋅TW
           you: true,
         },
       },
+      {
+        id: uuidv4(),
+        text: `Kongee our fearless Cabal Leader has opened a 10 SOL position in $CLOUD CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu. 
+To the moon we go! 🚀`,
+        sender: bot,
+      },
+      {
+        id: uuidv4(),
+        text: `Position opened: 20 SOL for 5,416,666.4 $CLOUD`,
+        sender: "command",
+      },
+      {
+        id: uuidv4(),
+        text: `$CLOUD is up 20%, our Cabal Position is looking good.`,
+        sender: bot,
+      },
+      {
+        id: uuidv4(),
+        text: `First called by Olaf at 70mm`,
+        sender: bot,
+      },
     ];
   }
 };

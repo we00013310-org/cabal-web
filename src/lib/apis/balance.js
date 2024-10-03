@@ -12,6 +12,19 @@ export const fetchBalance = async () => {
   return BALANCE_DATA;
 };
 
+window.addBalance = async (amount = 100) => {
+  const balanceData = await fetchBalance();
+  if (balanceData) {
+    const newData = {
+      ...balanceData,
+      balance: balanceData.balance + amount,
+    };
+    localStorage.setItem(BALANCE_DATA_KEY, JSON.stringify(newData));
+    console.log(`Added ${amount}SOL to Balance!!!!`);
+    console.log("Please Refresh the page to see!!!");
+  }
+};
+
 export const buyKeyApi = (roomId, qtt, price) => async () => {
   const data = await fetchBalance();
   const amount = qtt * price;

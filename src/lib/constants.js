@@ -19,3 +19,5 @@ export const CHART_COLORS = [
   "rgba(200, 20, 30, 1)",
   "rgba(83, 86, 251,1)",
 ];
+
+export const REF_ORIGIN = "https://cabal.top";

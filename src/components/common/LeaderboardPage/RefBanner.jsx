@@ -1,9 +1,11 @@
 import { toast } from "react-toastify";
+
 import { copyTextToClipboard, getCurrentUsername } from "../../../lib/utils";
+import { REF_ORIGIN } from "../../../lib/constants";
 
 const RefBanner = ({ className }) => {
   const username = getCurrentUsername();
-  const url = `${window.location.origin}/ref/${username.toLowerCase()}`;
+  const url = `${REF_ORIGIN}/ref/${username.toLowerCase()}`;
 
   const handleCopy = async () => {
     await copyTextToClipboard(url);
@@ -30,15 +32,15 @@ const RefBanner = ({ className }) => {
           How referral work
         </h1>
         <p className="text-sm sm:text-base text-thin-light-gray">
-          - Users will earn points when their invites earn points and when their
-          invites earn points.
+          - Users will earn points when other users join using their invite
+          link, and earn a cut off their invitee's invites.
         </p>
         <p className="text-sm sm:text-base text-thin-light-gray">
-          - Direct Referral invites get 100 Burst Points +10% bonus Burst Points
-          from referral.
+          - Direct Referrals get 100 Points + 10% Bonus Points from Referral
+          Volume
         </p>
         <p className="text-sm sm:text-base text-thin-light-gray">
-          - Indirect Referral invites get 5% bonus Burst Points.
+          - Indirect Referrals get 5% bonus Points
         </p>
       </div>
     </div>

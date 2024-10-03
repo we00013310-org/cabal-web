@@ -2,6 +2,7 @@ import { toast } from "react-toastify";
 
 import { copyTextToClipboard, getCurrentUsername } from "../../../lib/utils";
 import { REF_ORIGIN } from "../../../lib/constants";
+import RefImg from "../../../assets/images/ref-img.png";
 
 const RefBanner = ({ className }) => {
   const username = getCurrentUsername();
@@ -27,21 +28,28 @@ const RefBanner = ({ className }) => {
           {url}
         </span>
       </div>
-      <div className="py-4">
-        <h1 className="text-purple font-bold mb-2 text-base sm:text-xl">
-          How referral work
-        </h1>
-        <p className="text-sm sm:text-base text-thin-light-gray">
-          - Users will earn points when other users join using their invite
-          link, and earn a cut off their invitee's invites.
-        </p>
-        <p className="text-sm sm:text-base text-thin-light-gray">
-          - Direct Referrals get 100 Points + 10% Bonus Points from Referral
-          Volume
-        </p>
-        <p className="text-sm sm:text-base text-thin-light-gray">
-          - Indirect Referrals get 5% bonus Points
-        </p>
+      <div className="flex flex-col lg:flex-row py-4 space-y-4 lg:space-y-0 lg:space-x-4">
+        <div className="flex-1">
+          <h1 className="text-purple font-bold mb-2 text-base sm:text-xl">
+            How referral work
+          </h1>
+          <p className="text-sm sm:text-base text-thin-light-gray">
+            - Users will earn points when other users join using their invite
+            link, and earn a cut off their invitee's invites.
+          </p>
+          <p className="text-sm sm:text-base text-thin-light-gray">
+            - Direct Referrals get 100 Points + 10% Bonus Points from Referral
+            Volume
+          </p>
+          <p className="text-sm sm:text-base text-thin-light-gray">
+            - Indirect Referrals get 5% bonus Points
+          </p>
+        </div>
+        <img
+          className="flex-1 rounded-lg border-pink border sm:border-2"
+          src={RefImg}
+          alt="ref-img"
+        />
       </div>
     </div>
   );

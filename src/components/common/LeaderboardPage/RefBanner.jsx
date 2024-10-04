@@ -29,7 +29,7 @@ const RefBanner = ({ className }) => {
         </span>
       </div>
       <div className="flex flex-col lg:flex-row py-4 space-y-4 lg:space-y-0 lg:space-x-4">
-        <div className="flex-[2]">
+        <div className="">
           <h1 className="pl-2 text-purple font-bold mb-2 text-base sm:text-xl">
             How referral work
           </h1>
@@ -46,7 +46,7 @@ const RefBanner = ({ className }) => {
           </p>
         </div>
         <img
-          className="flex-1 max-w-[80%] mx-auto rounded-lg border-pink border sm:border-2"
+          className="w-[80%] max-w-[300px] mx-auto rounded-lg border-pink border sm:border-2"
           src={RefImg}
           alt="ref-img"
         />
